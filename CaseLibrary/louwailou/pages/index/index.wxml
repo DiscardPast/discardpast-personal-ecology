@@ -1,0 +1,70 @@
+<!--index.wxml-->
+<view class="container">
+  <scroll-view class='scroll_view_vertical' scroll-y='true'>
+    <index_search_box></index_search_box>
+    <view class='top_choice_view_BG view_center_row'>
+      <view class='top_choice_view top_choice_view_recommend_customer view_center_column'>
+        <view class='top_choice_view_item_BG view_center_column'>
+          <view class='top_choice_view_image_BG'>
+            <image class='top_choice_view_image' bindtap='toRecommendClient' src='../../../../../icons/swiper_bottom_choice_icons/add_cus.png'></image>
+          </view>
+          <view class='top_choice_view_text_BG view_center_column'>
+            <text class='top_choice_view_text'>推荐客户</text>
+          </view>
+        </view>
+      </view>
+      <view class='top_choice_view top_choice_view_publish_demand view_center_column'>
+        <view class='top_choice_view_item_BG view_center_column'>
+          <view class='top_choice_view_image_BG'>
+            <image class='top_choice_view_image' bindtap='toSubmitDemand' src='../../../../../icons/swiper_bottom_choice_icons/post_demand.png'></image>
+          </view>
+          <view class='top_choice_view_text_BG view_center_column'>
+            <text class='top_choice_view_text '>发布需求</text>
+          </view>
+        </view>
+      </view>
+
+      <view class='top_choice_view top_choice_view_platform_rules view_center_column'>
+        <view class='top_choice_view_item_BG view_center_column'>
+          <view class='top_choice_view_image_BG'>
+            <image class='top_choice_view_image' bindtap='toPlatformRules' src='../../../../../icons/swiper_bottom_choice_icons/rule.png'></image>
+          </view>
+          <view class='top_choice_view_text_BG view_center_column'>
+            <text class='top_choice_view_text'>平台细则</text>
+          </view>
+        </view>
+      </view>
+      <view class='top_choice_view top_choice_view_be_partner view_center_column'>
+        <view class='top_choice_view_item_BG view_center_column'>
+          <view class='top_choice_view_image_BG'>
+            <image class='top_choice_view_image' bindtap='toRegister' src='../../../../../icons/swiper_bottom_choice_icons/join_us.png'></image>
+          </view>
+          <view class='top_choice_view_text_BG view_center_column'>
+            <text class='top_choice_view_text'>成为合伙人</text>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class='middle_show_image_BG'>
+      <image class='middle_show_image' src='https://discardpast.oss-cn-hangzhou.aliyuncs.com/v2_ph53tl.jpg'></image>
+    </view>
+    <view class='middle_hot_programs_BG'>
+      <view class='middle_hot_programs_title view_center_row'>
+        <text>资讯动态</text>
+      </view>
+      <scroll-view class='scroll_view_horizontal' scroll-x='true'>
+        <hot_program_list testList='{{testList}}' isUser='{{isUser}}'></hot_program_list>
+      </scroll-view>
+    </view>
+    <view class='bottom_hot_recommend'>
+      <view class='bottom_hot_recommend_title view_center_row'>
+        <text>长沙热门项目排行</text>
+      </view>
+      <program_list testList='{{testList}}' isUser='{{isUser}}'></program_list>
+    </view>
+    <view class='bottom_look_more'>
+      <button class='bottom_look_more_button view_center_row' bindtap='toProgramList'>查看更多</button>
+    </view>
+  </scroll-view>
+</view>
+<bottom_navigation></bottom_navigation>

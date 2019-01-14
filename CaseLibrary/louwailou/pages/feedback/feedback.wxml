@@ -1,0 +1,14 @@
+<!--pages/feedback/feedback.wxml-->
+<view class="container">
+  <scroll-view class='scroll_view_vertical' scroll-y='true'>
+    <view class='inputs_view'>
+      <view class='input_title_view'>
+        <input class='input_title_data'></input>
+      </view>
+      <view class='input_content_view'>
+        <textarea class='input_content_data'></textarea>
+      </view>
+    </view>
+  </scroll-view>
+</view>
+<bottom_navigation></bottom_navigation>

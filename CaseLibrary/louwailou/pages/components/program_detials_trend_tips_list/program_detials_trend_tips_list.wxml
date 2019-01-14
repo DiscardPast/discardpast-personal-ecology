@@ -1,0 +1,8 @@
+<!--pages/components/program_detials_trend_tips_list/program_detials_trend_tips_list.wxml-->
+<view class='program_detials_trend_tips_list_view view_center_row'>
+  <block wx:for='{{testList}}'>
+    <view class='program_detials_trend_tips_item_view view_center_row'>
+      <text class='program_detials_trend_tips_item_data'>{{item.programDynamicTipTitle}}({{item.programDynamicTipCount}})</text>
+    </view>
+  </block>
+</view>

@@ -1,0 +1,4 @@
+<!--pages/component/image_item/image_item.wxml-->
+<view class='image_view'>
+  <image class='image_data'></image>
+</view>

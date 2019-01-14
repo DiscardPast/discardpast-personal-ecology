@@ -1,0 +1,18 @@
+<!--pages/component/hot_program_item/hot_program_item.wxml-->
+<view class='hot_program_list_view view_center_row'>
+  <block wx:for='{{testList}}' wx:key='*this'>
+    <view class='hot_program_item view_center_column' bindtap='toProgramDetails' data-id='{{item.houseId}}'>
+      <view class='hot_program_item_image_view'>
+        <image class='hot_program_item_image' src='{{item.houseImageLinkList.houseImageLinkList[0]}}'></image>
+      </view>
+      <view class='hot_program_item_text_view view_center_column'>
+        <block wx:if="{{isUser}}">
+          <text class='hot_program_item_text'>{{item.houseUserTitle}}</text>
+        </block>
+        <block wx:else>
+          <text class='hot_program_item_text'>{{item.houseConsultantTitle}}</text>
+        </block>
+      </view>
+    </view>
+  </block>
+</view>

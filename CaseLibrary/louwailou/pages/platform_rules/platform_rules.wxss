@@ -1,0 +1,11 @@
+/* pages/platform_rules/platform_rules.wxss */
+/* pages/activity/activity.wxss */
+@import"../../wxParse/wxParse.wxss";
+.sus-h2{
+    color: red;
+}
+.wxParse {
+  margin-left: 50rpx;
+  margin-right: 50rpx;
+  margin-top: 64rpx;
+}

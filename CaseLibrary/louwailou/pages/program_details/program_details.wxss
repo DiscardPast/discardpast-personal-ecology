@@ -1,0 +1,187 @@
+/* pages/program_details/program_details.wxss */
+
+.text_view {
+  width: 100%;
+  height: 120rpx;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 10rpx;
+}
+
+.program_detials_items_view {
+  width: 100%;
+  height: 120rpx;
+}
+
+.program_details_item_view {
+  width: 33.3%;
+  height: 100%;
+  border-right: 1rpx black solid;
+}
+
+.program_detials_icons_view {
+  width: 100%;
+  height: 64rpx;
+  background-color: beige;
+  justify-content: flex-start;
+}
+
+.program_detials_icon_item_data {
+  width: 100%;
+  height: 100%;
+  background-color: blanchedalmond;
+}
+
+.program_detials_content_view {
+  width: 100%;
+  height: 600rpx;
+  background-color: blueviolet;
+  margin-bottom: 10rpx;
+}
+
+.program_detials_content_data {
+  width: 100%;
+  height: 100%;
+  background-color: burlywood;
+}
+
+.program_detials_house_plan {
+  width: 100%;
+}
+
+.program_detials_house_plan_title {
+  width: 100%;
+  height: 80rpx;
+  font-size: 40rpx;
+  margin-bottom: 10rpx;
+  justify-content: flex-start;
+}
+
+.program_detials_house_plan_options {
+  width: 100%;
+  justify-content: flex-start;
+}
+
+.program_detials_house_plan_item_view {
+  height: 80rpx;
+  margin-right: 20rpx;
+  align-items: flex-start;
+  font-size: 36rpx;
+}
+
+.program_detials_trend_view {
+  width: 100%;
+  height: 440rpx;
+}
+
+.program_detials_trend_title_view {
+  width: 100%;
+  height: 80rpx;
+  justify-content: space-between;
+}
+
+.program_detials_trend_title_data {
+  font-size: 32rpx;
+}
+
+.program_detials_trend_content_view {
+  width: 100%;
+  height: 200rpx;
+  background-color: blueviolet;
+}
+
+.program_detials_trend_content_data {
+  width: 60%;
+  height: 100%;
+  background-color: blueviolet;
+}
+
+.program_detials_trend_date_view {
+  width: 100%;
+  height: 48rpx;
+  background-color: brown;
+}
+
+.program_detials_recommend_view {
+  width: 100%;
+  height: 240rpx;
+}
+
+.program_detials_comment_view {
+  width: 100%;
+  height: 80rpx;
+  background-color: black;
+}
+
+.program_detials_comment_data {
+  width: 60%;
+  height: 100%;
+  background-color: floralwhite;
+}
+
+.hot_program_item_text {
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  white-space: normal !important;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  font-size: 28rpx;
+  font-weight: 600;
+}
+
+.program_detials_items_bonus{
+  width: 100%;
+  height: 30%;
+  justify-content: flex-end;
+}
+
+.program_detials_items_bonus_text {
+  font-size: 24rpx;
+  font-weight: 600;
+  color: red;
+}
+
+.program_details_item_title_view{
+  margin-bottom: 10rpx;
+}
+
+.program_details_item_title_data{
+  font-size: 26rpx;
+}
+
+.program_details_item_text_data{
+  font-size: 30rpx;
+  color: red;
+}
+
+.program_detials_icons_view{
+  margin-top: 10rpx;
+  margin-bottom: 10rpx;
+}
+
+.right_offical_item_icon {
+  height: 50rpx;
+  margin: 10rpx;
+  background-color: rgb(89, 89, 255);
+}
+
+.right_offical_item_icon_subway_image {
+  font-size: 20rpx;
+  color: blue;
+}
+
+.program_detials_house_plan_item_data{
+  margin-left: 20rpx;
+}
+
+.more_property_info_view{
+  width: 100%;
+  height: 80rpx;
+}
+
+.more_property_info_button{
+  width: 80%;
+  height: 100%;
+}

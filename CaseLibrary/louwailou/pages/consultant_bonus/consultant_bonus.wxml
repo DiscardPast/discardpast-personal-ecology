@@ -1,0 +1,24 @@
+<!--pages/consultant_bonus/consultant_bonus.wxml-->
+<view class="container">
+  <scroll-view class='scroll_view_vertical' scroll-y='true'>
+    <view class='consultant_bonus_view'>
+      <view class='consultant_bonus_data_view view_center_column'>
+        <view class='consultant_bonus_data_bg_view view_center_column'>
+          <text class='consultant_bonus_data_text'>20000</text>
+        </view>
+      </view>
+      <view class='consultant_bonus_details_view view_center_row'>
+        <view class='consultant_bonus_details_title_view'>
+          <text class='consultant_bonus_details_title_text'>佣金明细</text>
+        </view>
+        <view class='consultant_bonus_details_button_view'>
+          <button class='consultant_bonus_details_button_data'>>>></button>
+        </view>
+      </view>
+      <view class='consultant_bonu_application_settlement_view'>
+        <button class='consultant_bonu_application_settlement_button'>申请结算</button>
+      </view>
+    </view>
+  </scroll-view>
+</view>
+<bottom_navigation></bottom_navigation>

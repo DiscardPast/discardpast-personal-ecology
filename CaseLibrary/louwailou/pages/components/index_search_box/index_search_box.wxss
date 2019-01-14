@@ -1,0 +1,74 @@
+
+.top_serach_view {
+  width: 100%;
+  height: 500rpx;
+  background-color: beige;
+  background-image: url('https://discardpast.oss-cn-hangzhou.aliyuncs.com/shouye.png?x-oss-process=style/yasuo');
+  background-size: cover;
+  
+}
+.bottom_search_view_BG {
+  width: 100%;
+  height: 160rpx;
+}
+.bottom_search_view {
+  width: 79%;
+  height: 110rpx;
+  align-items: flex-start;
+}
+
+.bottom_search_view_item {
+  width: 60rpx;
+  height: 50rpx;
+  font-size: 24rpx;
+  color: black;
+  margin-right: 5rpx;
+}
+
+.bottom_search_view_item_text {
+  border-right: white 3rpx solid;
+  width: 100%;
+  height: 100%;
+}
+
+.bottom_search_view_item_text_shop {
+  border-right: none;
+}
+
+.triangle_up {
+  width: 0;
+  height: 0;
+  border-left: 16rpx solid transparent;
+  border-right: 16rpx solid transparent;
+  border-bottom: 18rpx solid white;
+}
+
+.bottom_search_view_image_BG {
+  width: 100%;
+  height: 60rpx;
+}
+
+.bottom_search_view_input_view {
+  width: 80%;
+  height: 100%;
+}
+
+.bottom_search_view_input {
+  font-size: 24rpx;
+  width: 100%;
+  height: 100%;
+  border: black 1rpx solid;
+}
+
+.bottom_search_view_button_view {
+  width: 20%;
+  height: 100%;
+  border: white 3rpx solid;
+}
+
+.bottom_search_view_button {
+  font-size: 23rpx;
+  background-color: none;
+  width: 100%;
+  height: 100%;
+}

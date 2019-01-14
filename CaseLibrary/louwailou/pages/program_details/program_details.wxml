@@ -1,0 +1,104 @@
+<!--pages/program_details/program_details.wxml-->
+<view class="container">
+  <scroll-view class='scroll_view_vertical' scroll-y='true' scroll-into-view="{{toView}}">
+    <view class='image_context_view'>
+      <view class='swiper_view'>
+        <program_swiper imgUrls='{{testList.houseImageLinkList.houseImageLinkList}}'></program_swiper>
+      </view>
+      <view class='text_view view_center_column'>
+        <block wx:if="{{isUser}}">
+          <text class='hot_program_item_text'>{{testList.houseUserTitle}}</text>
+        </block>
+        <block wx:else>
+          <text class='hot_program_item_text'>{{testList.houseConsultantTitle}}</text>
+          <view class='program_detials_items_bonus view_center_row'>
+            <text class='program_detials_items_bonus_text'>佣金:{{testList.programBonus}}</text>
+          </view>
+        </block>
+      </view>
+    </view>
+    <view class='program_detials_items_view view_center_row'>
+      <view class='program_details_item_view view_center_column'>
+        <view class='program_details_item_title_view'>
+          <text class='program_details_item_title_data'>售价</text>
+        </view>
+        <view class='program_details_item_text_view'>
+          <text class='program_details_item_text_data'>{{testList.housePrice}}</text>
+        </view>
+      </view>
+      <view class='program_details_item_view view_center_column'>
+        <view class='program_details_item_title_view'>
+          <text class='program_details_item_title_data'>户型</text>
+        </view>
+        <view class='program_details_item_text_view'>
+          <text class='program_details_item_text_data'>{{testList.houseTypeText}}</text>
+        </view>
+      </view>
+      <view class='program_details_item_view view_center_column'>
+        <view class='program_details_item_title_view'>
+          <text class='program_details_item_title_data'>建筑面积</text>
+        </view>
+        <view class='program_details_item_text_view'>
+          <text class='program_details_item_text_data'>{{testList.houseArea}}</text>
+        </view>
+      </view>
+    </view>
+          <view class='more_property_info_view view_center_row' bindtap='toPropertyInfo'>
+        <button class='more_property_info_button view_center_row'>查看更多楼盘信息</button>
+      </view>
+    <view class='program_detials_icons_view view_center_row'>
+      <block wx:for='{{[1,2,3]}}'>
+        <view class='program_detials_icon_item_view'>
+          <view class='right_offical_item_icon right_offical_item_icon_subway view_center_row'>
+            <text class='right_offical_item_icon_subway_image'>临地铁</text>
+          </view>
+        </view>
+      </block>
+    </view>
+    <view class='program_detials_content_view'>
+      <rich-text class='program_detials_content_data'>{{testList.houseContent}}</rich-text>
+    </view>
+    <view class='program_detials_house_plan'>
+      <view class='program_detials_house_plan_title view_center_row'>
+        <text>户型图</text>
+      </view>
+      <view class='program_detials_house_plan_options view_center_row'>
+        <block wx:for='{{testList.houseTypeList.houseTypeList}}' wx:key='*this'>
+          <view class='program_detials_house_plan_item_view view_center_column' data-housetype='{{item.houseTypeList}}' bindtap='clickHouseTypeItem'>
+            <text class='program_detials_house_plan_item_data'>{{item.houseTypeName}}</text>
+          </view>
+        </block>
+      </view>
+
+      <floor_plan_list testList='{{houseType}}'></floor_plan_list>
+    </view>
+    <view class='program_detials_trend_view'>
+      <view class='program_detials_trend_title_view view_center_row'>
+        <view class='program_detials_trend_title_data_view'>
+          <text class='program_detials_trend_title_data'>楼盘动态({{testList.programDynamic.programDynamicItemList.length}})</text>
+        </view>
+        <view class='program_detials_trend_more_view' bindtap='toProgramTrend'>
+          <text class='program_detials_trend_more_data'>查看全部></text>
+        </view>
+      </view>
+      <view class='program_detials_trend_tips_view'>
+        <program_detials_trend_tips_list testList='{{testList.programDynamic.programDynamicTipList}}'></program_detials_trend_tips_list>
+      </view>
+      <view class='program_detials_trend_content_view view_center_row'>
+        <text class='program_detials_trend_content_data view_center_row'>{{testList.programDynamic.programDynamicItemList[testList.programDynamic.programDynamicItemList.length - 1].programDynamicItemContent}}</text>
+      </view>
+      <view class='program_detials_trend_date_view'>
+        <text class='program_detials_trend_date_data'>{{testList.programDynamic.programDynamicItemList[testList.programDynamic.programDynamicItemList.length - 1].programDynamicItemDate}}</text>
+      </view>
+    </view>
+    <view class='program_detials_recommend_view view_center_row'>
+      <scroll-view class='scroll_view_horizontal' scroll-x='true'>
+        <hot_program_list testList='{{backList}}'></hot_program_list>
+      </scroll-view>
+    </view>
+    <view class='program_detials_comment_view view_center_row'>
+      <button class='program_detials_comment_data view_center_row' data-houseid='{{testList.houseId}}' bindtap='toComment'>查看评论</button>
+    </view>
+  </scroll-view>
+</view>
+<program_details_bottom_navigation></program_details_bottom_navigation>

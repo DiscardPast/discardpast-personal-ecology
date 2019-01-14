@@ -1,0 +1,223 @@
+/* pages/register/register.wxss */
+.scroll_view_vertical{
+  height: 1120rpx;
+}
+.groundBG {
+  width: 100%;
+  height: 1300rpx;
+  background-color: #cbced5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.middleBG {
+  width: 90%;
+  height: 80%;
+  background-color: #fbfbfb;
+}
+.topBG {
+  width: 80%;
+  height: 95%;
+  background-color: #fff;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.enrollView {
+  width: 100%;
+  height: 15%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.steinwayLogo {
+  width: 100%;
+  height: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.steinwayLogoData {
+  width: 80%;
+  height: 80%;
+}
+.enrollText {
+  width: 100;
+  height: 30%;
+  font-size: 30rpx;
+}
+.inputWxUserView {
+  width: 100%;
+  height: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.inputView {
+  width: 100%;
+  height: 16%;
+  margin: 8rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.inputWxUserData {
+  width: 80%;
+  height: 80%;
+  background-color: #eff1f2;
+}
+.inputWxUserDataPlaceholderStyle {
+  background-color: #b2b2b2;
+}
+.entrollTips {
+  width: 100%;
+  height: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.musicDemand {
+  width: 100%;
+  height: 50%;
+}
+.musicDemandTitle {
+  width: 100%;
+  height: 30%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+.musicDemandTitleIcon {
+  width: 28rpx;
+  height: 28rpx;
+  margin: 0rpx 12rpx;
+}
+.musicDemandTitleIconData {
+  width: 100%;
+  height: 100%;
+}
+.musicDemandTitleText {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+.musicDemandDesc {
+  width: 100%;
+  height: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.musicDemandDescData {
+  width: 85%;
+  height: 100%;
+}
+.musicTips {
+  width: 100%;
+  height: 50%;
+}
+.musicTipsTitle {
+  width: 100%;
+  height: 30%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+.musicTipsTitleIcon {
+  width: 28rpx;
+  height: 28rpx;
+  margin: 0rpx 12rpx;
+}
+.musicTipsTitleIconData {
+  width: 100%;
+  height: 100%;
+}
+.musicTipsTitleText {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.musicTipsDesc {
+  width: 100%;
+  height: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.musicTipsDescData {
+  width: 85%;
+  height: 100%;
+}
+.confirmView {
+  width: 100%;
+  height: 15%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.confirmViewData{
+  width: 80%;
+  height: 60%;
+}
+
+.idcard_upload {
+  width: 100%;
+  height: 600rpx;
+}
+
+.idcard_front {
+  width: 80%;
+  height: 48%;
+  margin-bottom: 20rpx;
+}
+
+.idcard_back {
+  width: 80%;
+  height: 48%;
+}
+
+.idcard_front_button {
+  width: 100%;
+  height: 100%;
+}
+
+.idcard_back_button {
+  width: 100%;
+  height: 100%;
+}
+
+.submit {
+  width: 100%;
+  height: 160rpx;
+  margin-bottom: 10rpx;
+}
+
+.submit_button {
+  width: 80%;
+  height: 50%;
+}
+.inputWxUserPhoneView{
+  width: 80%;
+}
+.inputWxUserPhoneData{
+  width:65%;
+}
+.inputWxUserPhoneButton{
+  height: 90%;
+  width: 35%;
+  font-size: 20rpx;
+}

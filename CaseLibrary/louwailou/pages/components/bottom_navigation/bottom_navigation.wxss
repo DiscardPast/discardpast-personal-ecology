@@ -1,0 +1,19 @@
+/* pages/component/buttom_navigation/buttom_navigation.wxss */
+
+.bottom_navigation {
+  height: 80rpx;
+  width: 100%;
+  position: absolute;
+  bottom: 0rpx;
+  border-top: 1rpx black solid;
+}
+
+.bottom_navigation_item {
+  height: 100%;
+  width: 33.3%;
+}
+
+.bottom_navigation_item_icon {
+  width: 64rpx;
+  height: 64rpx;
+}

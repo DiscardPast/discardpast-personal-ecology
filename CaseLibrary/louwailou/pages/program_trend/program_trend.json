@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "项目动态",
+  "usingComponents": {
+    "bottom_navigation": "../components/bottom_navigation/bottom_navigation",
+    "program_trend_list": "../components/program_trend_list/program_trend_list",
+    "program_detials_trend_tips_list": "../components/program_detials_trend_tips_list/program_detials_trend_tips_list"
+  }
+}

@@ -1,0 +1,18 @@
+<!--pages/components/program_trend_list/program_trend_list.wxml-->
+<view class='program_trend_list_view'>
+  <block wx:for='{{testList}}'>
+    <view class='program_trend_item_view view_center_column'>
+      <view class='program_trend_item_date view_center_column'>
+        <text>{{item.programDynamicItemDate}}</text>
+      </view>
+      <view class='program_trend_item_content view_center_column'>
+        <view class='program_trend_item_title view_center_column'>
+          <text>{{item.programDynamicItemTitle}}</text>
+        </view>
+        <view class='program_trend_item_content_text'>
+          <text>{{item.programDynamicItemContent}}</text>
+        </view>
+      </view>
+    </view>
+  </block>
+</view>

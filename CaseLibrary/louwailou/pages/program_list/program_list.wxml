@@ -1,0 +1,31 @@
+<view class="container">
+  <scroll-view class='scroll_view_vertical' scroll-y='{{isScrollValue}}'>
+    <view class='search_view view_center_row'>
+      <search_box searchValue='{{searchValue}}'></search_box>
+    </view>
+    <view class='filter_view view_center_row'>
+      <view class='filter_item_view'>
+        <view class='filter_item_text_view view_center_row' bindtap='openAreaFilter'>
+          <text class='filter_item_text'>区域</text>
+        </view>
+      </view>
+      <view class='filter_item_view'>
+        <view class='filter_item_text_view view_center_row'>
+          <text class='filter_item_text'>价格</text>
+        </view>
+      </view>
+      <view class='filter_item_view'>
+        <view class='filter_item_text_view view_center_row'>
+          <text class='filter_item_text' bindtap='toFilter'>筛选器</text>
+        </view>
+      </view>
+    </view>
+    <block wx:if='{{isOpenAreaFilter}}'>
+      <program_list_area_filter listData='{{listData}}'></program_list_area_filter>
+    </block>
+    <view class='program_list_view'>
+      <program_list testList='{{testList}}'></program_list>
+    </view>
+  </scroll-view>
+</view>
+<bottom_navigation></bottom_navigation>

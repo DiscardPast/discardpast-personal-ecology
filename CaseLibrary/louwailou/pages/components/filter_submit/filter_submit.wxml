@@ -1,0 +1,9 @@
+<!--pages/components/filter_submit/filter_submit.wxml-->
+<view class='bottom_navigation view_center_row'>
+  <view class='bottom_navigation_item message view_center_row'>
+    <button class='bottom_navigation_item_button view_center_row' bindtap='Cancel'>取消</button>
+  </view>
+  <view class='bottom_navigation_item personal view_center_row'>
+    <button class='bottom_navigation_item_button view_center_row' bindtap='Determine'>提交</button>
+  </view>
+</view>

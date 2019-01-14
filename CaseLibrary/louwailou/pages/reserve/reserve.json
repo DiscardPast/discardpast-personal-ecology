@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "我的预约",
+  "usingComponents": {
+    "image_item": "../components/image_item/image_item",
+    "bottom_navigation": "../components/bottom_navigation/bottom_navigation",
+    "button_list": "../components/button_list/button_list",
+    "reserve_item": "../components/reserve_item/reserve_item"
+  }
+}

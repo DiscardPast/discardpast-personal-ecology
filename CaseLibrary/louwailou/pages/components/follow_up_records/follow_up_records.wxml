@@ -1,0 +1,29 @@
+<!--pages/component/follow_up_records_item/follow_up_records_item.wxml-->
+<view class='follow_up_records_view view_center_column'>
+  <view class='follow_up_records_head_view view_center_row'>
+    <view class='follow_up_records_head_record_view view_center_row'>
+      <text class='follow_up_records_head_record_data'>跟进记录</text>
+    </view>
+    <view class='follow_up_records_head_icon_view view_center_row'>
+      <image class='follow_up_records_head_icon_data'></image>
+    </view>
+  </view>
+  <view class='follow_up_records_title_view view_center_row'>
+    <view class='follow_up_records_title_date_view view_center_row'>
+      <text class='follow_up_records_title_date_data'>跟进时间</text>
+    </view>
+    <view class='follow_up_records_title_record_view view_center_row'>
+      <text class='follow_up_records_title_record_data'>跟进记录</text>
+    </view>
+  </view>
+  <block wx:for='{{recordList}}'>
+    <view class='follow_up_records_item_view view_center_row'>
+      <view class='follow_up_records_item_date_view view_center_row'>
+        <text class='follow_up_records_item_date_data view_center_row'>2018.01.02</text>
+      </view>
+      <view class='follow_up_records_item_text_view view_center_row'>
+        <text class='follow_up_records_item_text_data view_center_row'>####</text>
+      </view>
+    </view>
+  </block>
+</view>

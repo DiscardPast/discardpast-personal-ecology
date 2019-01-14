@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "商品详情",
+    "usingComponents": {
+      "image_item": "../components/image_item/image_item",
+      "bottom_navigation": "../components/bottom_navigation/bottom_navigation",
+      "index_search_box": "../components/index_search_box/index_search_box",
+      "program_list": "../components/program_list/program_list",
+      "hot_program_list": "../components/hot_program_list/hot_program_list",
+      "program_swiper": "../components/program_swiper/program_swiper"   
+    }
+}

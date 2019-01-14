@@ -1,0 +1,8 @@
+<!--pages/program_trend/program_trend.wxml-->
+<view class="container">
+  <scroll-view class='scroll_view_vertical' scroll-y='true'>
+    <program_detials_trend_tips_list testList='{{tipList}}'></program_detials_trend_tips_list>
+    <program_trend_list testList='{{testList}}'></program_trend_list>
+  </scroll-view>
+</view>
+<bottom_navigation></bottom_navigation>

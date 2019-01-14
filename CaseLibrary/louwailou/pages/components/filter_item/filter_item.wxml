@@ -1,0 +1,11 @@
+<!--pages/components/filter_item/filter_item.wxml-->
+<view class='filter_item_view view_center_column'>
+  <view class='filter_item_title view_center_column'>
+    <text>{{testTitle}}</text>
+  </view>
+  <view class='filter_item_tips_view view_center_row'>
+    <block wx:for='{{testList}}'>
+      <view class='filter_item_tip_view view_center_row'><text>{{item}}</text></view>
+    </block>
+  </view>
+</view>

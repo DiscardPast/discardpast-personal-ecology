@@ -1,0 +1,39 @@
+<!--pages/register/register.wxml-->
+
+<scroll-view class='scroll_view_vertical' scroll-y='true'>
+  <view class='container'>
+    <view class='groundBG'>
+      <view class='middleBG'></view>
+      <view class='topBG'>
+        <view class='inputWxUserView'>
+          <view class='inputWxUserNameView inputView'>
+            <input type='text' class='inputWxUserNameData inputWxUserData' placeholder='  姓名' placeholder-style='inputWxUserDataPlaceholderStyle' bindblur='getName'></input>
+          </view>
+          <view class='inputWxUserPhoneView inputView view_center_row'>
+            <input type='number' class='inputWxUserPhoneData inputWxUserData' placeholder='  手机号' placeholder-style='inputWxUserDataPlaceholderStyle' bindblur='getPhone'></input>
+            <button class='inputWxUserPhoneButton view_center_row'>获取验证码</button>
+          </view>
+          <view type='number' class='inputWxUserCodeView inputView'>
+            <input class='inputWxUserCodeData inputWxUserData' placeholder='  验证码' placeholder-style='inputWxUserDataPlaceholderStyle' bindblur='getCode'></input>
+          </view>
+          <view class='inputWxUserStaffCodeView inputView'>
+            <input type='text' class='inputWxUserStaffCodeData inputWxUserData' placeholder='  员工邀请码' placeholder-style='inputWxUserDataPlaceholderStyle' bindblur='getStaffCode'></input>
+          </view>
+        </view>
+        <view class='idcard_upload view_center_column'>
+          <view class='idcard_front'>
+            <button class='idcard_front_button view_center_column' bindtap='upLoadImageIdCardFront'>上传身份证正面</button>
+          </view>
+          <view class='idcard_back'>
+            <button class='idcard_back_button view_center_column' bindtap='upLoadImageIdCardBack'>上传名片</button>
+          </view>
+        </view>
+        <view class='submit view_center_column'>
+          <button class='submit_button view_center_column' bindtap='submit' disabled='{{isConsultant}}'>提交</button>
+        </view>
+      </view>
+    </view>
+  </view>
+
+</scroll-view>
+<bottom_navigation></bottom_navigation>

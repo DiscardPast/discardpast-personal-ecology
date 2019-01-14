@@ -1,0 +1,11 @@
+<!--pages/components/property_info_item/property_info_item.wxml-->
+<view class='property_info_view'>
+  <view class='property_info_item_view'>
+    <view class='property_info_item_title_view'>
+      <text class='property_info_item_title_text'></text>
+    </view>
+    <view class='property_info_item_value_view'>
+      <text class='property_info_item_title_text'></text>
+    </view>
+  </view>
+</view>

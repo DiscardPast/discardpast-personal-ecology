@@ -1,0 +1,28 @@
+/* pages/component/search_box/search_box.wxss */
+.search_box_view {
+  width: 710rpx;
+  height: 80rpx;
+}
+
+.search_box_input_view {
+  width: 80%;
+  height: 100%;
+  justify-content: flex-start;
+}
+
+.search_box_input{
+  width: 100%;
+  height: 80%;
+  border:black 1rpx solid;
+}
+
+.search_box_button_view{
+  width: 20%;
+  height: 100%;
+}
+
+.search_box_button{
+  width: 100%;
+  height: 80%;
+  font-size: 24rpx;
+}

@@ -1,0 +1,61 @@
+/* pages/personal_center/user_center/user_center.wxss */
+
+.user_indicate {
+  width: 100%;
+  height: 400rpx;
+  background-color: #192;
+}
+
+.head_image_view {
+  width: 100%;
+  height: 80%;
+  background-color: #910;
+}
+
+.head_image_data {
+  width: 300rpx;
+  height: 300rpx;
+  border-radius: 50%;
+  background-color: #182;
+}
+
+.nickname_view {
+  width: 100%;
+  height: 20%;
+  background-color: beige;
+}
+
+.nickname_data {
+  height: 100%;
+  font-size: 24rpx;
+}
+
+.function_module {
+  width: 100%;
+  height: 450rpx;
+  flex-wrap: wrap;
+}
+
+.function_module_item_view {
+  width: 99%;
+  height: 80rpx;
+  border: black 1rpx solid;
+  margin: 1rpx;
+}
+
+.function_module_item_icon {
+  width: 15%;
+  height: 80%;
+}
+
+.function_module_item_icon_image {
+  width: 64rpx;
+  height: 64rpx;
+  border-radius: 50%;
+}
+
+.function_module_item_text {
+  width: 85%;
+  height: 100%;
+  justify-content: flex-start
+}

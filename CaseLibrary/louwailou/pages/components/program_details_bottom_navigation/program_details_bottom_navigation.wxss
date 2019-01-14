@@ -1,0 +1,45 @@
+/* pages/component/buttom_navigation/buttom_navigation.wxss */
+
+.bottom_navigation {
+  height: 80rpx;
+  width: 100%;
+  background-color: #124;
+  position: absolute;
+  bottom: 0rpx;
+}
+
+.bottom_navigation_item {
+  height: 100%;
+  width: 33.3%;
+  background-color: #149;
+}
+
+.bottom_navigation_item_icon_button {
+  width: 64rpx;
+  height: 64rpx;
+  background-color: #182;
+}
+
+.message {
+  width: 20%;
+  height: 100%;
+  background-color: beige;
+}
+
+.home {
+  width: 40%;
+  height: 100%;
+  background-color: bisque;
+}
+
+.personal {
+  width: 40%;
+  height: 100%;
+  background-color: black;
+}
+
+.bottom_navigation_item_button{
+  width: 100%;
+  height: 100%;
+  font-size: 24rpx;
+}

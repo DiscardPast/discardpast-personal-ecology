@@ -1,0 +1,8 @@
+<!--pages/comment/comment.wxml-->
+<view class="container">
+  <scroll-view class='scroll_view_vertical' scroll-y='true'>
+    <comment_list testList='{{testList}}'></comment_list>
+  </scroll-view>
+</view>
+<comment_input></comment_input>
+<bottom_navigation></bottom_navigation>

@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "项目列表",
+  "usingComponents": {
+    "program_list_area_filter": "../components/program_list_area_filter/program_list_area_filter",
+    "search_box": "../components/search_box/search_box",
+    "program_list": "../components/program_list/program_list",
+    "bottom_navigation": "../components/bottom_navigation/bottom_navigation",
+    "index_search_box": "../components/index_search_box/index_search_box",
+    "program_swiper": "../components/program_swiper/program_swiper"
+  }
+}

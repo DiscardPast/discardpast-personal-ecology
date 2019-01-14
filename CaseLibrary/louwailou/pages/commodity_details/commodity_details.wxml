@@ -1,0 +1,27 @@
+<!--pages/commodity_details/commodity_details.wxml-->
+<view class="container">
+  <scroll-view class='scroll_view_vertical' scroll-y='true'>
+    <view class='commodity_details_view'>
+      <view class='commodity_details_swiper_view'>
+        <program_swiper imgUrls='{{testList.commodityImageList.commodityImageList}}'></program_swiper>
+      </view>
+      <view class='commodity_details_content_view view_center_column'>
+        <view class='commodity_details_content_title_view view_center_column'>
+          <text>{{testList.commodityTitle}}</text>
+        </view>
+        <view class='commodity_details_content_price_info_view view_center_column'>
+          <view class='commodity_details_content_price_view view_center_column'>
+            <text>市场价格:{{testList.commodityPrice}}</text>
+          </view>
+          <view class='commodity_details_content_integral_view view_center_column'>
+            <text>所需积分:{{testList.commodityIntegral}}</text>
+          </view>
+        </view>
+      </view>
+      <view class='commodity_details_submit_view'>
+        <button class='commodity_details_submit_button'>提交</button>
+      </view>
+    </view>
+  </scroll-view>
+</view>
+<bottom_navigation></bottom_navigation>

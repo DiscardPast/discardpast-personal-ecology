@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "bottom_navigation": "../components/bottom_navigation/bottom_navigation",
+    "filter": "../components/filter/filter",
+    "filter_submit": "../components/filter_submit/filter_submit"
+  }
+}

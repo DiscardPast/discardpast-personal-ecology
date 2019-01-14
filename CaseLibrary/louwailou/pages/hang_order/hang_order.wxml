@@ -1,0 +1,35 @@
+<!--pages/register/register.wxml-->
+<scroll-view class='scroll_view_vertical' scroll-y='true'>
+  <view class='container'>
+    <view class='groundBG'>
+      <view class='middleBG'></view>
+      <view class='topBG'>
+        <view class='inputWxUserView'>
+          <view class='inputWxUserNameView inputView'>
+            <input class='inputWxUserNameData inputWxUserData' placeholder='  客户姓名' placeholder-style='inputWxUserDataPlaceholderStyle' bindinput='getName'></input>
+          </view>
+          <view class='inputWxUserAgeView inputView'>
+            <input class='inputWxUserAgeData inputWxUserData' placeholder='  客户手机号' placeholder-style='inputWxUserDataPlaceholderStyle' bindinput='getAge'></input>
+          </view>
+          <view class='inputWxUserWxIDView inputView'>
+            <input class='inputWxUserWxIDData inputWxUserData' placeholder='  性别' placeholder-style='inputWxUserDataPlaceholderStyle' bindinput='getWxID'></input>
+          </view>
+          <view class='inputWxUserParentsNameView inputView'>
+            <input class='inputWxUserParentsNameData inputWxUserData' placeholder='  中意项目' placeholder-style='inputWxUserDataPlaceholderStyle' bindinput='getParentsName'></input>
+          </view>
+          <view class='inputWxUserParentsNameView inputView'>
+            <input class='inputWxUserParentsCodeData inputWxUserData' placeholder='  员工编码(选填)' placeholder-style='inputWxUserDataPlaceholderStyle' bindinput='getParentsName'></input>
+          </view>
+          <view class='inputWxUserParentsNameView inputView input_client_tip'>
+            <textarea class='inputWxUserParentsNameData inputWxUserData ' placeholder='  备注:(客户资产情况，客户中意产品)' placeholder-style='inputWxUserDataPlaceholderStyle' bindinput='getParentsName'></textarea>
+          </view>
+        </view>
+        <view class='submit view_center_column'>
+          <button class='submit_button view_center_column'>提交</button>
+        </view>
+      </view>
+    </view>
+  </view>
+
+</scroll-view>
+<bottom_navigation></bottom_navigation>

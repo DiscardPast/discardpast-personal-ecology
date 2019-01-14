@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "我的关注",
+  "usingComponents": {
+    "search_box": "../components/search_box/search_box",
+    "hot_program_list": "../components/hot_program_list/hot_program_list",
+    "bottom_navigation": "../components/bottom_navigation/bottom_navigation",
+    "index_search_box": "../components/index_search_box/index_search_box",
+    "program_list": "../components/program_list/program_list"
+  }
+}

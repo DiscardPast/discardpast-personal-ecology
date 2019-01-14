@@ -1,0 +1,38 @@
+/* pages/client_list/client_list.wxss */
+
+.buttons_view {
+  width: 710rpx;
+  height: 100rpx;
+  background-color: beige;
+}
+
+.button_item {
+  width: 33%;
+  height: 100%;
+  background-color: blue;
+}
+
+.button_item_text {
+  width: 100%;
+  height: 100%;
+}
+
+.reserve_content_view {
+  width: 100%;
+  height: 980rpx;
+}
+
+.reserve_swiper_data {
+  width: 100%;
+  height: 100%;
+}
+
+.reserve_swiper_item_view {
+  width: 100%;
+  height: 100%;
+}
+
+.reserve_scroll_view_item_view {
+  width: 100%;
+  height: 100%;
+}
