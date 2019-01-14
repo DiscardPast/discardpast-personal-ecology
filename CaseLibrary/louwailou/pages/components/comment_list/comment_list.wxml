@@ -1,0 +1,33 @@
+<!--pages/components/comment_list/comment_list.wxml-->
+<view class='comment_list_view view_center_column'>
+  <block wx:for='{{testList}}'>
+    <view class='comment_item_view' prop-a="{{item.commentUser.userAvatar}}">
+      <view class='personal_comment_info_view view_center_row'>
+        <view class='personal_comment_info_avatar_view'>
+          <image class='personal_comment_info_avatar_data' src='{{item.commentUser.userAvatar}}'></image>
+        </view>
+        <view class='personal_comment_info_nickname_view view_center_row'>
+          <text>{{item.commentUser.userNickName}}</text>
+        </view>
+      </view>
+      <view class='personal_comment_content_view'>
+        <rich-text class='personal_comment_content_data'>{{item.commentContent}}</rich-text>
+      </view>
+      <view class='personal_comment_date_view view_center_row'>
+        <view class='personal_comment_date view_center_row'>
+          <text>{{item.commentDate}}</text>
+        </view>
+        <view class='personal_comment_icons view_center_row'>
+          <view class='personal_comment_icons_zan view_center_row'>
+            <view class='personal_comment_icons_zan_icon view_center_row'></view>
+            <view class='personal_comment_icons_zan_count view_center_row'>{{item.commentZanCount}}</view>
+          </view>
+          <view class='personal_comment_icons_dislike view_center_row'>
+            <view class='personal_comment_icons_dislike_icon view_center_row'></view>
+            <view class='personal_comment_icons_dislike_count view_center_row'>{{item.commentZanCount}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </block>
+</view>

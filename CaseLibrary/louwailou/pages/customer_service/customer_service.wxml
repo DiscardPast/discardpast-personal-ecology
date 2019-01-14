@@ -1,0 +1,9 @@
+<!--pages/reserve/reserve.wxml-->
+<view class="container">
+  <view class='reserve_content_view'>
+      <scroll-view class='reserve_scroll_view_item_view' scroll-y='true'>
+          <customer_service_list testList='{{testList}}'></customer_service_list>
+      </scroll-view>
+  </view>
+</view>
+<bottom_navigation></bottom_navigation>

@@ -1,0 +1,55 @@
+<!--pages/components/program_list_filter/program_list_filter.wxml-->
+<block wx:if='{{isCancleChoose}}'>
+  <view class='program_list_filter_bg' bindtap='cancleChoose'>
+    <view class='program_list_filter view_center_row'>
+      <view class='program_list_filter_left_view'>
+        <block wx:for='{{listData}}' wx:for-item='asd'>
+          <view class='program_list_filter_left_item_view'>
+            <text class='program_list_filter_left_item_text'>{{asd.programAreaFilterTypeItemName}}</text>
+          </view>
+        </block>
+      </view>
+      <scroll-view class='program_list_filter_right_scroll_view' scroll-y='true'>
+        <view class='program_list_filter_right_view'>
+          <view class='program_list_filter_right_item_view'>
+            <block wx:for='{{listData[0].programAreaFilterTypeCities}}' wx:for-item='itemm'>
+              <view class='program_list_filter_right_item_title_view'>
+                <text class='program_list_filter_right_item_title_text'>{{itemm.programAreaFilterTypeCityType}}</text>
+                <block wx:for='{{itemm.programAreaFilterTypeCityAreaItems}}'  wx:for-item='itemmm'>
+                  <view class='program_list_filter_right_item_area_view view_center_row'>
+                    <text class='program_list_filter_right_item_area_text'>{{itemmm.programAreaFilterTypeCityAreaItemName}}</text>
+                    <text class='program_list_filter_right_item_price_text'>均价{{itemmm.programAreaFilterTypeCityAreaItemPrice}}</text>
+                  </view>
+                </block>
+              </view>
+            </block>
+          </view>
+        </view>
+      </scroll-view>
+      <block wx:if='{{true}}'>
+        <scroll-view class='program_list_filter_checkbox_scroll_view' scroll-y='true'>
+          <view class='program_list_filter_right_item_detials_view'>
+            <checkbox-group bindchange="checkboxChange">
+              <label class="checkbox" wx:for="{{listData[0].programAreaFilterTypeList.programAreaFilterTypeItems.programAreaFilterTypeCities.programAreaFilterTypeCityAreaItems.programAreaFilterTypeCityAreaItemStreets}}" wx:for-item='itemmmm'>
+                <checkbox value="{{itemmmm.programAreaFilterTypeCityAreaItemStreetName}}" checked="{{item.checked}}" /> {{itemmmm.programAreaFilterTypeCityAreaItemStreetValue}}
+              </label>
+            </checkbox-group>
+          </view>
+        </scroll-view>
+      </block>
+    </view>
+    <view class='program_list_filter_submit_view view_center_cloum'>
+      <view class='program_list_filter_submit_is_checked_view view_center_cloum'>
+        <text class='program_list_filter_submit_is_checked_text'>已选:</text>
+      </view>
+      <view class='program_list_filter_submit_button_view view_center_row'>
+        <view class='program_list_filter_submit_button_cancle_view'>
+          <button class='program_list_filter_submit_button_cancle_button'>重置</button>
+        </view>
+        <view class='program_list_filter_submit_button_confirm_view'>
+          <button class='program_list_filter_submit_button_confirm_button'>确认</button>
+        </view>
+      </view>
+    </view>
+  </view>
+</block>

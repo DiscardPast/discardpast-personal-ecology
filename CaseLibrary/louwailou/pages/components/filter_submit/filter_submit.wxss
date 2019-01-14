@@ -1,0 +1,25 @@
+/* pages/components/filter_submit/filter_submit.wxss */
+.bottom_navigation {
+  height: 100rpx;
+  width: 100%;
+  background-color: #124;
+  position: absolute;
+  bottom: 80rpx;
+}
+
+.bottom_navigation_item {
+  height: 100%;
+  width: 50%;
+  background-color: gainsboro;
+}
+
+.bottom_navigation_item_icon {
+  width: 80%;
+  height: 100%;
+  background-color: #182;
+}
+
+.bottom_navigation_item_button {
+  width: 80%;
+  height: 80%;
+}

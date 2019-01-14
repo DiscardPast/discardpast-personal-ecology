@@ -1,0 +1,14 @@
+/* pages/components/program_detials_trend_tips_list/program_detials_trend_tips_list.wxss */
+.program_detials_trend_tips_list_view {
+  width: 100%;
+  height: 120rpx;
+  flex-wrap: wrap;
+  justify-content: flex-start
+}
+
+.program_detials_trend_tips_item_view {
+  height: 40%;
+  margin-right: 10rpx;
+  border-radius: 10%;
+  background-color: gainsboro;
+}

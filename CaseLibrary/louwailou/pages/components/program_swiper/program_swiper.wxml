@@ -1,0 +1,10 @@
+<!--pages/component/program_swiper/program_swiper.wxml-->
+<view class='swiper_view view_center_row'>
+  <swiper class='swiper_data' indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}" vertical="{{vertical}}" bindtap='toLinks' >
+    <block wx:for="{{imgUrls}}" wx:key='*this'>
+      <swiper-item class='swiper_item_view'>
+        <image src="{{item}}" class="swiper_item_data"/>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>

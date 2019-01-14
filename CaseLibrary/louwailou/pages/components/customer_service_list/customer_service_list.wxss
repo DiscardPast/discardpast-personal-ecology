@@ -1,0 +1,58 @@
+/* pages/components/customer_service_list/customer_service_list.wxss *//* pages/component/program_item/program_item.wxss */
+
+.program_list_view {
+  width: 710rpx;
+  height: 100%;
+}
+
+.program_list_item_view {
+  width: 100%;
+  height: 240rpx;
+  background-color: beige;
+   margin-bottom: 10rpx;
+}
+
+.left_view {
+  width: 40%;
+  height: 100%;
+  background-color: bisque;
+}
+
+.left_image_view {
+  width: 100%;
+  height: 80%;
+  background-color: bisque;
+}
+
+.left_image {
+  width: 180rpx;
+  height: 180rpx;
+  background-color: black;
+  border-radius: 50%;
+}
+
+.left_name_view {
+  width: 100%;
+  height: 20%;
+  background-color: blueviolet;
+}
+
+.right_offical_view {
+  width: 60%;
+  height: 100%;
+  background-color: cyan;
+}
+
+.right_offical_item {
+  width: 100%;
+  height: 80rpx;
+  background-color: ghostwhite;
+  justify-content: flex-start;
+}
+
+.right_offical_item_icon {
+  width: 50rpx;
+  height: 50rpx;
+  background-color: blueviolet;
+  margin: 10rpx;
+}

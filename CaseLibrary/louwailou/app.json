@@ -1,0 +1,30 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/program_list/program_list",
+    "pages/program_trend/program_trend",
+    "pages/comment/comment",
+    "pages/filter/filter",
+    "pages/program_details/program_details",
+    "pages/register/register",
+    "pages/personal_center/personal_center",
+    "pages/interest/interest",
+    "pages/feedback/feedback",
+    "pages/submit_demand/submit_demand",
+    "pages/client_list/client_list",
+    "pages/recommend_client/recommend_client",
+    "pages/reserve/reserve",
+    "pages/integrate_shop/integrate_shop",
+    "pages/platform_rules/platform_rules",
+    "pages/consultant_bonus/consultant_bonus",
+    "pages/hang_order/hang_order",
+    "pages/commodity_details/commodity_details",
+    "pages/property_info/property_info"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "长沙楼外楼",
+    "navigationBarTextStyle": "black"
+  }
+}

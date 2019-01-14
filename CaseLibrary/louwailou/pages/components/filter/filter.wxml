@@ -1,0 +1,6 @@
+<!--pages/components/filter/filter.wxml-->
+<view class='filter_view'>
+  <block wx:for='{{testList}}'>
+    <filter_item testTitle='{{item.testTitle}}' testList='{{item.testList}}'></filter_item>
+  </block>
+</view>

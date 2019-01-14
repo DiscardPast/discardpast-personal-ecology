@@ -1,0 +1,13 @@
+<!--pages/component/personal_center/user_center_item/user_center_item.wxml-->
+<view class='function_module view_center_cloum'>
+  <block wx:for='{{testList}}' wx:key='*this'>
+    <view class='function_module_item_view view_center_row' bindtap='{{item.link}}'>
+      <view class='function_module_item_icon view_center_column'>
+        <image class='function_module_item_icon_image' src='{{item.icon}}'></image>
+      </view>
+      <view class='function_module_item_text view_center_row'>
+        <text class='function_module_item_text_data'>{{item.text}}</text>
+      </view>
+    </view>
+  </block>
+</view>

@@ -1,0 +1,12 @@
+<!--pages/component/buttom_navigation/buttom_navigation.wxml-->
+<view class='bottom_navigation view_center_row'>
+  <view class='bottom_navigation_item message view_center_row'>
+    <image class='bottom_navigation_item_icon' bindtap='toTest' src='../../../../../../../icons/bottom_navigation_icons/message.png'></image>
+  </view>
+  <view class='bottom_navigation_item home view_center_row'>
+    <image class='bottom_navigation_item_icon' bindtap='toHome' src='../../../../../../../icons/bottom_navigation_icons/home.png'></image>
+  </view>
+  <view class='bottom_navigation_item personal view_center_row'>
+    <image class='bottom_navigation_item_icon' bindtap='toPersonalCenter' src='../../../../../../../icons/bottom_navigation_icons/personal.png'></image>
+  </view>
+</view>

@@ -1,0 +1,46 @@
+<!--pages/register/register.wxml-->
+<scroll-view class='scroll_view_vertical' scroll-y='true'>
+  <view class='container'>
+    <view class='groundBG'>
+      <view class='middleBG'></view>
+      <view class='topBG'>
+        <view class='log_view view_center_column'>
+          <view class='log_image_view view_center_column'>
+            <image class='log_image' src=''></image>
+          </view>
+          <view class='log_title_view view_center_column'>
+            <text class='log_title_text'>客户信息</text>
+          </view>
+        </view>
+        <view class='inputWxUserView'>
+          <view class='inputWxUserNameView inputView'>
+            <input class='inputWxUserNameData inputWxUserData' placeholder='  客户姓名' placeholder-style='inputWxUserDataPlaceholderStyle' bindblur='getName'></input>
+          </view>
+          <view class='inputWxUserPhoneView inputView'>
+            <input class='inputWxUserPhoneData inputWxUserData' placeholder='  客户手机号' placeholder-style='inputWxUserDataPlaceholderStyle' bindblur='getPhone'></input>
+          </view>
+          <view class='inputWxUserGenderView inputView'>
+            <input class='inputWxUserGenderData inputWxUserData' placeholder='  性别' placeholder-style='inputWxUserDataPlaceholderStyle' bindblur='getGender'></input>
+          </view>
+          <view class='inputWxUserGenderView inputView'>
+            <input class='inputWxUserGenderData inputWxUserData' placeholder='  意向类型' placeholder-style='inputWxUserDataPlaceholderStyle' bindblur='getGender'></input>
+          </view>
+          <view class='inputWxUserGenderView inputView'>
+            <input class='inputWxUserGenderData inputWxUserData' placeholder='  意向片区' placeholder-style='inputWxUserDataPlaceholderStyle' bindblur='getGender'></input>
+          </view>
+          <view class='inputWxUserInterestingHouseView inputView'>
+            <input class='inputWxUserInterestingHouseData inputWxUserData' placeholder='  投资预算' placeholder-style='inputWxUserDataPlaceholderStyle' bindblur='getInterestingHouse'></input>
+          </view>
+          <view class='inputWxUserTipsView inputView input_client_tip'>
+            <textarea class='inputWxUserTipsData inputWxUserData ' placeholder='  备注:(客户资产情况，客户中意产品)' placeholder-style='inputWxUserDataPlaceholderStyle' bindblur='getTips'></textarea>
+          </view>
+        </view>
+        <view class='submit view_center_column'>
+          <button class='submit_button view_center_column' bindtap='submit'>提交</button>
+        </view>
+      </view>
+    </view>
+  </view>
+
+</scroll-view>
+<bottom_navigation></bottom_navigation>

@@ -1,0 +1,8 @@
+<!--pages/comment/comment.wxml-->
+<view class="container">
+  <scroll-view class='scroll_view_vertical' scroll-y='true'>
+    <filter testList='{{testList}}'></filter>
+  </scroll-view>
+</view>
+<filter_submit></filter_submit>
+<bottom_navigation></bottom_navigation>

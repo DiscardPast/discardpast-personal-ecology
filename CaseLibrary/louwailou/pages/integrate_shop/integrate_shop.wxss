@@ -1,0 +1,46 @@
+/* pages/recommend_client/recommend_client.wxss */
+
+.commodity_show_swiper_view {
+  width: 100%;
+  height: 470rpx;
+  background-color: beige;
+}
+
+.swiper_view {
+  width: 100%;
+  height: 85%;
+  background-color: bisque;
+  margin-bottom: 10rpx;
+}
+
+.bottom_swiper_view {
+  width: 100%;
+  height: 15%;
+}
+
+.bottom_swiper_view_left {
+  width: 50%;
+  height: 100%;
+  background-color: blanchedalmond;
+}
+
+.bottom_swiper_view_right {
+  width: 50%;
+  height: 100%;
+  background-color: blueviolet;
+}
+
+.commodity_list_view {
+  width: 100%;
+  margin-bottom: 10rpx;
+}
+
+.redeem_button_view {
+  width: 100%;
+  height: 80rpx;
+}
+
+.redeem_button_data {
+  width: 100%;
+  height: 100%;
+}

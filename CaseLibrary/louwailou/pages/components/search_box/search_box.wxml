@@ -1,0 +1,9 @@
+<!--pages/component/search_box/search_box.wxml-->
+<view class='search_box_view view_center_row'>
+  <view class='search_box_input_view view_center_row'>
+    <input class='search_box_input' placeholder='请输入搜索内容' value='{{searchValue}}' bindblur='getSearchValue'></input>
+  </view>
+  <view class='search_box_button_view view_center_row'>
+    <button class='search_box_button view_center_row' bindtap='searchButton'>搜索</button>
+  </view>
+</view>

@@ -1,0 +1,101 @@
+/* pages/component/program_item/program_item.wxss */
+
+.program_list_view {
+  width: 710rpx;
+  height: 100%;
+}
+
+.program_list_item_view {
+  width: 100%;
+  height: 300rpx;
+  margin-bottom: 10rpx;
+  padding-bottom: 10rpx;
+  border-bottom: 1rpx rgba(184, 184, 184, 0.418) solid;
+}
+
+.left_image_view {
+  width: 40%;
+  height: 80%;
+}
+
+.left_image {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+}
+
+.right_offical_view {
+  width: 60%;
+  height: 100%;
+  margin-left: 10rpx;
+}
+
+.hot_program_item_text {
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  white-space: normal !important;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  font-size: 28rpx;
+  font-weight: 600;
+}
+
+.right_offical_item {
+  width: 100%;
+  height: 25%;
+  align-items: flex-start;
+}
+
+.right_offical_item_house {
+  margin-left: 10rpx;
+}
+
+.right_offical_item_house_text {
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  white-space: normal !important;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  font-size: 20rpx;
+}
+
+.right_offical_item_icon {
+  height: 50rpx;
+  margin: 10rpx;
+  background-color: rgb(89, 89, 255);
+}
+
+.right_offical_item_icon_subway_image {
+  font-size: 20rpx;
+  color: blue;
+}
+
+.right_offical_item_price_text {
+  font-weight: 600;
+}
+
+.right_offical_item_area_text {
+  margin-left: 20rpx;
+}
+
+.right_offical_item_title {
+  height: 32%;
+}
+
+.right_offical_item_house {
+  height: 32%;
+}
+
+.right_offical_item_icons {
+  height: 25%;
+  justify-content: flex-start;
+}
+
+.right_offical_item_price {
+  height: 15%;
+  justify-content: flex-start;
+}

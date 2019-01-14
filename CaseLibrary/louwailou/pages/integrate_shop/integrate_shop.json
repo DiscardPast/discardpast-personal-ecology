@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "积分商城",
+  "usingComponents": {
+    "image_item": "../components/image_item/image_item",
+    "commodity_list": "../components/commodity_list/commodity_list",
+    "bottom_navigation": "../components/bottom_navigation/bottom_navigation",
+    "index_search_box": "../components/index_search_box/index_search_box",
+    "program_swiper": "../components/program_swiper/program_swiper"
+  }
+}

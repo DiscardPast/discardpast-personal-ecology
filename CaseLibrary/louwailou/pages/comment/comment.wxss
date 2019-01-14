@@ -1,0 +1,4 @@
+/* pages/comment/comment.wxss */
+.scroll_view_vertical {
+  height: 980rpx;
+}

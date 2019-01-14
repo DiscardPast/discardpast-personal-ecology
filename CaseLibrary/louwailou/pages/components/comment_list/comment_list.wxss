@@ -1,0 +1,118 @@
+/* pages/components/comment_list/comment_list.wxss */
+
+.comment_list_view {
+  width: 100%;
+  background-color: beige;
+}
+
+.comment_item_view {
+  width: 100%;
+  height: 300rpx;
+  background-color: black;
+  margin-bottom: 10rpx;
+}
+
+.personal_comment_info_view {
+  width: 100%;
+  height: 20%;
+  background-color: blanchedalmond;
+  justify-content: flex-start;
+  margin-bottom: 10rpx;
+}
+
+.personal_comment_info_avatar_view {
+  width: 48rpx;
+  height: 48rpx;
+  background-color: blue;
+}
+
+.personal_comment_info_avatar_data {
+  width: 100%;
+  height: 100%;
+  background-color: brown;
+  border-radius: 50%;
+}
+
+.personal_comment_info_nickname_view {
+  width: 80%;
+  height: 100%;
+  background-color: blueviolet;
+  margin-left: 10rpx;
+  justify-content: flex-start;
+}
+
+.personal_comment_content_view {
+  width: 100%;
+  height: 60%;
+  background-color: burlywood;
+}
+
+.personal_comment_date_view {
+  width: 100%;
+  height: 20%;
+  background-color: beige;
+}
+
+.personal_comment_date {
+  width: 50%;
+  height: 100%;
+  background-color: bisque;
+}
+
+.personal_comment_icons {
+  width: 50%;
+  height: 100%;
+  background-color: black;
+}
+
+.personal_comment_icons_comments {
+  width: 50%;
+  height: 100%;
+  background-color: blanchedalmond;
+}
+
+.personal_comment_icons_comments_icon {
+  width: 48rpx;
+  height: 48rpx;
+  background-color: blueviolet;
+}
+
+.personal_comment_icons_comments_count {
+  width: 48rpx;
+  height: 48rpx;
+  background-color: brown;
+}
+
+.personal_comment_icons_zan {
+  width: 100%;
+  height: 100%;
+  background-color: blue;
+}
+.personal_comment_icons_zan_icon {
+  width: 48rpx;
+  height: 48rpx;
+  background-color: blueviolet;
+}
+
+.personal_comment_icons_zan_count {
+  width: 48rpx;
+  height: 48rpx;
+  background-color: brown;
+}
+
+.personal_comment_icons_dislike {
+  width: 100%;
+  height: 100%;
+  background-color: blue;
+}
+.personal_comment_icons_dislike_icon {
+  width: 48rpx;
+  height: 48rpx;
+  background-color: blueviolet;
+}
+
+.personal_comment_icons_dislike_count {
+  width: 48rpx;
+  height: 48rpx;
+  background-color: brown;
+}

@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "个人中心",
+  "usingComponents": {
+    "bottom_navigation": "../components/bottom_navigation/bottom_navigation",
+    "personal_center_list": "../components/personal_center_list/personal_center_list"
+  }
+}

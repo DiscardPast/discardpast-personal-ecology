@@ -1,0 +1,36 @@
+<!--pages/recommend_client/recommend_client.wxml-->
+
+<view class="container">
+  <scroll-view class='scroll_view_vertical' scroll-y='true'>
+    <view class='commodity_show_swiper_view view_center_column'>
+      <view class='swiper_view'>
+        <program_swiper imgUrls='{{imgUrls}}'></program_swiper>
+      </view>
+      <view class='bottom_swiper_view view_center_row'>
+        <view class='bottom_swiper_view_left view_center_row'>
+          <text>礼品兑换</text>
+        </view>
+        <view class='bottom_swiper_view_right view_center_row'>
+          <text>我的积分:999999</text>
+        </view>
+      </view>
+    </view>
+    <view class='commodity_list_view'>
+      <commodity_list testList='{{testList}}'></commodity_list>
+      <view class='redeem_button_view'>
+        <button class='redeem_button_data view_center_row'>
+          查看更多
+        </button>
+      </view>
+    </view>
+    <view class='commodity_image_view'>
+      <image_item></image_item>
+    </view>
+    <view class='redeem_button_view'>
+      <button class='redeem_button_data view_center_row'>
+        红包兑换
+      </button>
+    </view>
+  </scroll-view>
+</view>
+<bottom_navigation></bottom_navigation>

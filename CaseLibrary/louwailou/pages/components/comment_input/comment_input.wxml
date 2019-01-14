@@ -1,0 +1,9 @@
+<!--pages/components/comment_input/comment_input.wxml-->
+<view class='comment_input view_center_row'>
+  <view class='comment_input_view message view_center_row'>
+    <input class='comment_input_item_input' placeholder='请输入评论...'></input>
+  </view>
+  <view class='comment_button_view personal view_center_row'>
+    <button class='comment_input_item_button view_center_row'>发表</button>
+  </view>
+</view>

@@ -1,0 +1,38 @@
+<!--pages/template/program_item/program_item.wxml-->
+<view class='program_list_view view_center_column'>
+  <block wx:for='{{testList}}' wx:key='*this'>
+    <view class='program_list_item_view view_center_row' bindtap='toProgramDetails' data-id='{{item.houseId}}'>
+      <view class='left_image_view'>
+        <image class='left_image' src='{{item.houseImageLinkList.houseImageLinkList[0]}}'></image>
+      </view>
+      <view class='right_offical_view view_center_column'>
+        <view class='right_offical_item right_offical_item_title view_center_column'>
+          <block class="view_center_column" wx:if="{{isUser}}">
+            <text class='hot_program_item_text'>{{item.houseUserTitle}}</text>
+          </block>
+          <block class="view_center_column" wx:else>
+            <text class='hot_program_item_text'>{{item.houseConsultantTitle}}</text>
+          </block>
+        </view>
+        <view class='right_offical_item right_offical_item_house view_center_row'>
+          <text class='right_offical_item_house_text'>{{item.houseContent}}</text>
+        </view>
+        <view class='right_offical_item right_offical_item_icons view_center_row'>
+          <view class='right_offical_item_icon right_offical_item_icon_subway view_center_row'>
+            <text class='right_offical_item_icon_subway_image'>临地铁</text>
+          </view>
+          <view class='right_offical_item_icon right_offical_item_icon_subway view_center_row'>
+            <text class='right_offical_item_icon_subway_image'>临地铁</text>
+          </view>
+          <view class='right_offical_item_icon right_offical_item_icon_subway view_center_row'>
+            <text class='right_offical_item_icon_subway_image'>临地铁</text>
+          </view>
+        </view>
+        <view class='right_offical_item right_offical_item_price view_center_row'>
+          <text class='right_offical_item_price_text'>{{item.housePrice}}</text>
+          <text class='right_offical_item_area_text'>建面 {{item.houseArea}}</text>
+        </view>
+      </view>
+    </view>
+  </block>
+</view>

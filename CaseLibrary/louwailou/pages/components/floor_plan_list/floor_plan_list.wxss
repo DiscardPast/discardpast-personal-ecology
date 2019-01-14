@@ -1,0 +1,22 @@
+/* pages/component/floor_plan_item/floor_plan_item.wxss */
+.floor_plan_item{
+  width: 710rpx;
+  height: 320rpx;
+  margin-bottom: 10rpx;
+}
+.floor_plan_item_image_view{
+  width: 50%;
+  height: 100%;
+  background-color: honeydew;
+  margin-right: 10rpx;
+}
+.floor_plan_item_image_data {
+  width: 100%;
+  height: 100%;
+  background-color: hotpink;
+}
+.floor_plan_item_text_view{
+    width: 50%;
+  height: 100%;
+  background-color: gainsboro;
+}

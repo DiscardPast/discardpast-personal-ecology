@@ -1,0 +1,29 @@
+<!--pages/template/program_item/program_item.wxml-->
+<view class='program_list_view view_center_column'>
+  <block wx:for='{{testList}}' wx:key='*this'>
+    <view class='program_list_item_view view_center_row'>
+      <view class='left_view view_center_column'>
+        <view class='left_image_view view_center_column'>
+          <image class='left_image'></image>
+        </view>
+        <view class='left_name_view view_center_column'>
+          <text class='left_name'>{{item.clientName}}</text>
+        </view>
+      </view>
+      <view class='right_offical_view view_center_column'>
+        <view class='right_offical_item right_offical_item_phone view_center_row'>
+          <text class='right_offical_item_phone_text'>{{item.clientPhone}}</text>
+        </view>
+        <view class='right_offical_item right_offical_item_people view_center_row'>
+          <text class='right_offical_item_people_text'>{{item.staff.staffName}}</text>
+        </view>
+        <view class='right_offical_item right_offical_item_validate view_center_row'>
+          <text class='right_offical_item_validate_text'>{{item.staffValidityStart}}-{{item.staffValidityStop}}</text>
+        </view>
+        <view class='right_offical_item right_offical_item_lastdate view_center_row'>
+          <text class='right_offical_item_lastdate_text'>{{item.staffLastTime}}</text>
+        </view>
+      </view>
+    </view>
+  </block>
+</view>

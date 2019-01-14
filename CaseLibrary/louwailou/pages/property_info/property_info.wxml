@@ -1,0 +1,112 @@
+<!--pages/property_info/property_info.wxml-->
+<view class="container">
+  <scroll-view class='scroll_view_vertical' scroll-y='true'>
+    <view class='property_info_view'>
+      <view class='property_info_item_view view_center_row'>
+        <view class='property_info_item_title_view view_center_row'>
+          <text class='property_info_item_title_text'>开发商</text>
+        </view>
+        <view class='property_info_item_value_view view_center_row'>
+          <text class='property_info_item_title_text view_center_row'>{{listData.propertyDeveloper}}</text>
+        </view>
+      </view>
+      <view class='property_info_item_view view_center_row'>
+        <view class='property_info_item_title_view view_center_row'>
+          <text class='property_info_item_title_text'>区域</text>
+        </view>
+        <view class='property_info_item_value_view view_center_row'>
+                    <text class='property_info_item_title_text view_center_row'>{{listData.propertyArea}}</text>
+        </view>
+      </view>
+      <view class='property_info_item_view view_center_row'>
+        <view class='property_info_item_title_view view_center_row'>
+          <text class='property_info_item_title_text'>销售状态</text>
+        </view>
+        <view class='property_info_item_value_view view_center_row'>
+                    <text class='property_info_item_title_text view_center_row'>{{listData.propertySalesStatus}}</text>
+        </view>
+      </view>
+      <view class='property_info_item_view view_center_row'>
+        <view class='property_info_item_title_view view_center_row'>
+          <text class='property_info_item_title_text'>产权年限</text>
+        </view>
+        <view class='property_info_item_value_view view_center_row'>
+                    <text class='property_info_item_title_text view_center_row'>{{listData.propertyYears}}</text>
+        </view>
+      </view>
+      <view class='property_info_item_view view_center_row'>
+        <view class='property_info_item_title_view view_center_row'>
+          <text class='property_info_item_title_text'>物业类别</text>
+        </view>
+        <view class='property_info_item_value_view view_center_row'>
+                    <text class='property_info_item_title_text view_center_row'>{{listData.propertyType}}</text>
+        </view>
+      </view>
+      <view class='property_info_item_view view_center_row'>
+        <view class='property_info_item_title_view view_center_row'>
+          <text class='property_info_item_title_text'>容积率</text>
+        </view>
+        <view class='property_info_item_value_view view_center_row'>
+                    <text class='property_info_item_title_text view_center_row'>{{listData.propertyVolumeRate}}</text>
+        </view>
+      </view>
+      <view class='property_info_item_view view_center_row'>
+        <view class='property_info_item_title_view view_center_row'>
+          <text class='property_info_item_title_text'>绿化率</text>
+        </view>
+        <view class='property_info_item_value_view view_center_row'>
+                    <text class='property_info_item_title_text view_center_row'>{{listData.propertyGreeningRate}}</text>
+        </view>
+      </view>
+      <view class='property_info_item_view view_center_row'>
+        <view class='property_info_item_title_view view_center_row'>
+          <text class='property_info_item_title_text'>楼栋总户数</text>
+        </view>
+        <view class='property_info_item_value_view view_center_row'>
+                    <text class='property_info_item_title_text view_center_row'>{{listData.propertyHouseholdCount}}</text>
+        </view>
+      </view>
+      <view class='property_info_item_view view_center_row'>
+        <view class='property_info_item_title_view view_center_row'>
+          <text class='property_info_item_title_text'>物业公司</text>
+        </view>
+        <view class='property_info_item_value_view view_center_row'>
+                    <text class='property_info_item_title_text view_center_row'>{{listData.propertyCompany}}</text>
+        </view>
+      </view>
+      <view class='property_info_item_view view_center_row'>
+        <view class='property_info_item_title_view view_center_row'>
+          <text class='property_info_item_title_text'>物业费</text>
+        </view>
+        <view class='property_info_item_value_view view_center_row'>
+                    <text class='property_info_item_title_text view_center_row'>{{listData.propertyPrice}}</text>
+        </view>
+      </view>
+      <view class='property_info_item_view view_center_row'>
+        <view class='property_info_item_title_view view_center_row'>
+          <text class='property_info_item_title_text'>装修状况</text>
+        </view>
+        <view class='property_info_item_value_view view_center_row'>
+                    <text class='property_info_item_title_text view_center_row'>{{listData.propertyDecorationStatus}}</text>
+        </view>
+      </view>
+      <view class='property_info_item_view view_center_row'>
+        <view class='property_info_item_title_view view_center_row'>
+          <text class='property_info_item_title_text'>交房时间</text>
+        </view>
+        <view class='property_info_item_value_view view_center_row'>
+                    <text class='property_info_item_title_text view_center_row'>{{listData.propertyHandingDate}}</text>
+        </view>
+      </view>
+    </view>
+    <view class='property_info_item_view view_center_row'>
+      <view class='property_info_item_title_view view_center_row'>
+        <text class='property_info_item_title_text'>车位</text>
+      </view>
+      <view class='property_info_item_value_view view_center_row'>
+                  <text class='property_info_item_title_text view_center_row'>{{listData.propertyParkingSpace}}</text>
+      </view>
+    </view>
+  </scroll-view>
+</view>
+<bottom_navigation></bottom_navigation>

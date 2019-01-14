@@ -1,0 +1,25 @@
+/* pages/feedback/feedback.wxss */
+
+.input_title_view {
+  width: 100%;
+  height: 80rpx;
+  background-color: beige;
+}
+
+.input_title_data {
+  width: 99%;
+  height: 90%;
+  border: 1rpx black solid;
+}
+
+.input_content_view {
+  width: 100%;
+  height: 800rpx;
+  background-color: bisque;
+}
+
+.input_content_data {
+  width: 99%;
+  height: 100%;
+  border: 1rpx black solid;
+}

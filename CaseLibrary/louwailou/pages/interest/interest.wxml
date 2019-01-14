@@ -1,0 +1,14 @@
+<!--pages/interest/interest.wxml-->
+<view class="container">
+  <scroll-view class='scroll_view_vertical' scroll-y='true'>
+    <view class='program_list_view view_center_column'>
+      <view class='serach_button_view'>
+        <search_box></search_box>
+      </view>
+      <view class='program_list_item_view'>
+        <program_list testList='{{testList}}'></program_list>
+      </view>
+    </view>
+  </scroll-view>
+</view>
+<bottom_navigation></bottom_navigation>

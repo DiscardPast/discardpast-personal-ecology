@@ -1,0 +1,14 @@
+<!--pages/component/hot_program_item/hot_program_item.wxml-->
+<view class='hot_program_list_view view_center_row'>
+  <block wx:for='{{testList}}' wx:key='*this'>
+    <view class='hot_program_item view_center_column' bindtap='toCommodityDetails' data-commodityid='{{item.commodityId}}'>
+      <view class='hot_program_item_image_view'>
+        <image class='hot_program_item_image' src='{{item.commodityImageList.commodityImageList[0]}}'></image>
+      </view>
+      <view class='hot_program_item_text_view view_center_row'>
+        <text class='hot_program_item_text'>{{item.commodityTitle}}</text>
+        <text class='hot_program_item_text'>{{item.commodityPrice}}</text>
+      </view>
+    </view>
+  </block>
+</view>

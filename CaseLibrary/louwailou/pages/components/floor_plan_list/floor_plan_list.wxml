@@ -1,0 +1,15 @@
+<!--pages/component/floor_plan_item/floor_plan_item.wxml-->
+<view class='floor_plan_list view_center_column'>
+  <block wx:for='{{testList}}'>
+    <view class='floor_plan_item view_center_row'>
+      <view class='floor_plan_item_image_view view_center_row'>
+        <image class='floor_plan_item_image_data' src='{{item.houseTypeImageLink}}'></image>
+      </view>
+      <view class='floor_plan_item_text_view view_center_row'>
+        <rich-text class='floor_plan_item_text_data'>
+          {{item.houseTypeContent}}
+        </rich-text>
+      </view>
+    </view>
+  </block>
+</view>

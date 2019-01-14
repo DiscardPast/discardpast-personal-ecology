@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "follow_up_records": "../follow_up_records/follow_up_records"
+  }
+}

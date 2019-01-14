@@ -1,0 +1,40 @@
+    <view class='top_serach_view view_center_column'>
+      <view class='bottom_search_view_BG view_center_row'>
+        <view class='bottom_search_view view_center_column'>
+          <view class='bottom_search_view_items view_center_row'>
+            <view class='bottom_search_view_item bottom_search_view_items_apartment view_center_column'>
+              <view class='bottom_search_view_item_text view_center_column' bindtap='ClickApartment'>
+                <text>公寓</text>
+              </view>
+              <block wx:if='{{isApartMent}}'>
+                <view class='triangle_up'></view>
+              </block>
+            </view>
+            <view class='bottom_search_view_item bottom_search_view_items_house view_center_column'>
+              <view class='bottom_search_view_item_text view_center_column' bindtap='ClickHouse'>
+                <text>住宅</text>
+              </view>
+              <block wx:if='{{isHouse}}'>
+                <view class='triangle_up'></view>
+              </block>
+            </view>
+            <view class='bottom_search_view_item bottom_search_view_items_shop view_center_column'>
+              <view class='bottom_search_view_item_text bottom_search_view_item_text_shop view_center_column' bindtap='ClickShop'>
+                <text>商铺</text>
+              </view>
+              <block wx:if='{{isShop}}'>
+                <view class='triangle_up'></view>
+              </block>
+            </view>
+          </view>
+          <view class='bottom_search_view_image_BG view_center_row'>
+            <view class='bottom_search_view_input_view'>
+              <input class='bottom_search_view_input' placeholder='输入关键字' bindblur='getInputValue'></input>
+            </view>
+            <view class='bottom_search_view_button_view view_center_column'>
+              <button class='bottom_search_view_button' bindtap='toProgramList'>搜索</button>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>

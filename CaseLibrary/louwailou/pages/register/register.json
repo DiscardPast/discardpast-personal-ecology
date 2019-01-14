@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "申请页面",
+  "usingComponents": {
+    "bottom_navigation": "../components/bottom_navigation/bottom_navigation"
+  }
+}
