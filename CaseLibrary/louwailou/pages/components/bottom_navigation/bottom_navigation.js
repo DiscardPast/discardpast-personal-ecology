@@ -31,9 +31,9 @@ Component({
         url: '../../pages/personal_center/personal_center',
       })
     },
-    toTest: function(e) {
+    toProgramList: function(e) {
       wx.navigateTo({
-        url: '../../pages/customer_service/customer_service',
+        url: '../../pages/program_list/program_list',
       })
     }
   }

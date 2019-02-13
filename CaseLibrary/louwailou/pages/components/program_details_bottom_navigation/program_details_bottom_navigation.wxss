@@ -6,6 +6,7 @@
   background-color: #124;
   position: absolute;
   bottom: 0rpx;
+  justify-content: space-between
 }
 
 .bottom_navigation_item {

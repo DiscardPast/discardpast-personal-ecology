@@ -2,8 +2,8 @@
 .top_choice_view_BG {
   width: 100%;
   height: 160rpx;
-  margin-top: 5rpx;
-  margin-bottom: 5rpx;
+  margin-top: 25rpx;
+  margin-bottom: 25rpx;
 }
 
 .top_choice_view {
@@ -48,19 +48,21 @@
 
 .middle_hot_programs_BG {
   width: 100%;
-  height: 300rpx;
+  height: 450rpx;
   margin-bottom: 10rpx;
 }
 
 .middle_hot_programs_title {
   width: 100%;
-  height: 80rpx;
+  height: 140rpx;
   justify-content: flex-start;
   font-size: 40rpx;
   margin-bottom: 5rpx;
   margin-top: 5rpx;
-  border-bottom: 1rpx black solid;
-  border-top: 1rpx black solid;
+}
+
+.middle_hot_programs_title_text{
+  margin-top: 10rpx;
 }
 
 .middle_hot_programs_items_view {
@@ -97,19 +99,23 @@
   height: 100%;
 }
 
+.hot_program_list_scroll_view{
+  height: 280rpx;
+  border-top: 1rpx #e5e5e5 solid;
+}
+
 .bottom_hot_recommend {
   width: 100%;
 }
 
 .bottom_hot_recommend_title {
   width: 100%;
-  height: 80rpx;
+  height: 140rpx;
   justify-content: flex-start;
   font-size: 40rpx;
   margin-bottom: 5rpx;
   margin-top: 5rpx;
-    border-bottom: 1rpx black solid;
-  border-top: 1rpx black solid;
+  border-bottom: 1rpx #e5e5e5 solid;
 }
 
 .bottom_look_more {

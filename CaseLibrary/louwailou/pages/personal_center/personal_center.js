@@ -20,7 +20,7 @@ Page({
 
       {
         'icon': '../../../../../../../icons/personal_center_icons/date.png',
-        'text': '我的预约',
+        'text': '带看预约',
         'link': 'toReserve'
       },
       {

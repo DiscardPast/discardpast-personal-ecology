@@ -51,7 +51,6 @@
 .function_module_item_icon_image {
   width: 64rpx;
   height: 64rpx;
-  border-radius: 50%;
 }
 
 .function_module_item_text {

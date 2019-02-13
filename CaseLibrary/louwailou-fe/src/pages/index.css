@@ -1,0 +1,22 @@
+
+.normal {
+  font-family: Georgia, sans-serif;
+  margin-top: 4em;
+  text-align: center;
+}
+
+.header{
+  background-color: #79CEF2;
+}
+
+.sider {
+  background-color: #8F79F2;
+}
+
+.content {
+  background-color: aqua;
+}
+
+.footer {
+  background-color: beige;
+}
