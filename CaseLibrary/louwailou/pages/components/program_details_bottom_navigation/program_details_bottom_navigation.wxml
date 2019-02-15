@@ -6,7 +6,4 @@
   <view class='bottom_navigation_item home view_center_row'>
     <button class='bottom_navigation_item_button view_center_row' bindtap='callPhone'>电话咨询</button>
   </view>
-  <view class='bottom_navigation_item personal view_center_row'>
-    <button class='bottom_navigation_item_button view_center_row' bindtap='toCustomerService'>在线咨询</button>
-  </view>
 </view>

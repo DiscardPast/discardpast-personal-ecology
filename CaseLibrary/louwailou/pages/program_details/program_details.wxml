@@ -101,4 +101,9 @@
     </view>
   </scroll-view>
 </view>
-<program_details_bottom_navigation></program_details_bottom_navigation>
+<block wx:if='{{isUser}}'>
+  <program_details_bottom_navigation></program_details_bottom_navigation>
+</block>
+<block wx:else>
+  <bottom_navigation></bottom_navigation>
+</block>

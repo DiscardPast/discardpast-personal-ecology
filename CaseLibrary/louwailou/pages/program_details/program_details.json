@@ -1,6 +1,7 @@
 {
   "navigationBarTitleText": "项目详情",
   "usingComponents": {
+    "bottom_navigation": "../components/bottom_navigation/bottom_navigation",
     "program_details_bottom_navigation": "../components/program_details_bottom_navigation/program_details_bottom_navigation",
     "floor_plan_list": "../components/floor_plan_list/floor_plan_list",
     "program_detials_trend_tips_list": "../components/program_detials_trend_tips_list/program_detials_trend_tips_list",

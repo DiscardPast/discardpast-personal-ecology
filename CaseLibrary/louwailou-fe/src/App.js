@@ -1,15 +1,23 @@
-import React, { Component } from 'react';
-import { Button } from 'antd';
-import './App.css';
+export const dva = {
+  config: {
+    onError(err) {
+      err.preventDefault();
+      console.error(err.message);
+    },
+    initialState: {
+      clients: [
+        { name: 'dva', id: 1 },
+        { name: 'antd', id: 2 },
+      ],
+      users: [
+        { name: 'dva', id: 1 },
+        { name: 'antd', id: 2 },
+        { name: 'antd', id: 2 },
+        { name: 'antd', id: 2 },
+        { name: 'antd', id: 2 },
+        { name: 'antd', id: 2 },
 
-class App extends Component {
-  render() {
-    return (
-        <div className="App">
-          <Button type="primary">Button</Button>
-        </div>
-    );
-  }
-}
-
-export default App;
+      ],
+    },
+  },
+};

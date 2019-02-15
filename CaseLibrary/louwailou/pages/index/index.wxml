@@ -48,17 +48,18 @@
     <view class='middle_show_image_BG'>
       <image class='middle_show_image' src='https://discardpast.oss-cn-hangzhou.aliyuncs.com/v2_ph53tl.jpg'></image>
     </view>
+    <view class=''></view>
     <view class='middle_hot_programs_BG'>
       <view class='middle_hot_programs_title view_center_row'>
-        <text>资讯动态</text>
+        <text class='middle_hot_programs_title_text'>资讯动态</text>
       </view>
-      <scroll-view class='scroll_view_horizontal' scroll-x='true'>
+      <scroll-view class='hot_program_list_scroll_view scroll_view_horizontal' scroll-x='true'>
         <hot_program_list testList='{{testList}}' isUser='{{isUser}}'></hot_program_list>
       </scroll-view>
     </view>
     <view class='bottom_hot_recommend'>
       <view class='bottom_hot_recommend_title view_center_row'>
-        <text>长沙热门项目排行</text>
+        <text class='middle_hot_programs_title_text'>长沙热门项目排行</text>
       </view>
       <program_list testList='{{testList}}' isUser='{{isUser}}'></program_list>
     </view>
