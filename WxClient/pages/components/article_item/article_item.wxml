@@ -1,0 +1,14 @@
+<!--pages/components/article_item/article_item.wxml-->
+<view class='article_item_view view_center_vertical'>
+  <view class='article_item_top_view view_center_horizontal'>
+    <view class='article_item_top_left_view view_center_horizontal'>
+      <view class='article_item_top_left_avatar_view'>
+        <image class='article_item_top_left_avatar_image'></image>
+      </view>
+      <view class='article_item_top_left_nickname_view'></view>
+    </view>
+    <view class='article_item_top_right_view'></view>
+  </view>
+  <view class='article_view_middle_view'></view>
+  <view class='article_view_bottom_view'></view>
+</view>
