@@ -18,7 +18,7 @@ Page({
       title: '加载中...',
     })
     wx.request({
-      url: 'https://www.discardpast.top/api/mall/list', // 仅为示例，并非真实的接口地址
+      url: 'https://www.cslouwailou.com/api/mall/list', // 仅为示例，并非真实的接口地址
       method: 'get',
       header: {
         'content-type': 'application/json' // 默认值

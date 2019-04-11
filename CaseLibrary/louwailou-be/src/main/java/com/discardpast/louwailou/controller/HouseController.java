@@ -49,7 +49,7 @@ public class HouseController {
 
 
 
-    @PostMapping(value = "/add")
+    /*@PostMapping(value = "/add")
     private House addHouse() {
         House house = new House();
         HouseImageLinkList houseImageLinkList = new HouseImageLinkList();
@@ -115,6 +115,12 @@ public class HouseController {
         house.setHouseCommentList(houseCommentList);
         house.setProgramDynamic(programDynamic);
         house.setProgramType(ProgramType.APARTMENT);
+        return houseRepository.save(house);
+    }*/
+
+    @PostMapping(value = "/add")
+    private House addHouse(@RequestBody House house)
+    {
         return houseRepository.save(house);
     }
 

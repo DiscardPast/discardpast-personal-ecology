@@ -201,14 +201,14 @@ wx.hideLoading()
       },
       success: function(res) {
         wx.request({
-          url: 'https://www.discardpast.top/api/user/userKey?userKey=' + res.data,
+          url: 'https://www.cslouwailou.com/api/user/userKey?userKey=' + res.data,
           method: 'get',
           header: {
             'content-type': 'application/json' // 默认值
           },
           success(resfs) {
             wx.request({
-              url: 'https://www.discardpast.top/api/user/consultant?userKey=' + resfs.data.userKey,
+              url: 'https://www.cslouwailou.com/api/user/consultant?userKey=' + resfs.data.userKey,
               method: 'post',
               data: {
                 userName: userName,

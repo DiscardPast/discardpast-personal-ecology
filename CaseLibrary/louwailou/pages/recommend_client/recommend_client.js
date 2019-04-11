@@ -111,7 +111,7 @@ wx.hideLoading()
       success: function(res) {
         console.log(res.data)
         wx.request({
-          url: 'https://www.discardpast.top/api/client/add?staffCode=' + clientStaffCode + "&userKey=" + res.data,
+          url: 'https://www.cslouwailou.com/api/client/add?staffCode=' + clientStaffCode + "&userKey=" + res.data,
           method: 'post',
           header: {
             'content-type': 'application/json'

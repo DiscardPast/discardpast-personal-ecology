@@ -74,7 +74,7 @@ Page({
                     'link': 'toClientList'
                   },
                   {
-                    'icon': '../../../../../../../icons/personal_center_icons/post_list.png',
+                    'icon': '../../../../../../../icons/personal_center_icons/hang_order.png',
                     'text': '挂单',
                     'link': 'toHangOrder'
                   },
@@ -118,7 +118,7 @@ Page({
       success(res) {
         if (res.code) {
           wx.request({
-            url: 'https://www.discardpast.top/api/openid/getopenidkey?code=' + res.code,
+            url: 'https://www.cslouwailou.com/api/openid/getopenidkey?code=' + res.code,
             method: 'post',
             data: {
               code: res.code
@@ -136,7 +136,7 @@ Page({
                       wx.getUserInfo({
                         success(resuserinfo) {
                           wx.request({
-                            url: 'https://www.discardpast.top/api/user/add',
+                            url: 'https://www.cslouwailou.com/api/user/add',
                             method: 'post',
                             data: {
                               userType: 0,
@@ -172,7 +172,7 @@ Page({
                               console.log(resf.data.status)
                               if (resf.data.status == 500) {
                                 wx.request({
-                                  url: 'https://www.discardpast.top/api/user/userKey?userKey=' + result.data.openid,
+                                  url: 'https://www.cslouwailou.com/api/user/userKey?userKey=' + result.data.openid,
                                   method: 'get',
                                   success(resfs) {
                                     that.setData({

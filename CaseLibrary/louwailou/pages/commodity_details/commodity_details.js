@@ -19,7 +19,7 @@ Page({
     })
     console.log(options.commodityId)
     wx.request({
-      url: 'https://www.discardpast.top/api/commodity/id',
+      url: 'https://www.cslouwailou.com/api/commodity/id',
       method: 'get',
       data: {
         commodityId: options.commodityId

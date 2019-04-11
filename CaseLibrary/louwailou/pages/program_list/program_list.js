@@ -222,7 +222,7 @@ Page({
           success: function(ress) {
             if (ress.data == undefined) {
               wx.request({
-                url: 'https://www.discardpast.top/api/house/list', // 仅为示例，并非真实的接口地址
+                url: 'https://www.cslouwailou.com/api/house/list', // 仅为示例，并非真实的接口地址
                 method: 'get',
                 header: {
                   'content-type': 'application/json' // 默认值
@@ -237,7 +237,7 @@ Page({
               })
             } else {
               wx.request({
-                url: 'https://www.discardpast.top/api/house/list/title',
+                url: 'https://www.cslouwailou.com/api/house/list/title',
                 method: 'get',
                 header: {
                   'content-type': 'application/json' // 默认值
@@ -326,7 +326,7 @@ Page({
   openAreaFilter: function() {
     var that = this;
     wx.request({
-      url: 'http://localhost:8080/p/one',
+      url: 'https://www.cslouwailou.com/api/p/one',
       method: 'get',
       success(res) {
         console.log(res.data.programAreaFilterTypeList.programAreaFilterTypeItems)

@@ -19,7 +19,8 @@
     "pages/consultant_bonus/consultant_bonus",
     "pages/hang_order/hang_order",
     "pages/commodity_details/commodity_details",
-    "pages/property_info/property_info"
+    "pages/property_info/property_info",
+    "pages/customer_service/customer_service"
   ],
   "window": {
     "backgroundTextStyle": "light",
