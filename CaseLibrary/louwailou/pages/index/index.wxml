@@ -64,7 +64,7 @@
       <program_list testList='{{testList}}' isUser='{{isUser}}'></program_list>
     </view>
     <view class='bottom_look_more'>
-      <button class='bottom_look_more_button view_center_row' bindtap='toProgramList'>查看更多</button>
+      <text class='bottom_look_more_button view_center_row' bindtap='toProgramList'>查看更多</text>
     </view>
   </scroll-view>
 </view>

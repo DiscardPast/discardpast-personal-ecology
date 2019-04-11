@@ -26,7 +26,7 @@
 }
 
 .scroll_view_vertical {
-  height: 1090rpx;
+  height: 1060rpx;
   width: 100%;
 }
 

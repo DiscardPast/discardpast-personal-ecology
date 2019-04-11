@@ -1,11 +1,11 @@
 /* pages/component/buttom_navigation/buttom_navigation.wxss */
 
 .bottom_navigation {
-  height: 80rpx;
+  height: 100rpx;
   width: 100%;
   position: absolute;
   bottom: 0rpx;
-  border-top: 1rpx black solid;
+  border-top: 1rpx gainsboro solid;
 }
 
 .bottom_navigation_item {

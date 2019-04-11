@@ -5,6 +5,7 @@
   background-color: beige;
   background-image: url('http://discardpast.oss-cn-hangzhou.aliyuncs.com/1234%EF%BC%81.png');
   background-size: cover;
+  padding-top: 180rpx;
   
 }
 .bottom_search_view_BG {
@@ -15,20 +16,26 @@
   width: 79%;
   height: 110rpx;
   align-items: flex-start;
+
 }
 
 .bottom_search_view_item {
-  width: 60rpx;
+  width: 80rpx;
   height: 50rpx;
   font-size: 24rpx;
   color: black;
-  margin-right: 5rpx;
 }
 
 .bottom_search_view_item_text {
   border-right: white 3rpx solid;
   width: 100%;
   height: 100%;
+  
+}
+
+.bottom_search_view_item_text_data{
+  font-size: 30rpx;
+  color: white
 }
 
 .bottom_search_view_item_text_shop {
@@ -45,7 +52,7 @@
 
 .bottom_search_view_image_BG {
   width: 100%;
-  height: 60rpx;
+  height: 80rpx;
 }
 
 .bottom_search_view_input_view {
@@ -57,18 +64,17 @@
   font-size: 24rpx;
   width: 100%;
   height: 100%;
-  border: black 1rpx solid;
+  background-color: #fff;
+  padding-left: 10rpx;
 }
 
 .bottom_search_view_button_view {
   width: 20%;
   height: 100%;
-  border: white 3rpx solid;
+  background: greenyellow
 }
 
 .bottom_search_view_button {
-  font-size: 23rpx;
+  font-size: 25rpx;
   background-color: none;
-  width: 100%;
-  height: 100%;
 }

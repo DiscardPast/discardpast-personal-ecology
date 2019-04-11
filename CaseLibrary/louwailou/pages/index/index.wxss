@@ -127,6 +127,9 @@
 .bottom_look_more_button {
   width: 100%;
   height: 80rpx;
+  background-color: gainsboro;
+  font-size: 30rpx;
+  color: white
 }
 
 .bottom_hot_recommend_items {

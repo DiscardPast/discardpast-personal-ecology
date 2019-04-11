@@ -19,11 +19,15 @@
         </view>
         <view class='personal_comment_icons view_center_row'>
           <view class='personal_comment_icons_zan view_center_row'>
-            <view class='personal_comment_icons_zan_icon view_center_row'></view>
+            <view class='personal_comment_icons_zan_icon view_center_row'>
+              <image src='../../../../../../../icons/others_icons/Retract.png' class='personal_comment_icons_zan_icon_data'></image>
+            </view>
             <view class='personal_comment_icons_zan_count view_center_row'>{{item.commentZanCount}}</view>
           </view>
           <view class='personal_comment_icons_dislike view_center_row'>
-            <view class='personal_comment_icons_dislike_icon view_center_row'></view>
+            <view class='personal_comment_icons_dislike_icon view_center_row'>
+              <image src='../../../../../../../icons/others_icons/drop_down.png' class='personal_comment_icons_dislike_icon_data'></image>
+            </view>
             <view class='personal_comment_icons_dislike_count view_center_row'>{{item.commentZanCount}}</view>
           </view>
         </view>

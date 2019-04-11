@@ -43,9 +43,9 @@
         </view>
       </view>
     </view>
-          <view class='more_property_info_view view_center_row' bindtap='toPropertyInfo'>
-        <button class='more_property_info_button view_center_row'>查看更多楼盘信息</button>
-      </view>
+    <view class='more_property_info_view view_center_row' bindtap='toPropertyInfo'>
+      <text class='more_property_info_button view_center_row'>查看更多楼盘信息</text>
+    </view>
     <view class='program_detials_icons_view view_center_row'>
       <block wx:for='{{[1,2,3]}}'>
         <view class='program_detials_icon_item_view'>
@@ -63,9 +63,9 @@
         <text>户型图</text>
       </view>
       <view class='program_detials_house_plan_options view_center_row'>
-        <block wx:for='{{testList.houseTypeList.houseTypeList}}' wx:key='*this'>
-          <view class='program_detials_house_plan_item_view view_center_column' data-housetype='{{item.houseTypeList}}' bindtap='clickHouseTypeItem'>
-            <text class='program_detials_house_plan_item_data'>{{item.houseTypeName}}</text>
+        <block wx:for='{{testList.houseTypeList.houseTypeList}}'>
+          <view class='program_detials_house_plan_item_view view_center_row' data-housetype='{{item.houseTypeList}}' data-idx="{{index}}" bindtap='clickHouseTypeItem'>
+              <text style='color:#fff' class='program_detials_house_plan_item_data'>{{item.houseTypeName}}</text>
           </view>
         </block>
       </view>
