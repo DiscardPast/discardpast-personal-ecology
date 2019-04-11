@@ -105,7 +105,7 @@ wx.hideLoading()
 
   submit: function() {
     wx.request({
-      url: 'http://localhost:8080/staff/id',
+      url: 'https://www.cslouwailou.com/api/staff/id',
       method: 'get',
       data: {
         staffId: 112
@@ -113,7 +113,7 @@ wx.hideLoading()
       success(res) {
         console.log(res)
         wx.request({
-          url: 'http://localhost:8080/client/add', // 仅为示例，并非真实的接口地址
+          url: 'https://www.cslouwailou.com/api/client/add', // 仅为示例，并非真实的接口地址
           method: 'post',
           data: {
             clientName: clientName,

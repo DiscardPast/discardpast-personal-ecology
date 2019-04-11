@@ -38,6 +38,7 @@ public class House implements Serializable {
     private HousePoint housePoint;
 
     //房源文案
+    @Lob
     private String houseContent;
 
     //房源户型

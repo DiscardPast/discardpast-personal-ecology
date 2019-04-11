@@ -12,11 +12,12 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    var that = this;
     wx.getStorage({
       key: 'houseId',
       success: function (res) {
         wx.request({
-          url: 'https://www.discardpast.top/api/house/id', // 仅为示例，并非真实的接口地址
+          url: 'https://www.cslouwailou.com/api/house/id', // 仅为示例，并非真实的接口地址
           header: {
             'content-type': 'application/json' // 默认值
           },

@@ -39,7 +39,7 @@ Page({
       key: 'houseId',
       success: function(res) {
         wx.request({
-          url: 'https://www.discardpast.top/api/house/id', // 仅为示例，并非真实的接口地址
+          url: 'https://www.cslouwailou.com/api/house/id', // 仅为示例，并非真实的接口地址
           header: {
             'content-type': 'application/json' // 默认值
           },
@@ -57,7 +57,7 @@ Page({
       },
     })
     wx.request({
-      url: 'https://www.discardpast.top/api/house/list', // 仅为示例，并非真实的接口地址
+      url: 'https://www.cslouwailou.com//house/list', // 仅为示例，并非真实的接口地址
       header: {
         'content-type': 'application/json' // 默认值
       },

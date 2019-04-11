@@ -41,7 +41,7 @@ Page({
     })
     var that = this;
     wx.request({
-      url: 'https://www.discardpast.top/api/house/list', // 仅为示例，并非真实的接口地址
+      url: 'https://www.cslouwailou.com/api/house/list', // 仅为示例，并非真实的接口地址
       method: 'get',
       header: {
         'content-type': 'application/json' // 默认值

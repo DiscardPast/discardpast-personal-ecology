@@ -53,7 +53,7 @@ Component({
             success: function(res) {
               
               wx.request({
-                url: 'https://www.discardpast.top/api/house/id', // 仅为示例，并非真实的接口地址
+                url: 'https://www.cslouwailou.com/api/house/id', // 仅为示例，并非真实的接口地址
                 header: {
                   'content-type': 'application/json' // 默认值
                 },
@@ -63,7 +63,7 @@ Component({
                 success(rest) {
                   console.log(rest.data)
                   wx.request({
-                    url: 'https://www.discardpast.top/api/user/add/interesting?userKey=' + res.data,
+                    url: 'https://www.cslouwailou.com/api/user/add/interesting?userKey=' + res.data,
                     method: 'post',
                     data: rest.data,
                     success(result) {
