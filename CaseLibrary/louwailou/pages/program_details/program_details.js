@@ -11,7 +11,8 @@ Page({
     backList: [],
     isClickSearchBoxButton: false,
     toView:'',
-    toIndex: ''
+    toIndex: '',
+    isChecked: true
   },
 
   /**
@@ -148,7 +149,7 @@ wx.hideLoading()
     })
   },
   clickHouseTypeItem: function(e) {
-    console.log(e.currentTarget.dataset.housetype)
+    console.log("idx:",e)
     var that = this;
     that.setData({
       houseType: e.currentTarget.dataset.housetype

@@ -116,3 +116,13 @@
   height: 48rpx;
   background-color: brown;
 }
+
+.personal_comment_icons_zan_icon_data{
+  width: 100%;
+  height: 100%;
+}
+
+.personal_comment_icons_dislike_icon_data{
+  width: 100%;
+  height: 100%;
+}
