@@ -1,7 +1,7 @@
 /* pages/component/buttom_navigation/buttom_navigation.wxss */
 
 .bottom_navigation {
-  height: 80rpx;
+  height: 100rpx;
   width: 100%;
   background-color: #124;
   position: absolute;
@@ -41,5 +41,5 @@
 .bottom_navigation_item_button{
   width: 100%;
   height: 100%;
-  font-size: 24rpx;
+  font-size: 30rpx;
 }

@@ -23,13 +23,10 @@
             <input class='inputWxUserGenderData inputWxUserData' placeholder='  性别' placeholder-style='inputWxUserDataPlaceholderStyle' bindblur='getGender'></input>
           </view>
           <view class='inputWxUserGenderView inputView'>
-            <input class='inputWxUserGenderData inputWxUserData' placeholder='  意向类型' placeholder-style='inputWxUserDataPlaceholderStyle' bindblur='getGender'></input>
+            <input class='inputWxUserGenderData inputWxUserData' placeholder='  意向项目' placeholder-style='inputWxUserDataPlaceholderStyle' bindblur='getGender'></input>
           </view>
           <view class='inputWxUserGenderView inputView'>
-            <input class='inputWxUserGenderData inputWxUserData' placeholder='  意向片区' placeholder-style='inputWxUserDataPlaceholderStyle' bindblur='getGender'></input>
-          </view>
-          <view class='inputWxUserInterestingHouseView inputView'>
-            <input class='inputWxUserInterestingHouseData inputWxUserData' placeholder='  投资预算' placeholder-style='inputWxUserDataPlaceholderStyle' bindblur='getInterestingHouse'></input>
+            <input class='inputWxUserGenderData inputWxUserData' placeholder='  带看时间' placeholder-style='inputWxUserDataPlaceholderStyle' bindblur='getGender'></input>
           </view>
           <view class='inputWxUserTipsView inputView input_client_tip'>
             <textarea class='inputWxUserTipsData inputWxUserData ' placeholder='  备注:(客户资产情况，客户中意产品)' placeholder-style='inputWxUserDataPlaceholderStyle' bindblur='getTips'></textarea>

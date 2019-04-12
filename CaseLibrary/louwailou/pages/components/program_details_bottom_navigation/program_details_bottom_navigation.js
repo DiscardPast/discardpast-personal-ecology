@@ -1,5 +1,11 @@
 // pages/components/program_details_bottom_navigation/program_details_bottom_navigation.js
 Component({
+  attached() {
+    this.setData({
+      numberA: 1,
+      numberB: 2,
+    })
+  },
   options: {
     addGlobalClass: true,
   },
@@ -12,46 +18,53 @@ Component({
    * 组件的初始数据
    */
   data: {
-
+    imageLink: '../../../../../../../icons/others_icons/like.png',
   },
 
   /**
    * 组件的方法列表
    */
   methods: {
+    onLoad: function() {
+
+    },
     callPhone: function() {
       wx.makePhoneCall({
         phoneNumber: '1340000' // 仅为示例，并非真实的电话号码
       })
     },
-    toCustomerService: function () {
+    toCustomerService: function() {
       wx.navigateTo({
         url: '../../../../customer_service/customer_service',
       })
     },
+    toReservation: function() {
+      wx.navigateTo({
+        url: '../../../../reservation/reservation',
+      })
+    },
+
     addUserInterestingHouse: function() {
       wx.getStorage({
         key: 'houseId',
         success: function(resh) {
           wx.getStorage({
             key: 'userKey',
-            fail: function(){
+            fail: function() {
               wx.showToast({
                 title: '请登录',
                 icon: 'none',
                 duration: 1000,
-                success(e){
-                  setTimeout(function(){
+                success(e) {
+                  setTimeout(function() {
                     wx.navigateTo({
                       url: '../../pages/personal_center/personal_center',
                     })
-                  },1000)
+                  }, 1000)
                 }
               })
-
             },
             success: function(res) {
-              
               wx.request({
                 url: 'https://www.cslouwailou.com/api/house/id', // 仅为示例，并非真实的接口地址
                 header: {
@@ -71,7 +84,10 @@ Component({
                       wx.showToast({
                         title: '关注成功',
                         duration: 1000,
-                        icon: 'success'
+                        icon: 'success',
+                        success(re) {
+                          this.s
+                        }
                       })
                     }
                   })
