@@ -5,6 +5,7 @@ import com.discardpast.louwailou.dao.house.House;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Lob;
 import java.io.Serializable;
 
 @Entity
@@ -28,9 +29,11 @@ public class Staff implements Serializable{
     private String staffCode;
 
     //员工带看项目列表
+    @Lob
     private House staffHouse;
 
     //员工带看项目记录
+    @Lob
     private StaffHouseRecord staffHouseRecord;
 
     public Staff() {

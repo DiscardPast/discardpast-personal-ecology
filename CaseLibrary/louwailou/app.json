@@ -20,7 +20,8 @@
     "pages/hang_order/hang_order",
     "pages/commodity_details/commodity_details",
     "pages/property_info/property_info",
-    "pages/customer_service/customer_service"
+    "pages/customer_service/customer_service",
+    "pages/reservation/reservation"
   ],
   "window": {
     "backgroundTextStyle": "light",
