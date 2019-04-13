@@ -6,6 +6,7 @@
     "floor_plan_list": "../components/floor_plan_list/floor_plan_list",
     "program_detials_trend_tips_list": "../components/program_detials_trend_tips_list/program_detials_trend_tips_list",
     "hot_program_list": "../components/hot_program_list/hot_program_list",
+    "comment_list": "../components/comment_list/comment_list",
     "program_swiper": "../components/program_swiper/program_swiper"
   }
 }

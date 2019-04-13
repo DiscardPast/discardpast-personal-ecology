@@ -8,6 +8,10 @@
   margin-top: 10rpx;
 }
 
+.scroll_view_horizontal{
+  height: 250rpx;
+}
+
 .program_detials_items_view {
   width: 100%;
   height: 120rpx;
@@ -106,13 +110,13 @@
 
 .program_detials_recommend_view {
   width: 100%;
-  height: 240rpx;
+  height: 360rpx;
 }
 
 .program_detials_comment_view {
   width: 100%;
-  height: 80rpx;
-  background-color: black;
+  height: 180rpx;
+  background-color: white;
 }
 
 .program_detials_comment_data {
@@ -190,4 +194,24 @@
   font-size: 30rpx;
   color: white
 
+}
+
+.program_detials_recommend_title_view {
+  width: 100%;
+  height: 100rpx;
+  justify-content: flex-start;
+  font-size: 30rpx;
+}
+
+.program_detials_recommend_comment_show_view{
+  height: 300rpx;
+  width: 100%;
+  background-color: gainsboro
+}
+
+.program_detials_comment_button_title_view{
+  width: 100%;
+  height: 100rpx;
+  font-size: 30rpx;
+  background-color: gainsboro
 }

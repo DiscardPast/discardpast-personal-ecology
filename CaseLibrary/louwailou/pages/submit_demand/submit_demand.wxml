@@ -41,6 +41,5 @@
       </view>
     </view>
   </view>
-
 </scroll-view>
 <bottom_navigation></bottom_navigation>

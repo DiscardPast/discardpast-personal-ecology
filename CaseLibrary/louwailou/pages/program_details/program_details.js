@@ -12,7 +12,8 @@ Page({
     isClickSearchBoxButton: false,
     toView:'',
     toIndex: '',
-    isChecked: true
+    isChecked: true,
+    commentList: [],
   },
 
   /**
@@ -58,12 +59,12 @@ Page({
       },
     })
     wx.request({
-      url: 'https://www.cslouwailou.com//house/list', // 仅为示例，并非真实的接口地址
+      url: 'https://www.cslouwailou.com/api/house/list', // 仅为示例，并非真实的接口地址
       header: {
         'content-type': 'application/json' // 默认值
       },
       data: {
-        houseId: 30
+        houseId: 2
       },
       success(res) {
         console.log(res.data)
@@ -87,6 +88,21 @@ Page({
           toView: res.data
         })
       },
+    })
+    var that = this;
+    wx.request({
+      url: 'https://www.cslouwailou.com/api/house/list', // 仅为示例，并非真实的接口地址
+      method: 'get',
+      header: {
+        'content-type': 'application/json' // 默认值
+      },
+      success(res) {
+        wx.hideLoading()
+        console.log(res.data)
+        that.setData({
+          commentList: res.data
+        })
+      }
     })
   },
 
