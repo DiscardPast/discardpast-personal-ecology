@@ -204,7 +204,6 @@
 }
 
 .program_detials_recommend_comment_show_view{
-  height: 300rpx;
   width: 100%;
   background-color: gainsboro
 }

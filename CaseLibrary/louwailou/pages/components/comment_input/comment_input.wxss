@@ -6,7 +6,7 @@
   width: 100%;
   background-color: #124;
   position: absolute;
-  bottom: 80rpx;
+  bottom: 100rpx;
 }
 .comment_input_view {
   width: 80%;

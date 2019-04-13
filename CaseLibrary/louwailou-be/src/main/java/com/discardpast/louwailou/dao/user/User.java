@@ -4,9 +4,6 @@ import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
-@Table(name="EMPLOYEE",
-        uniqueConstraints={@UniqueConstraint(columnNames={"userKey"})}
-)
 public class User implements Serializable {
 
     @Id

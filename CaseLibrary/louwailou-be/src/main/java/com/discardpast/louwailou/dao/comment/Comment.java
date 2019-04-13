@@ -30,6 +30,9 @@ public class Comment implements Serializable {
     //评论获赞数量
     private Integer commentZanCount;
 
+    //评论踩人数
+    private Integer commentDislikeCount;
+
     public Comment(){
         this.commentUser = new User();
     }
@@ -72,5 +75,13 @@ public class Comment implements Serializable {
 
     public void setCommentZanCount(Integer commentZanCount) {
         this.commentZanCount = commentZanCount;
+    }
+
+    public Integer getCommentDislikeCount() {
+        return commentDislikeCount;
+    }
+
+    public void setCommentDislikeCount(Integer commentDislikeCount) {
+        this.commentDislikeCount = commentDislikeCount;
     }
 }

@@ -28,7 +28,7 @@
             <view class='personal_comment_icons_dislike_icon view_center_row'>
               <image src='../../../../../../../icons/others_icons/drop_down.png' class='personal_comment_icons_dislike_icon_data'></image>
             </view>
-            <view class='personal_comment_icons_dislike_count view_center_row'>{{item.commentZanCount}}</view>
+            <view class='personal_comment_icons_dislike_count view_center_row'>{{item.commentDislikeCount}}</view>
           </view>
         </view>
       </view>
