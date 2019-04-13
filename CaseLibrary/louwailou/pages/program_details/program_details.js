@@ -10,7 +10,7 @@ Page({
     houseType: [],
     backList: [],
     isClickSearchBoxButton: false,
-    toView:'',
+    toView: '',
     toIndex: '',
     isChecked: true,
     commentList: [],
@@ -75,7 +75,7 @@ Page({
     })
     wx.getStorage({
       key: 'toIndex',
-      success: function (res) {
+      success: function(res) {
         that.setData({
           toIndex: res.data
         })
@@ -89,20 +89,33 @@ Page({
         })
       },
     })
-    var that = this;
-    wx.request({
-      url: 'https://www.cslouwailou.com/api/house/list', // 仅为示例，并非真实的接口地址
-      method: 'get',
-      header: {
-        'content-type': 'application/json' // 默认值
-      },
-      success(res) {
-        wx.hideLoading()
-        console.log(res.data)
-        that.setData({
-          commentList: res.data
+    wx.getStorage({
+      key: 'houseId',
+      success: function(res) {
+        wx.request({
+          url: 'https://www.cslouwailou.com/api/house/id', // 仅为示例，并非真实的接口地址
+          header: {
+            'content-type': 'application/json' // 默认值
+          },
+          data: {
+            houseId: res.data
+          },
+          success(res) {
+            console.log(res.data.houseCommentList.commentList)
+            var commentListVar = new Array();
+            if (res.data.houseCommentList.commentList.length > 3) {
+              for (var i = 0; i < 3; i++) {
+                commentListVar[i] = res.data.houseCommentList.commentList[i]
+              }
+            }else{
+              commentListVar = res.data.houseCommentList.commentList
+            }
+            that.setData({
+              commentList: commentListVar
+            })
+          }
         })
-      }
+      },
     })
   },
 
@@ -110,7 +123,7 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function() {
-wx.hideLoading()
+    wx.hideLoading()
   },
 
   /**
@@ -165,16 +178,16 @@ wx.hideLoading()
     })
   },
   clickHouseTypeItem: function(e) {
-    console.log("idx:",e)
+    console.log("idx:", e)
     var that = this;
     that.setData({
       houseType: e.currentTarget.dataset.housetype
     })
   },
-  toPropertyInfo: function(e){
+  toPropertyInfo: function(e) {
     wx.navigateTo({
       url: '../property_info/property_info'
     })
   },
-  
+
 })

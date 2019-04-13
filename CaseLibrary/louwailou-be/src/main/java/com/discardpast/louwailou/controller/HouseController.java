@@ -3,12 +3,12 @@ package com.discardpast.louwailou.controller;
 import com.discardpast.louwailou.dao.comment.Comment;
 import com.discardpast.louwailou.dao.house.*;
 import com.discardpast.louwailou.dao.user.User;
-import com.discardpast.louwailou.dao.user.UserType;
 import com.discardpast.louwailou.repository.HouseRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -45,6 +45,27 @@ public class HouseController {
         return houseRepository.
                 findAllByProgramTypeAndHouseUserTitleLikeOrHouseConsultantTitleLikeOrHouseContentLike(programType,"%" + searchValueUserTitle + "%",
                         "%" + searchValueConsultantTitle + "%","%" + searchValueHouseContent + "%");
+    }
+
+    @PostMapping(value = "/add/comment")
+    private String addHouseComment(@RequestBody House house,
+                                   @RequestBody User user,
+                                   @RequestParam(value = "commentText") String commentText)
+    {
+        House newHouse = houseRepository.getOne(house.getHouseId());
+        HouseCommentList houseCommentList = new HouseCommentList();
+        List<Comment> comments = new ArrayList<Comment>();
+        Comment comment = new Comment();
+        comment.setCommentDate(new Date());
+        comment.setCommentContent(commentText);
+        comment.setCommentUser(user);
+        comment.setCommentDislikeCount(0);
+        comment.setCommentZanCount(0);
+        comments.add(comment);
+        houseCommentList.setCommentList(comments);
+        newHouse.setHouseCommentList(houseCommentList);
+        houseRepository.save(newHouse);
+        return "ok";
     }
 
 

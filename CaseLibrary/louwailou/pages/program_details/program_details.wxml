@@ -103,9 +103,9 @@
       <view class='program_detials_recommend_title_view view_center_row'>
         <text class='program_detials_trend_recommend_data'>评论</text>
       </view>
-      <scroll-view class='program_detials_recommend_comment_show_view view_center_row'>
+      <view class='program_detials_recommend_comment_show_view'>
         <comment_list testList='{{commentList}}'></comment_list>
-      </scroll-view>
+      </view>
       <view class='program_detials_comment_button_title_view view_center_row'>
         <text class='program_detials_trend_recommend_data' data-houseid='{{testList.houseId}}' bindtap='toComment'>查看评论</text>
       </view>
