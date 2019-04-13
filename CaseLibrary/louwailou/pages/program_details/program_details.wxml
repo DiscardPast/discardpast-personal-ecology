@@ -65,7 +65,7 @@
       <view class='program_detials_house_plan_options view_center_row'>
         <block wx:for='{{testList.houseTypeList.houseTypeList}}'>
           <view class='program_detials_house_plan_item_view view_center_row' data-housetype='{{item.houseTypeList}}' data-idx="{{index}}" bindtap='clickHouseTypeItem'>
-              <text style='color:#fff' class='program_detials_house_plan_item_data'>{{item.houseTypeName}}</text>
+            <text style='color:#fff' class='program_detials_house_plan_item_data'>{{item.houseTypeName}}</text>
           </view>
         </block>
       </view>
@@ -91,13 +91,24 @@
         <text class='program_detials_trend_date_data'>{{testList.programDynamic.programDynamicItemList[testList.programDynamic.programDynamicItemList.length - 1].programDynamicItemDate}}</text>
       </view>
     </view>
-    <view class='program_detials_recommend_view view_center_row'>
+    <view class='program_detials_recommend_view view_center_cloumn'>
+      <view class='program_detials_recommend_title_view view_center_row'>
+        <text class='program_detials_trend_recommend_data'>相关推荐</text>
+      </view>
       <scroll-view class='scroll_view_horizontal' scroll-x='true'>
         <hot_program_list testList='{{backList}}'></hot_program_list>
       </scroll-view>
     </view>
-    <view class='program_detials_comment_view view_center_row'>
-      <button class='program_detials_comment_data view_center_row' data-houseid='{{testList.houseId}}' bindtap='toComment'>查看评论</button>
+    <view class='program_detials_comment_view view_center_cloumn'>
+      <view class='program_detials_recommend_title_view view_center_row'>
+        <text class='program_detials_trend_recommend_data'>评论</text>
+      </view>
+      <scroll-view class='program_detials_recommend_comment_show_view view_center_row'>
+        <comment_list testList='{{commentList}}'></comment_list>
+      </scroll-view>
+      <view class='program_detials_comment_button_title_view view_center_row'>
+        <text class='program_detials_trend_recommend_data' data-houseid='{{testList.houseId}}' bindtap='toComment'>查看评论</text>
+      </view>
     </view>
   </scroll-view>
 </view>
