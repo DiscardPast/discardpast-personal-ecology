@@ -22,6 +22,12 @@ Component({
   methods: {
     onLoad: function (e) {
       this.data.testList
+    },
+    onCall:function(e) {
+      console.log(e.currentTarget.dataset.phonenumber)
+      wx.makePhoneCall({
+        phoneNumber: e.currentTarget.dataset.phonenumber // 仅为示例，并非真实的电话号码
+      })
     }
   }
 })

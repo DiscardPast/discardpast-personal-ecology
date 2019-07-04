@@ -20,21 +20,21 @@
     <view class='program_detials_items_view view_center_row'>
       <view class='program_details_item_view view_center_column'>
         <view class='program_details_item_title_view'>
+          <text class='program_details_item_title_data'>区域</text>
+        </view>
+        <view class='program_details_item_text_view'>
+          <text class='program_details_item_text_data'>{{testList.propertyInfo.propertyArea}}</text>
+        </view>
+      </view>
+      <view class='program_details_item_view view_center_column'>
+        <view class='program_details_item_title_view'>
           <text class='program_details_item_title_data'>售价</text>
         </view>
         <view class='program_details_item_text_view'>
           <text class='program_details_item_text_data'>{{testList.housePrice}}</text>
         </view>
       </view>
-      <view class='program_details_item_view view_center_column'>
-        <view class='program_details_item_title_view'>
-          <text class='program_details_item_title_data'>户型</text>
-        </view>
-        <view class='program_details_item_text_view'>
-          <text class='program_details_item_text_data'>{{testList.houseTypeText}}</text>
-        </view>
-      </view>
-      <view class='program_details_item_view view_center_column'>
+      <view class='program_details_item_view program_details_item_view_area view_center_column'>
         <view class='program_details_item_title_view'>
           <text class='program_details_item_title_data'>建筑面积</text>
         </view>
@@ -56,20 +56,17 @@
       </block>
     </view>
     <view class='program_detials_content_view'>
-      <rich-text class='program_detials_content_data'>{{testList.houseContent}}</rich-text>
+      <text class='program_detials_content_data'>{{testList.houseContent}}</text>
     </view>
     <view class='program_detials_house_plan'>
       <view class='program_detials_house_plan_title view_center_row'>
         <text>户型图</text>
       </view>
       <view class='program_detials_house_plan_options view_center_row'>
-        <block wx:for='{{testList.houseTypeList.houseTypeList}}'>
-          <view class='program_detials_house_plan_item_view view_center_row' data-housetype='{{item.houseTypeList}}' data-idx="{{index}}" bindtap='clickHouseTypeItem'>
-            <text style='color:#fff' class='program_detials_house_plan_item_data'>{{item.houseTypeName}}</text>
-          </view>
-        </block>
+        <view wx:for='{{testList.houseTypeList.houseTypeList}}' bindtap='clickHouseTypeItem' data-index="{{index}}" style='{{key==index?"background-color:red;":""}} z-index:999;' class='program_detials_house_plan_item_view view_center_row' data-housetype='{{item.houseTypeList}}'>
+          <text class='program_detials_house_plan_item_data'>{{item.houseTypeName}}</text>
+        </view>
       </view>
-
       <floor_plan_list testList='{{houseType}}'></floor_plan_list>
     </view>
     <view class='program_detials_trend_view'>

@@ -1,5 +1,5 @@
 {
-  "navigationBarTitleText": "我的预约",
+  "navigationBarTitleText": "在线客服",
   "usingComponents": {
     "image_item": "../components/image_item/image_item",
     "bottom_navigation": "../components/bottom_navigation/bottom_navigation",

@@ -1,7 +1,7 @@
 
 .top_serach_view {
   width: 100%;
-  height: 600rpx;
+  height: 500rpx;
   background-color: beige;
   background-image: url('http://discardpast.oss-cn-hangzhou.aliyuncs.com/1234%EF%BC%81.png');
   background-size: cover;

@@ -1,9 +1,14 @@
 package com.discardpast.louwailou.dao.user;
 
+import org.hibernate.validator.constraints.UniqueElements;
+
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
+@Table(name = "user",uniqueConstraints = {@UniqueConstraint(columnNames = "userKey")})
 public class User implements Serializable {
 
     @Id
@@ -12,6 +17,7 @@ public class User implements Serializable {
     private Integer userId;
 
     //用户key
+
     private String userKey;
 
     //用户类型
@@ -55,10 +61,15 @@ public class User implements Serializable {
     @Lob
     private ConsultantClientList consultantClientList;
 
+    //预约带看列表
+    @Lob
+    private List<ReservationInfo> reservationInfoList;
+
     public User(){
         this.userType = UserType.USER;
         this.userHouseList = new UserHouseList();
         this.consultantClientList = new ConsultantClientList();
+        this.reservationInfoList = new ArrayList<ReservationInfo>();
     }
 
     public Integer getUserId() {
@@ -179,5 +190,13 @@ public class User implements Serializable {
 
     public void setPhoneCode(String phoneCode) {
         this.phoneCode = phoneCode;
+    }
+
+    public List<ReservationInfo> getReservationInfoList() {
+        return reservationInfoList;
+    }
+
+    public void setReservationInfoList(List<ReservationInfo> reservationInfoList) {
+        this.reservationInfoList = reservationInfoList;
     }
 }

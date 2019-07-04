@@ -20,27 +20,24 @@
 .program_details_item_view {
   width: 33.3%;
   height: 100%;
-  border-right: 1rpx black solid;
+  border-right: 1rpx #e6e6e6 solid;
 }
 
 .program_detials_icons_view {
   width: 100%;
   height: 64rpx;
-  background-color: beige;
   justify-content: flex-start;
 }
 
 .program_detials_icon_item_data {
   width: 100%;
   height: 100%;
-  background-color: blanchedalmond;
 }
 
 .program_detials_content_view {
   width: 100%;
   height: 600rpx;
-  background-color: blueviolet;
-  margin-bottom: 10rpx;
+  padding-bottom: 60rpx;
 }
 
 .program_detials_content_data {
@@ -93,19 +90,16 @@
 .program_detials_trend_content_view {
   width: 100%;
   height: 200rpx;
-  background-color: blueviolet;
 }
 
 .program_detials_trend_content_data {
   width: 60%;
   height: 100%;
-  background-color: blueviolet;
 }
 
 .program_detials_trend_date_view {
   width: 100%;
   height: 48rpx;
-  background-color: brown;
 }
 
 .program_detials_recommend_view {
@@ -183,6 +177,7 @@
 }
 
 .more_property_info_view{
+  margin-top: 20rpx;
   width: 100%;
   height: 80rpx;
 }
@@ -193,7 +188,6 @@
   background-color: gainsboro;
   font-size: 30rpx;
   color: white
-
 }
 
 .program_detials_recommend_title_view {
@@ -213,4 +207,8 @@
   height: 100rpx;
   font-size: 30rpx;
   background-color: gainsboro
+}
+
+.program_details_item_view_area{
+  border: solid 0rpx #fafafa
 }

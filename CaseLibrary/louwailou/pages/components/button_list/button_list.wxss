@@ -9,6 +9,7 @@
 .button_item {
   width: 33%;
   height: 100%;
+  margin: 1%;
   background-color: blue;
 }
 

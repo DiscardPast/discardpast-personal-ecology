@@ -3,7 +3,6 @@
 .input_title_view {
   width: 100%;
   height: 80rpx;
-  background-color: beige;
 }
 
 .input_title_data {
@@ -13,13 +12,38 @@
 }
 
 .input_content_view {
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
   width: 100%;
-  height: 800rpx;
-  background-color: bisque;
+  height: 400rpx;
 }
 
 .input_content_data {
   width: 99%;
   height: 100%;
   border: 1rpx black solid;
+}
+
+.submit_feedback{
+  width: 100%;
+  height: 80rpx;
+  background-color: #0086c5
+}
+
+.submit_feedback_data{
+  font-size: 30rpx;
+  color: white;
+}
+
+.feedback_ask_view{
+  width: 100%;
+  height: 100rpx;
+  justify-content: flex-start;
+  font-size: 30rpx;
+  background-color: #0086c5
+}
+
+.feedback_ans_view{
+  font-size: 30rpx;
+  margin-bottom: 20rpx;
 }

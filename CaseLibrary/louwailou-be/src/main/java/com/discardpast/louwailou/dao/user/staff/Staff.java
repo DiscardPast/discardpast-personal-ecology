@@ -1,12 +1,15 @@
 package com.discardpast.louwailou.dao.user.staff;
 
-import com.discardpast.louwailou.dao.house.House;
+import com.discardpast.louwailou.dao.user.ReservationInfo;
+import com.discardpast.louwailou.dao.user.client.Client;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Lob;
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 public class Staff implements Serializable{
@@ -28,17 +31,22 @@ public class Staff implements Serializable{
     //员工编码
     private String staffCode;
 
-    //员工带看项目列表
+    //员工客户列表
     @Lob
-    private House staffHouse;
+    private List<Client> clientList;
+
+    //员工带看列表
+    @Lob
+    private List<ReservationInfo> reservationInfoList;
 
     //员工带看项目记录
     @Lob
     private StaffHouseRecord staffHouseRecord;
 
     public Staff() {
-        this.staffHouse = new House();
         this.staffHouseRecord = new StaffHouseRecord();
+        this.clientList = new ArrayList<Client>();
+        this.reservationInfoList = new ArrayList<ReservationInfo>();
     }
 
 
@@ -82,13 +90,6 @@ public class Staff implements Serializable{
         this.staffCode = staffCode;
     }
 
-    public House getStaffHouse() {
-        return staffHouse;
-    }
-
-    public void setStaffHouse(House staffHouse) {
-        this.staffHouse = staffHouse;
-    }
 
     public StaffHouseRecord getStaffHouseRecord() {
         return staffHouseRecord;
@@ -96,5 +97,13 @@ public class Staff implements Serializable{
 
     public void setStaffHouseRecord(StaffHouseRecord staffHouseRecord) {
         this.staffHouseRecord = staffHouseRecord;
+    }
+
+    public void setClientList(List<Client> clientList) {
+        this.clientList = clientList;
+    }
+
+    public void setReservationInfoList(List<ReservationInfo> reservationInfoList) {
+        this.reservationInfoList = reservationInfoList;
     }
 }

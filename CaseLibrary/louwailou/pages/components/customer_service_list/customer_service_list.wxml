@@ -1,21 +1,18 @@
 <!--pages/template/program_item/program_item.wxml-->
 <view class='program_list_view view_center_column'>
   <block wx:for='{{testList}}' wx:key='*this'>
-    <view class='program_list_item_view view_center_row'>
+    <view class='program_list_item_view view_center_row'  bindtap='onCall' data-phoneNumber='{{item.servicePhone}}'>
       <view class='left_view view_center_column'>
         <view class='left_image_view view_center_column'>
-          <image class='left_image'></image>
+          <image class='left_image' src='{{item.serviceAvatar}}'></image>
         </view>
       </view>
       <view class='right_offical_view view_center_column'>
-        <view class='right_offical_item right_offical_item_people view_center_row'>
-          <text class='right_offical_item_people_text'>{{item.staff.staffName}}</text>
-        </view>
         <view class='right_offical_item right_offical_item_validate view_center_row'>
-          <text class='right_offical_item_validate_text'>{{item.staffValidityStart}}-{{item.staffValidityStop}}</text>
+          <text class='right_offical_item_validate_text'>{{item.serviceName}}</text>
         </view>
         <view class='right_offical_item right_offical_item_lastdate view_center_row'>
-          <text class='right_offical_item_lastdate_text'>{{item.staffLastTime}}</text>
+          <text class='right_offical_item_lastdate_text'>{{item.servicePhone}}</text>
         </view>
       </view>
     </view>

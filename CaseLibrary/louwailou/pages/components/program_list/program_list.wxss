@@ -8,8 +8,8 @@
 .program_list_item_view {
   width: 100%;
   height: 300rpx;
-  margin-bottom: 10rpx;
-  padding-bottom: 10rpx;
+  margin-bottom: 50rpx;
+  padding-bottom: 50rpx;
   border-bottom: 1rpx rgba(184, 184, 184, 0.418) solid;
 }
 

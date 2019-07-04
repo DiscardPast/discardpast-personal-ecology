@@ -17,19 +17,15 @@
     </view>
     <view class='commodity_list_view'>
       <commodity_list testList='{{testList}}'></commodity_list>
-      <view class='redeem_button_view'>
-        <button class='redeem_button_data view_center_row'>
-          查看更多
-        </button>
+      <view class='redeem_button_view view_center_column'>
+        <text class='redeem_button_data'>查看更多</text>
       </view>
     </view>
     <view class='commodity_image_view'>
       <image_item></image_item>
     </view>
-    <view class='redeem_button_view'>
-      <button class='redeem_button_data view_center_row'>
-        红包兑换
-      </button>
+    <view class='redeem_button_view view_center_column'>
+      <text class='redeem_button_data view_center_column'>红包兑换</text>
     </view>
   </scroll-view>
 </view>
