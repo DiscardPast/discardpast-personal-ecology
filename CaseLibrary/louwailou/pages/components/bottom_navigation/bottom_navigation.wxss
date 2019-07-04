@@ -6,6 +6,7 @@
   position: absolute;
   bottom: 0rpx;
   border-top: 1rpx gainsboro solid;
+  background-color: white
 }
 
 .bottom_navigation_item {

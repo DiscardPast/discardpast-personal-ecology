@@ -16,12 +16,12 @@ Page({
       {
         'serviceAvatar': 'https://discardpast.oss-cn-hangzhou.aliyuncs.com/IndexResources/code.jpg?x-oss-process=style/yasuo',
         'serviceName': '客服二',
-        'servicePhone': '123456741258'
+        'servicePhone': '365212425'
       },
       {
         'serviceAvatar': 'https://discardpast.oss-cn-hangzhou.aliyuncs.com/IndexResources/code.jpg?x-oss-process=style/yasuo',
         'serviceName': '客服三',
-        'servicePhone': '123456741258'
+        'servicePhone': '586321452'
       }, {
         'serviceAvatar': 'https://discardpast.oss-cn-hangzhou.aliyuncs.com/IndexResources/code.jpg?x-oss-process=style/yasuo',
         'serviceName': '客服四',

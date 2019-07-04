@@ -3,16 +3,15 @@
   flex-wrap: wrap;
 }
 .hot_program_item {
-  width: 33%;
-  height: 220rpx;
-  margin-right: 2rpx;
-  margin-bottom: 10rpx;
-  background-color: beige;
+  width: 31%;
+  height: 240rpx;
+  margin: 1%;
+  background-color: gainsboro
 }
 
 .hot_program_item_image_view{
   width: 100%;
-  height: 80%;
+  height: 70%;
   background-color: violet;
 }
 
@@ -23,6 +22,24 @@
 }
 .hot_program_item_text_view{
   width: 100%;
-  height: 20%;
-  background-color: blueviolet;
+  height: 30%;
+  align-items: flex-start
+}
+
+.hot_program_item_price_text{
+  width: 100%;
+  height: 30%;
+  align-items: flex-start;
+  text-decoration: line-through;
+}
+
+.hot_program_item_text_price_view{
+  width: 100%;
+  justify-content: space-between
+}
+
+.hot_program_item_integeate_text{
+  width: 100%;
+  height: 30%;
+  font-size: 22rpx;
 }

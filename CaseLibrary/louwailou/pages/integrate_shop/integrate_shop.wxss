@@ -2,20 +2,20 @@
 
 .commodity_show_swiper_view {
   width: 100%;
-  height: 470rpx;
-  background-color: beige;
+  height: 490rpx;
 }
 
 .swiper_view {
   width: 100%;
-  height: 85%;
-  background-color: bisque;
-  margin-bottom: 10rpx;
+  height: 80%;
+  margin-bottom: 20rpx;
 }
 
 .bottom_swiper_view {
   width: 100%;
-  height: 15%;
+  height: 20%;
+  font-size: 30rpx;
+  margin-bottom: 20rpx;
 }
 
 .bottom_swiper_view_left {
@@ -38,9 +38,12 @@
 .redeem_button_view {
   width: 100%;
   height: 80rpx;
+  background-color: gainsboro;
+  font-size: 30rpx;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
 }
 
-.redeem_button_data {
-  width: 100%;
-  height: 100%;
+.redeem_button_data{
+  color: white;
 }

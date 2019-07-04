@@ -4,7 +4,7 @@
     <view class='search_view view_center_row'>
       <view class='user_indicate'>
         <block wx:if='{{isRegister}}'>
-          <view class="userinfo">
+          <view class="userinfo view_center_column">
             <view class="userinfo-avatar">
               <open-data type="userAvatarUrl"></open-data>
             </view>
@@ -13,7 +13,10 @@
         </block>
         <block wx:else>
           <view class='head_button_view view_center_column'>
-            <button bindgetuserinfo="bindGetUserInfo" open-type='getUserInfo' class='head_button_data view_center_column'>登录</button>
+            <view class='head_view view_center_column'>
+              <view class='head_avatar_view'></view>
+            </view>
+            <button bindgetuserinfo="bindGetUserInfo" open-type='getUserInfo' class='head_button_data view_center_column'>立即登录</button>
           </view>
         </block>
         <view class='choose_item_view'>

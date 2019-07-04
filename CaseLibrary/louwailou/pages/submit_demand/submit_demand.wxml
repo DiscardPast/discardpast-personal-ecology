@@ -14,16 +14,16 @@
         </view>
         <view class='inputWxUserView'>
           <view class='inputWxUserNameView inputView'>
-            <input class='inputWxUserNameData inputWxUserData' placeholder='  客户姓名' placeholder-style='inputWxUserDataPlaceholderStyle' bindblur='getName'></input>
+            <input class='inputWxUserNameData inputWxUserData' placeholder='  姓名' placeholder-style='inputWxUserDataPlaceholderStyle' bindblur='getName'></input>
           </view>
           <view class='inputWxUserPhoneView inputView'>
-            <input class='inputWxUserPhoneData inputWxUserData' placeholder='  客户手机号' placeholder-style='inputWxUserDataPlaceholderStyle' bindblur='getPhone'></input>
+            <input class='inputWxUserPhoneData inputWxUserData' placeholder='  联系方式' placeholder-style='inputWxUserDataPlaceholderStyle' bindblur='getPhone'></input>
           </view>
           <view class='inputWxUserGenderView inputView'>
             <input class='inputWxUserGenderData inputWxUserData' placeholder='  性别' placeholder-style='inputWxUserDataPlaceholderStyle' bindblur='getGender'></input>
           </view>
           <view class='inputWxUserGenderView inputView'>
-            <input class='inputWxUserGenderData inputWxUserData' placeholder='  意向类型' placeholder-style='inputWxUserDataPlaceholderStyle' bindblur='getGender'></input>
+            <input class='inputWxUserGenderData inputWxUserData' placeholder='  物业类型' placeholder-style='inputWxUserDataPlaceholderStyle' bindblur='getGender'></input>
           </view>
           <view class='inputWxUserGenderView inputView'>
             <input class='inputWxUserGenderData inputWxUserData' placeholder='  意向片区' placeholder-style='inputWxUserDataPlaceholderStyle' bindblur='getGender'></input>

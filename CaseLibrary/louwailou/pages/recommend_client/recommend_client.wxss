@@ -1,7 +1,7 @@
 /* pages/register/register.wxss */
 
 .scroll_view_vertical {
-  height: 1120rpx;
+  height: 1080rpx;
 }
 
 .groundBG {

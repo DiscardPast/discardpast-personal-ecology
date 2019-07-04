@@ -1,8 +1,6 @@
 <!--pages/component/button_list/button_list.wxml-->
 <view class='buttons_view view_center_row'>
-  <block wx:for='{{buttonslist}}' wx:key="link">
-    <view class='button_item'>
-      <button class='button_item_text view_center_row'>{{item}}</button>
+    <view  wx:for='{{buttonslist}}' bindtap='clickButton' data-index="{{index}}" style='{{key==index?"background-color:red;":""}} z-index:999;'  class='button_item'>
+      <text class='button_item_text view_center_row'>{{item.title}}</text>
     </view>
-  </block>
 </view>

@@ -2,8 +2,8 @@
 <view class="container">
   <scroll-view class='scroll_view_vertical' scroll-y='true'>
     <view class='property_info_view'>
-      <view class='property_info_item_view view_center_row'>
-        <view class='property_info_item_title_view view_center_row'>
+      <view class='property_info_item_view property_info_item_title_view_dev view_center_row'>
+        <view class='property_info_item_title_view  view_center_row'>
           <text class='property_info_item_title_text'>开发商</text>
         </view>
         <view class='property_info_item_value_view view_center_row'>

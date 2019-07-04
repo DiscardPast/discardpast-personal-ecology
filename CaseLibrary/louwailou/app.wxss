@@ -8,7 +8,7 @@
   box-sizing: border-box;
   margin: 10rpx;
   font-size: 24rpx;
-  background-color: #fff;
+  background-color: #fafafa;
 } 
 
 .view_center_row {

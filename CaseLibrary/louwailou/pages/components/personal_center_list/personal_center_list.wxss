@@ -38,9 +38,10 @@
 
 .function_module_item_view {
   width: 99%;
-  height: 80rpx;
-  border: black 1rpx solid;
+  height: 100rpx;
   margin: 1rpx;
+  background-color: white;
+  font-size: 30rpx
 }
 
 .function_module_item_icon {

@@ -5,9 +5,12 @@
       <view class='hot_program_item_image_view'>
         <image class='hot_program_item_image' src='{{item.commodityImageList.commodityImageList[0]}}'></image>
       </view>
-      <view class='hot_program_item_text_view view_center_row'>
+      <view class='hot_program_item_text_view view_center_column'>
         <text class='hot_program_item_text'>{{item.commodityTitle}}</text>
-        <text class='hot_program_item_text'>{{item.commodityPrice}}</text>
+        <view class='hot_program_item_text_price_view view_center_row'>
+          <text class='hot_program_item_price_text'>￥ {{item.commodityPrice}}</text>
+          <text class='hot_program_item_integeate_text'>积分:{{item.commodityIntegral}}</text>
+        </view>
       </view>
     </view>
   </block>

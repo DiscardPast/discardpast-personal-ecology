@@ -4,18 +4,18 @@
     <view class='program_list_item_view view_center_row'>
       <view class='left_view view_center_column'>
         <view class='left_image_view view_center_column'>
-          <image class='left_image'></image>
+          <image class='left_image' src='item.staff.staffAvatar'></image>
         </view>
         <view class='left_name_view view_center_column'>
-          <text class='left_name'>{{item.clientName}}</text>
+          <text class='left_name'>{{item.staff.staffName}}</text>
         </view>
       </view>
       <view class='right_offical_view view_center_column'>
         <view class='right_offical_item right_offical_item_phone view_center_row'>
-          <text class='right_offical_item_phone_text'>{{item.clientPhone}}</text>
+          <text class='right_offical_item_phone_text'>{{item.staff.staffPhone}}</text>
         </view>
         <view class='right_offical_item right_offical_item_people view_center_row'>
-          <text class='right_offical_item_people_text'>{{item.staff.staffName}}</text>
+          <text class='right_offical_item_people_text'>{{item.clientHouse}}</text>
         </view>
         <view class='right_offical_item right_offical_item_validate view_center_row'>
           <text class='right_offical_item_validate_text'>{{item.staffValidityStart}}-{{item.staffValidityStop}}</text>

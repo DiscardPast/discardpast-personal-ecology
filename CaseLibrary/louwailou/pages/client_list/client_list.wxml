@@ -2,15 +2,7 @@
 <view class="container">
   <button_list buttonslist='{{buttonslist}}' />
   <view class='reserve_content_view'>
-    <swiper class='reserve_swiper_data'>
-      <swiper-item class='reserve_swiper_item_view' wx:for="{{[0,1,2]}}" wx:key='*this' skip-hidden-item-layout='true'>
-        <scroll-view class='reserve_scroll_view_item_view' scroll-y='true'>
-          <view>
-            <client_item testList='{{testList}}'></client_item>
-          </view>
-        </scroll-view>
-      </swiper-item>
-    </swiper>
+    <client_item testList='{{testList}}'></client_item>
   </view>
 </view>
 <bottom_navigation></bottom_navigation>

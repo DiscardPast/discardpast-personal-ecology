@@ -24,6 +24,7 @@ Page({
         'content-type': 'application/json' // 默认值
       },
       success(res) {
+        console.log('asdasdadasd=========',res)
         that.setData({
           testList: res.data[0].commodityList.commodityList,
           imgUrls: res.data[0].mallImageList.mallImageListItemList

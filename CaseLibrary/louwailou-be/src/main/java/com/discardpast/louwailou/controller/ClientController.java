@@ -3,6 +3,7 @@ package com.discardpast.louwailou.controller;
 import com.discardpast.louwailou.Util;
 import com.discardpast.louwailou.dao.user.ConsultantClientList;
 import com.discardpast.louwailou.dao.user.User;
+import com.discardpast.louwailou.dao.user.admin.ClientList;
 import com.discardpast.louwailou.dao.user.client.Client;
 import com.discardpast.louwailou.repository.ClientRepository;
 import com.discardpast.louwailou.repository.StaffRepository;
@@ -48,13 +49,16 @@ public class ClientController {
         calendar.add(Calendar.MONTH,2);
         client.setStaffValidityStop(new Date(calendar.getTimeInMillis()));
         client.setStaffLastTime(new Date(calendar.getTimeInMillis()));
+        clientRepository.save(client);
 
         User user = userRepository.findUserByUserKey(userKey);
-        ConsultantClientList consultantClientList = userRepository.findUserByUserKey(userKey).getConsultantClientList();
-        consultantClientList.getClientList().add(client);
+        System.out.println("------------------" + user.getConsultantClientList());
+        ConsultantClientList consultantClientList = user.getConsultantClientList();
+        List clientList = consultantClientList.getClientList();
+        clientList.add(client);
+        consultantClientList.setClientList(clientList);
         user.setConsultantClientList(consultantClientList);
-        userRepository.saveAndFlush(user);
-        clientRepository.saveAndFlush(client);
+        userRepository.save(user);
         return "ok";
     }
 }

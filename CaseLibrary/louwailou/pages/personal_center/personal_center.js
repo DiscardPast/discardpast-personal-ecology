@@ -32,7 +32,7 @@ Page({
         'icon': '../../../../../../../icons/personal_center_icons/service.png',
         'text': '在线客服',
         'link': 'toRecommendClient'
-      },
+      }
     ],
     isRegister: false,
     isUser: true
@@ -103,6 +103,8 @@ Page({
                     'icon': '../../../../../../../icons/personal_center_icons/service.png',
                     'text': '在线客服',
                     'link': 'toCustomerService'
+                  },
+                  {
                   }
                 ]
               })

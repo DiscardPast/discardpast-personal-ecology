@@ -1,4 +1,8 @@
 /**index.wxss**/
+
+.scroll_view_vertical{
+  height: 1060rpx;
+}
 .top_choice_view_BG {
   width: 100%;
   height: 160rpx;
@@ -38,7 +42,7 @@
 
 .middle_show_image_BG {
   width: 100%;
-  height: 450rpx;
+  height: 500rpx;
 }
 
 .middle_show_image {

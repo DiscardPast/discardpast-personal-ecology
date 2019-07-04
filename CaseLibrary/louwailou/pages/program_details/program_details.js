@@ -14,6 +14,8 @@ Page({
     toIndex: '',
     isChecked: true,
     commentList: [],
+    index: 0,
+    key: 0
   },
 
   /**
@@ -178,10 +180,12 @@ Page({
     })
   },
   clickHouseTypeItem: function(e) {
-    console.log("idx:", e)
-    var that = this;
-    that.setData({
-      houseType: e.currentTarget.dataset.housetype
+    console.log(e);
+    var houseType = e.currentTarget.dataset.housetype;
+    var curIdx = e.currentTarget.dataset.index;
+    this.setData({
+      key: curIdx,
+      houseType: houseType
     })
   },
   toPropertyInfo: function(e) {

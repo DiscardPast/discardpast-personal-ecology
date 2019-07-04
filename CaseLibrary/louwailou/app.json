@@ -28,5 +28,6 @@
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "长沙楼外楼",
     "navigationBarTextStyle": "black"
-  }
+  },
+  "sitemapLocation": "sitemap25.json"
 }
