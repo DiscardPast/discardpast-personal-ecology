@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./css/common/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/common/common.css">
+    <link rel="stylesheet" href="./css/common/bootstrap-multiselect.css">
+    <title>添加项目信息</title>
+</head>
+
+<body>
+    <div class="container">
+        <form>
+            <div class="form-group">
+                <label for="projectDeveloper">开发商</label>
+                <input type="text" class="form-control" id="projectDeveloper" placeholder="开发商名称">
+            </div>
+            <div class="form-group">
+                <label for="projectRegion">区域</label>
+                <input type="text" class="form-control" id="projectRegion" placeholder="项目所在区域">
+            </div>
+            <div class="form-group">
+                <label for="projectPropertyYears">产权年限</label>
+                <input type="number" class="form-control" id="projectPropertyYears" placeholder="产权年限">
+            </div>
+            <div class="form-group">
+                <label for="projectVolumeRate">容积率</label>
+                <input type="number" class="form-control" id="projectVolumeRate" placeholder="容积率">
+            </div>
+            <div class="form-group">
+                <label for="projectGreeningRate">绿化率</label>
+                <input type="number" class="form-control" id="projectGreeningRate" placeholder="绿化率">
+            </div>
+            <div class="form-group">
+                <label for="projectHouseholdsNum">楼栋总户数</label>
+                <input type="number" class="form-control" id="projectHouseholdsNum" placeholder="楼栋总户数">
+            </div>
+            <div class="form-group">
+                <label for="projectPropertyCompany">物业公司</label>
+                <input type="text" class="form-control" id="projectPropertyCompany" placeholder="物业公司">
+            </div>
+            <div class="form-group">
+                <label for="projectPropertyCosts">物业费</label>
+                <input type="number" class="form-control" id="projectPropertyCosts" placeholder="物业费">
+            </div>
+            <div class="form-group">
+                <label for="projectParkingSpace">车位</label>
+                <input type="number" class="form-control" id="projectParkingSpace" placeholder="车位">
+            </div>
+            <div class="form-group">
+                <label for="projectHandingHouseTime">交房时间</label>
+                <input type="date" class="form-control" id="projectHandingHouseTime" placeholder="车位">
+            </div>
+        </form>
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="projectSaleStatus"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                售卖状态
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">在售</a>
+                <a class="dropdown-item" href="#">告罄</a>
+                <a class="dropdown-item" href="#">未开盘</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="projectPropertyType"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                物业类别
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">住宅</a>
+                <a class="dropdown-item" href="#">商铺</a>
+                <a class="dropdown-item" href="#">公寓</a>
+                <a class="dropdown-item" href="#">写字楼</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="projectDecorationStatus"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                装修状况
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">毛坯</a>
+                <a class="dropdown-item" href="#">精装</a>
+                <a class="dropdown-item" href="#">精装</a>
+            </div>
+        </div>
+        <button type="button" class="btn btn-success">添加项目信息</button>
+    </div>
+</body>
+<script src="js/common/jquery-3.3.1.slim.min.js"></script>
+<script src="js/common/popper.min.js"></script>
+<script src="js/common/bootstrap.min.js"></script>
+<script src="js/common/jquery.js"></script>
+<script src="js/common/bootstrap-multiselect.js"></script>
+
+</html>
