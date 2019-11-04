@@ -20,7 +20,7 @@ $.ajax({
                 "        <td>" + data[i].username + "</td>\n" +
                 "        <td>" + data[i].password + "</td>\n" +
                 "        <td>" +
-                "<button type=\"button\" class=\"btn btn-success\">查看</button>" +
+                "<button type=\"button\" class=\"btn btn-success\">修改</button>" +
                 "<button type=\"button\" class=\"btn btn-danger\" onclick=\"deleteUser(" + data[i].id + ")\">删除</button>" +
                 "</td>\n" +
                 "    </tr>"

@@ -19,12 +19,10 @@ function login() {
         data: JSON.stringify(data),
         success: function (response) {
             var data = response.data;
-            if(data)
-            {
+            if (data) {
                 window.location.href = base + "index.html"
             }
-            else
-            {
+            else {
                 alert("账号密码错误！请重新输入！")
             }
         },

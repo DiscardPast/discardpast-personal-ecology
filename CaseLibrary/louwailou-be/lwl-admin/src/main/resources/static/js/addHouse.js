@@ -1,6 +1,6 @@
 $(".form-control-chosen").chosen();
 
-function addHouse(){
+function addHouse() {
 
     var url = base + "house";
     var houseTitle = $("#houseTitle").val();
@@ -18,8 +18,7 @@ function addHouse(){
     var houseProject = $("#houseProject").val();
 
     var tips = "";
-    for (var i = 0;i < houseTips.length;i++)
-    {
+    for (var i = 0; i < houseTips.length; i++) {
         tips += houseTips[i] + ",";
     }
 

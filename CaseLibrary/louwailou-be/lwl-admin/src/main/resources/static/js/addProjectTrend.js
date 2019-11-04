@@ -1,6 +1,6 @@
 $(".form-control-chosen").chosen();
 
-function addProjectTrend(){
+function addProjectTrend() {
 
     var url = base + "project";
     var projectTrendTitle = $("#projectTrendTitle").val();
