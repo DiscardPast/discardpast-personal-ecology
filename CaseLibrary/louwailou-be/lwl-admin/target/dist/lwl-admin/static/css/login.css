@@ -1,0 +1,21 @@
+.index_head{
+    height: 64px;
+    width: 100%;
+    background-color: blueviolet;
+}
+
+.index_middle{
+    height: 555px;
+    width: 100%;
+    background-color: aquamarine;
+}
+
+.index_footer {
+    height: 100px;
+    width: 100%;
+    background-color: navajowhite;
+}
+
+.input_view {
+    width: 40%;
+}
