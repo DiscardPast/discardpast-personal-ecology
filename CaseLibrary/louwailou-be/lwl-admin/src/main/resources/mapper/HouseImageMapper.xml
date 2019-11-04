@@ -21,6 +21,6 @@
     <select id="selectHouseImageListByHouseId" parameterType="java.lang.Long" resultMap="BaseResultMap">
         select
         <include refid="Base_Column_List"/>
-        from t_house_image where deleted = 0 and hosue_id = #{houseId}
+        from t_house_image where deleted = 0 and house_id = #{houseId}
     </select>
 </mapper>

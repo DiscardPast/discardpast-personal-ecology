@@ -27,7 +27,7 @@ public class ProjectTrendServiceImpl implements ProjectTrendService {
 
     @Override
     public List<ProjectTrend> queryProjectTrendListByProjectId(Long projectId) {
-        return this.projectTrendMapper.selectProjectTrendsByProjectId();
+        return this.projectTrendMapper.selectProjectTrendsByProjectId(projectId);
     }
 
     @Override

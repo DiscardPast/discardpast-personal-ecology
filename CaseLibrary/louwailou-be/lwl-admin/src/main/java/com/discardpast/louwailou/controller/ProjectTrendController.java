@@ -18,7 +18,7 @@ import javax.annotation.Resource;
  */
 @Api(value = "项目动态信息表接口", tags = "项目动态信息表模块")
 @RestController
-@RequestMapping("/projectTrends")
+@RequestMapping("/projectTrend")
 public class ProjectTrendController {
 
     @Resource
@@ -27,15 +27,15 @@ public class ProjectTrendController {
     /**
      * 通过主键查询单条项目动态信息表数据
      *
-     * @param projectTrendsId
+     * @param projectTrendId
      * @return Result 返回统一结果model
      */
     @ApiOperation(value = "查询项目动态信息表", notes = "查询项目动态信息表", response = Result.class)
     @GetMapping
     public Result selectOne(
-            @ApiParam(name = "projectTrendsId", value = "主键", required = true, example = "1")
-            @RequestParam Long projectTrendsId) {
-        return Result.success(this.projectTrendService.queryById(projectTrendsId));
+            @ApiParam(name = "projectTrendId", value = "主键", required = true, example = "1")
+            @RequestParam Long projectTrendId) {
+        return Result.success(this.projectTrendService.queryById(projectTrendId));
     }
 
     /**
@@ -49,7 +49,7 @@ public class ProjectTrendController {
     public Result selectByUserId(
             @ApiParam(name = "userId", value = "用户Id", required = true, example = "1")
             @PathVariable Long userId) {
-        return Result.success(this.projectTrendService.queryProjectTrendsByUserId(userId));
+        return Result.success(this.projectTrendService.queryProjectTrendListByProjectId(userId));
     }
 
     /**
@@ -63,7 +63,7 @@ public class ProjectTrendController {
     public Result insert(
             @ApiParam(name = "projectTrend", value = "传入json格式", required = true)
             @RequestBody ProjectTrend projectTrend) {
-        return Result.success(this.projectTrendService.addProjectTrends(projectTrend));
+        return Result.success(this.projectTrendService.addProjectTrend(projectTrend));
     }
 
     /**
@@ -77,20 +77,20 @@ public class ProjectTrendController {
     public Result update(
             @ApiParam(name = "projectTrend", value = "传入json格式", required = true)
             @RequestBody ProjectTrend projectTrend) {
-        return Result.success(this.projectTrendService.updateProjectTrends(projectTrend));
+        return Result.success(this.projectTrendService.updateProjectTrend(projectTrend));
     }
 
     /**
      * 删除项目动态信息表数据
      *
-     * @param projectTrendsId
+     * @param projectTrendId
      * @return Result 返回统一结果model
      */
     @ApiOperation(value = "删除项目动态信息表", notes = "删除项目动态信息表", response = Result.class)
     @DeleteMapping
     public Result delete(
-            @ApiParam(name = "projectTrendsId", value = "projectTrendsId", required = true)
-            @RequestParam Long projectTrendsId) {
-        return Result.success(this.projectTrendService.deleteProjectTrendsById(projectTrendsId));
+            @ApiParam(name = "projectTrendId", value = "projectTrendsId", required = true)
+            @RequestParam Long projectTrendId) {
+        return Result.success(this.projectTrendService.deleteProjectTrendById(projectTrendId));
     }
 }

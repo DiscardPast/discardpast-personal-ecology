@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="./css/common/bootstrap.min.css">
     <link rel="stylesheet" href="./css/common/common.css">
-    <link rel="stylesheet" href="./css/common/bootstrap-multiselect.css">
     <link rel="stylesheet" href="./css/index.css">
     <title>Title</title>
 </head>
+
 <body>
     <div id="header" class="header">
 
@@ -17,21 +18,37 @@
             <nav class="navbar bg-light">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">房屋列表</a>
+                        <button type="submit" class="btn btn-primary" style="margin-bottom: 5px"onclick="getHouseList()">房屋列表</button>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">用户列表</a>
+                        <button type="submit" class="btn btn-primary" style="margin-bottom: 5px" onclick="getUserList()">用户列表</button>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">项目列表</a>
+                        <button type="submit" class="btn btn-primary" style="margin-bottom: 5px" onclick="getStaffList()">员工列表</button>
+                    </li>
+                    <li class="nav-item">
+                        <button type="submit" class="btn btn-primary" style="margin-bottom: 5px" onclick="toAddHouse()">添加房屋信息</button>
+                    </li>
+                    <li class="nav-item">
+                        <button type="submit" class="btn btn-primary" style="margin-bottom: 5px" onclick="toAddStaff()">添加员工信息</button>
+                    </li>
+                    <li class="nav-item">
+                        <button type="submit" class="btn btn-primary" style="margin-bottom: 5px" onclick="getStaffList()">员工列表</button>
                     </li>
                 </ul>
             </nav>
         </div>
         <div id="content" class="content">
-            <iframe class="contentView" src="http://localhost:8080/user.html" style="overflow: hidden; border:none;"></iframe>
+            <iframe id="contentIframe" class="contentView" src="http://localhost:8080/user.html"style="overflow: hidden; border:none;"></iframe>
         </div>
     </div>
     <div id="footer" class="footer"></div>
 </body>
+<script src="js/common/jquery-3.3.1.slim.min.js"></script>
+<script src="js/common/popper.min.js"></script>
+<script src="js/common/bootstrap.min.js"></script>
+<script src="js/common/jquery.js"></script>
+<script src="js/common/basic.js"></script>
+<script src="js/common/chosen.jquery.min.js"></script>
+<script src="js/index.js"></script>
 </html>

@@ -2,6 +2,11 @@ package com.discardpast.louwailou.vo;
 
 import lombok.Data;
 
+/**
+ * 项目动态Vo
+ *
+ * @author discardpast
+ */
 @Data
 public class ProjectTrendVo {
 

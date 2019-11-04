@@ -60,7 +60,7 @@ public class ProjectController{
     public Result selectByUserId(
             @ApiParam(name = "userId", value = "用户Id", required = true, example = "1")
             @PathVariable Long userId) {
-        return Result.success(this.projectService.queryProjectByUserId(userId));
+        return Result.success(this.projectService.queryProjectByHouseId(userId));
     }
 
     /**

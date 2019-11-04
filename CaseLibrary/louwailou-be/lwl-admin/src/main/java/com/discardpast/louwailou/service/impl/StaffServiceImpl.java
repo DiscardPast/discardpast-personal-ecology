@@ -1,5 +1,6 @@
 package com.discardpast.louwailou.service.impl;
 
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.discardpast.louwailou.service.StaffService;
@@ -26,8 +27,9 @@ public class StaffServiceImpl implements StaffService {
     }
 
     @Override
-    public List<Staff> queryStaffByUserId(Long userId) {
-        return this.staffMapper.selectStaffByUserId(userId);
+    public Staff queryStaffByStaff(Staff staff) {
+        QueryWrapper<Staff> queryWrapper = new QueryWrapper<Staff>().eq("username",staff.getUsername()).eq("password",staff.getPassword());
+        return this.staffMapper.selectOne(queryWrapper);
     }
 
     @Override

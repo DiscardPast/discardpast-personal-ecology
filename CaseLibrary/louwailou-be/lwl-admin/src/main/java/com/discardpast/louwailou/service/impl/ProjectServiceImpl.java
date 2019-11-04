@@ -32,7 +32,7 @@ public class ProjectServiceImpl implements ProjectService {
     }
 
     @Override
-    public List<Project> queryProjectByUserId(Long userId) {
+    public List<Project> queryProjectByHouseId(Long userId) {
         return this.projectMapper.selectProjectByUserId(userId);
     }
 

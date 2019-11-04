@@ -1,5 +1,8 @@
 package com.discardpast.louwailou.action;
 
+import com.discardpast.louwailou.domain.Staff;
+import com.discardpast.louwailou.service.StaffService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 /**
@@ -9,4 +12,17 @@ import org.springframework.stereotype.Component;
  */
 @Component
 public class StaffAction{
+
+    @Autowired
+    private StaffService staffService;
+
+    public boolean staffLogin(Staff staff)
+    {
+        Staff entityStaff = this.staffService.queryStaffByStaff(staff);
+        if(entityStaff != null)
+        {
+            return true;
+        }
+        return false;
+    }
 }

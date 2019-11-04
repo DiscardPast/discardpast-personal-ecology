@@ -18,4 +18,10 @@
       id,house_id,title,text,create_time,update_time,deleted
     </sql>
 
+    <!--通过用户Id查询房屋评论信息表-->
+    <select id="selectHouseApartmentListByHouseId" parameterType="java.lang.Long" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from t_house_apartment where deleted = 0 and house_id = #{houseId}
+    </select>
 </mapper>

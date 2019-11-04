@@ -24,10 +24,10 @@ public interface StaffService {
     /**
      * 通过UserId查询一条员工表数据
      *
-     * @param userId
+     * @param staff
      * @return
      */
-     List<Staff> queryStaffByUserId(Long userId);
+     Staff queryStaffByStaff(Staff staff);
 
 
     /**

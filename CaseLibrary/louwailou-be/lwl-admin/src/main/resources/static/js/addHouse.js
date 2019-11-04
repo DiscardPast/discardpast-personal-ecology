@@ -34,7 +34,7 @@ function addHouse(){
         async: false,
         data: JSON.stringify(data),
         success: function () {
-            window.location.href = "http://localhost:8080/house.html"
+            window.location.href = "http://localhost:8080/index.html?fromPage=addHouse"
         },
         error: function () {
 

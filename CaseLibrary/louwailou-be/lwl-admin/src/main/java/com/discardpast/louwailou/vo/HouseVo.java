@@ -56,4 +56,7 @@ public class HouseVo {
 
     /** 房屋所属项目信息 */
     private ProjectVo projectVo;
+
+    /** 房屋所有评论信息*/
+    private List<HouseCommentVo> houseCommentVoList;
 }

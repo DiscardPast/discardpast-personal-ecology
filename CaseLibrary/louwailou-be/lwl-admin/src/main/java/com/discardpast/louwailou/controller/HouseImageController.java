@@ -49,7 +49,7 @@ public class HouseImageController{
     public Result selectByUserId(
             @ApiParam(name = "userId", value = "用户Id", required = true, example = "1")
             @PathVariable Long userId) {
-        return Result.success(this.houseImageService.queryHouseImageByUserId(userId));
+        return Result.success(this.houseImageService.queryHouseImageByHouseId(userId));
     }
 
     /**

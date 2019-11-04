@@ -16,7 +16,7 @@
             </resultMap>
 
     <sql id="Base_Column_List">
-      id,projectId,tip,title,content,create_time,update_time,deleted
+      id,project_id,tip,title,content,create_time,update_time,deleted
     </sql>
 
     <!--通过用户Id查询项目信息表-->

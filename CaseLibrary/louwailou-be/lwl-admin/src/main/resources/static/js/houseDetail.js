@@ -1,3 +1,4 @@
+$(".form-control-chosen").chosen();
 var houseId = getQueryVariable("houseId");
 var url = "http://localhost:8080/house?houseId=" + houseId;
 

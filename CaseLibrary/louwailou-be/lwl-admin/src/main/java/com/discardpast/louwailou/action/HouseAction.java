@@ -41,6 +41,10 @@ public class HouseAction{
     public HouseVo getHouseVo(Long houseId)
     {
         House house = this.houseService.queryById(houseId);
+        if(house == null)
+        {
+            return null;
+        }
         HouseVo houseVo = new HouseVo();
         houseVo.setArea(house.getArea());
         houseVo.setPrice(house.getPrice());
@@ -55,6 +59,10 @@ public class HouseAction{
         houseVo.setBouns(house.getBouns());
         houseVo.setTips(house.getTips());
         List<HouseImage> houseImageList = this.houseImageService.queryHouseImageByHouseId(houseId);
+        if (houseImageList == null)
+        {
+            return null;
+        }
         List<String> houseImageUrlList = Lists.newArrayList();
         for (HouseImage houseImage : houseImageList) {
             houseImageUrlList.add(houseImage.getImageUrl());
@@ -86,6 +94,10 @@ public class HouseAction{
         houseVo.setHouseApartmentVoList(houseApartmentVoList);
         ProjectVo projectVo = new ProjectVo();
         Project project = this.projectService.queryById(house.getProjectId());
+        if(project == null)
+        {
+            return null;
+        }
         projectVo.setDeveloper(project.getDeveloper());
         projectVo.setRegion(project.getRegion());
         projectVo.setSaleStatus(project.getSaleStatus());

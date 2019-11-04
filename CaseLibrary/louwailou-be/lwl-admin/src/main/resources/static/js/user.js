@@ -19,7 +19,7 @@ $.ajax({
                 "        <td>" + data[i].phone + "</td>\n" +
                 "        <td>" +
                 "<button type=\"button\" class=\"btn btn-success\">查看</button>" +
-                "<button type=\"button\" class=\"btn btn-danger\">删除</button>" +
+                "<button type=\"button\" class=\"btn btn-danger\" onclick=\"deleteUser(" + data[i].id + ")\">删除</button>" +
                 "</td>\n" +
                 "    </tr>"
             )
@@ -29,3 +29,21 @@ $.ajax({
         console.log("error")
     }
 });
+
+function deleteUser(currentUserId) {
+    var deleteUrl = "http://localhost:8080/user?userId=" + currentUserId;
+    $.ajax({
+        url: deleteUrl,
+        type: "delete",
+        contentType: "application/json;charset=utf-8",
+        dataType: "json",
+        timeout: 10000,
+        async: false,
+        success: function () {
+            window.location.reload();
+        },
+        error: function () {
+            alert("删除用户信息失败！")
+        }
+    });
+}

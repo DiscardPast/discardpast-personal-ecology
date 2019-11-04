@@ -3,6 +3,7 @@ package com.discardpast.louwailou.mapper;
 import com.discardpast.louwailou.domain.HouseImage;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Mapper;
+import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.List;
 

@@ -5,6 +5,12 @@ import lombok.Data;
 import java.util.Date;
 import java.util.List;
 
+/**
+ * 项目vo
+ *
+ * @author discardpast@yeah.net
+ */
+
 @Data
 public class ProjectVo {
 
