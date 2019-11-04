@@ -1,8 +1,3 @@
 spring:
-  datasource:
-    url: jdbc:mysql://127.0.0.1:3306/new_louwailou?useUnicode=true&characterEncoding=utf8
-    driverClassName: com.mysql.jdbc.Driver
-    username: root
-    password: Louwailou&mysql2019
-server:
-  port: 8082
+  profiles:
+    active: dev

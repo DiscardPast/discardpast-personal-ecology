@@ -17,6 +17,9 @@ function getProjectList() {
 function getUserList() {
     $("#contentIframe").attr("src", base + "user.html");
 }
+function getUserWithdrawList() {
+    $("#contentIframe").attr("src", base + "user.html");
+}
 function getStaffList() {
     $("#contentIframe").attr("src", base + "staff.html");
 }

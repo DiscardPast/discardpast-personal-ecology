@@ -13,7 +13,6 @@
         <result property="structure" column="structure" jdbcType="TINYINT" />
         <result property="address" column="address" jdbcType="VARCHAR" />
         <result property="openTime" column="open_time" jdbcType="TIMESTAMP" />
-        <result property="apartment" column="apartment" jdbcType="TINYINT" />
         <result property="beat" column="beat" jdbcType="VARCHAR" />
         <result property="title" column="title" jdbcType="VARCHAR" />
         <result property="consultantTitle" column="consultant_title" jdbcType="VARCHAR" />
@@ -26,7 +25,7 @@
             </resultMap>
 
     <sql id="Base_Column_List">
-      id,project_id,area,price,types,structure,address,open_time,apartment,beat,title,consultant_title,content,bouns,create_time,update_time,deleted,tips
+      id,project_id,area,price,types,structure,address,open_time,beat,title,consultant_title,content,bouns,create_time,update_time,deleted,tips
     </sql>
 
     <!--通过用户Id查询房屋信息表-->

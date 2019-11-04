@@ -25,7 +25,7 @@
         <!-- mybatis-plus -->
         <mybatis-plus.version>3.2.0</mybatis-plus.version>
         <!--druid-->
-        <druid.version>1.1.20</druid.version>
+        <druid.version>1.1.9</druid.version>
         <!-- lombok-->
         <lombok.version>1.16.22</lombok.version>
         <!-- swagger -->

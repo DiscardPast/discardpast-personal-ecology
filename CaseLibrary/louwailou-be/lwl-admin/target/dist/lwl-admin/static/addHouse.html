@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="./css/common/bootstrap.min.css">
-    <title>Title</title>
+    <link rel="stylesheet" href="./css/common/common.css">
+    <link rel="stylesheet" href="./css/common/component-chosen.css">
+    <title>添加房屋信息</title>
 </head>
+
 <body>
-<div class="container">
-    <form>
+    <div class="container">
         <div class="form-group">
             <label for="houseTitle">房屋标题</label>
             <input type="text" class="form-control" id="houseTitle" placeholder="房屋标题">
@@ -15,6 +18,40 @@
         <div class="form-group">
             <label for="houseConsultantTitle">置业顾问所见房屋标题</label>
             <input type="text" class="form-control" id="houseConsultantTitle" placeholder="置业顾问所见房屋标题">
+        </div>
+        <div class="form-group">
+            <label for="houseType">房屋类型</label>
+            <select id="houseType" class="form-control form-control-chosen" data-placeholder="房屋类型">
+                <option value="1">公寓</option>
+                <option value="2">住宅</option>
+                <option value="3">商铺</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="houseStructure">房屋结构</label>
+            <select id="houseStructure" class="form-control form-control-chosen" data-placeholder="房屋结构">
+                <option value="1">塔楼</option>
+                <option value="2">独栋</option>
+                <option value="3">毛坯</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="houseTips">房屋标识</label>
+            <select id="houseTips" class="form-control form-control-chosen" data-placeholder=“请选择..." multiple>
+                <option value="1">临地铁</option>
+                <option value="2">临水</option>
+                <option value="3">临超市</option>
+                <option value="4">临海边</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="houseProject">房屋所属项目</label>
+            <select id="houseProject" class="form-control form-control-chosen" data-placeholder=“请选择..." multiple>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+            </select>
         </div>
         <div class="form-group">
             <label for="houseArea">房屋面积</label>
@@ -36,25 +73,33 @@
             <label for="houseContent">房屋信息</label>
             <input type="text" class="form-control" id="houseContent" placeholder="房屋信息">
         </div>
+        <div class="input-group mb-3">
+            <label for="houseContent">房屋图片</label>
+            <div class="custom-file">
+                <input type="file" class="custom-file-input" id="houseImage">
+                <label class="custom-file-label" for="houseImage" aria-describedby="houseImage">选择图片</label>
+            </div>
+            <div class="input-group-append">
+                <span class="input-group-text" id="houseImageUpload">上传</span>
+            </div>
+        </div>
         <div class="form-group">
             <label for="houseBonus">房屋赏金</label>
-            <input type="password" class="form-control" id="houseBonus" placeholder="房屋赏金">
+            <input type="number" class="form-control" id="houseBonus" placeholder="房屋赏金">
         </div>
         <div class="form-group">
             <label for="houseOpenTime">房屋开盘时间</label>
             <input type="date" class="form-control" id="houseOpenTime" placeholder="房屋开盘时间">
         </div>
-    </form>
-    <div class="btn-group">
-        <button type="button" class="btn btn-primary">Primary</button>
-        <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown">
-            <span class="caret"></span>
-        </button>
-        <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">Link 1</a>
-            <a class="dropdown-item" href="#">Link 2</a>
-        </div>
+        <button type="button" class="btn btn-success" onclick="addHouse()">添加房屋信息</button>
     </div>
-</div>
 </body>
+<script src="js/common/jquery-3.3.1.slim.min.js"></script>
+<script src="js/common/popper.min.js"></script>
+<script src="js/common/bootstrap.min.js"></script>
+<script src="js/common/jquery.js"></script>
+<script src="js/common/basic.js"></script>
+<script src="js/common/chosen.jquery.min.js"></script>
+<script src="js/addHouse.js"></script>
+
 </html>

@@ -1,43 +1,74 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- Bootstrap CSS -->
+    <meta charset="UTF-8">
     <link rel="stylesheet" href="./css/common/bootstrap.min.css">
     <link rel="stylesheet" href="./css/common/common.css">
     <link rel="stylesheet" href="./css/index.css">
-    <title>楼外楼登录页面</title>
+    <title>Title</title>
 </head>
+
 <body>
-<div id="wrapper">
-    <div id="header" class="index_head flex_horizontal">
-        头部
+    <div id="header" class="header">
+
     </div>
-    <div id="middle" class="index_middle flex_horizontal">
-        <div class="input_view">
-            <form>
-                <div class="form-group">
-                <label for="exampleInputEmail1">账号</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="用户账号">
-            </div>
-                <div class="form-group">
-                <label for="exampleInputPassword1">密码</label>
-                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="用户密码">
-            </div>
-                <button type="submit" class="btn btn-primary" onclick="toDataList()">登录</button>
-            </form>
+    <div id="middle" class="middle flex_horizontal">
+        <div id="navigation" class="navigation">
+            <nav class="navbar bg-light">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <button type="submit" class="btn btn-info" style="margin-bottom: 5px"
+                            onclick="getHouseList()">房屋列表</button>
+                    </li>
+                    <li class="nav-item">
+                        <button type="submit" class="btn btn-info" style="margin-bottom: 5px"
+                            onclick="getProjectList()">项目列表</button>
+                    </li>
+                    <li class="nav-item">
+                        <button type="submit" class="btn btn-info" style="margin-bottom: 5px"
+                            onclick="getStaffList()">员工列表</button>
+                    </li>
+                    <li class="nav-item">
+                        <button type="submit" class="btn btn-info" style="margin-bottom: 5px"
+                            onclick="getUserList()">用户列表</button>
+                    </li>
+                    <li class="nav-item">
+                        <button type="submit" class="btn btn-success" style="margin-bottom: 5px"
+                            onclick="toAddHouse()">添加房屋信息</button>
+                    </li>
+                    <li class="nav-item">
+                        <button type="submit" class="btn btn-success" style="margin-bottom: 5px"
+                            onclick="toAddProject()">添加项目信息</button>
+                    </li>
+                    <li class="nav-item">
+                        <button type="submit" class="btn btn-success" style="margin-bottom: 5px"
+                            onclick="toAddStaff()">添加员工信息</button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div id="content" class="content">
+            <iframe id="contentIframe" class="contentView" style="overflow: hidden; border:none;"></iframe>
+            <nav id="paginationView" class="paginationView" aria-label="Page navigation example">
+                <ul class="pagination">
+                    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                </ul>
+            </nav>
         </div>
     </div>
-    <div id="footer" class="index_footer flex_horizontal">
-        底部
-    </div>
-</div>
-<script src="./js/jquery-3.3.1.slim.min.js"></script>
-<script src="./js/popper.min.js"></script>
-<script src="./js/bootstrap.min.js"></script>
-<script src="./js/jquery.js"></script>
-<script src="./js/index.js"></script>
+    <div id="footer" class="footer"></div>
 </body>
+<script src="js/common/jquery-3.3.1.slim.min.js"></script>
+<script src="js/common/popper.min.js"></script>
+<script src="js/common/bootstrap.min.js"></script>
+<script src="js/common/jquery.js"></script>
+<script src="js/common/basic.js"></script>
+<script src="js/common/chosen.jquery.min.js"></script>
+<script src="js/index.js"></script>
+
 </html>

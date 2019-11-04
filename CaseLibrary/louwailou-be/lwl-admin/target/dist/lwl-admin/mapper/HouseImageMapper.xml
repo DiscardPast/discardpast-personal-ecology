@@ -18,9 +18,9 @@
     </sql>
 
     <!--通过用户Id查询房屋信息图片表-->
-    <select id="selectHouseImageByUserId" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    <select id="selectHouseImageListByHouseId" parameterType="java.lang.Long" resultMap="BaseResultMap">
         select
         <include refid="Base_Column_List"/>
-        from t_house_image where deleted = 0 and user_id = #{userId}
+        from t_house_image where deleted = 0 and house_id = #{houseId}
     </select>
 </mapper>

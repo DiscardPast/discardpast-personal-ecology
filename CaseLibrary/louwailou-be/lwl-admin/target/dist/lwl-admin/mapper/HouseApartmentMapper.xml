@@ -7,8 +7,7 @@
     <resultMap type="com.discardpast.louwailou.domain.HouseApartment" id="BaseResultMap">
         <result property="id" column="id" jdbcType="BIGINT" />
         <result property="houseId" column="house_id" jdbcType="BIGINT" />
-        <result property="houseApartmentId" column="house_apartment_id" jdbcType="TINYINT" />
-        <result property="imageUrl" column="image_url" jdbcType="VARCHAR" />
+        <result property="title" column="title" jdbcType="VARCHAR" />
         <result property="text" column="text" jdbcType="VARCHAR" />
         <result property="createTime" column="create_time" jdbcType="TIMESTAMP" />
         <result property="updateTime" column="update_time" jdbcType="TIMESTAMP" />
@@ -16,13 +15,13 @@
             </resultMap>
 
     <sql id="Base_Column_List">
-      id,house_id,house_apartment_id,image_url,text,create_time,update_time,deleted
+      id,house_id,title,text,create_time,update_time,deleted
     </sql>
 
-    <!--通过用户Id查询房屋户型信息表-->
-    <select id="selectHouseApartmentByUserId" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    <!--通过用户Id查询房屋评论信息表-->
+    <select id="selectHouseApartmentListByHouseId" parameterType="java.lang.Long" resultMap="BaseResultMap">
         select
         <include refid="Base_Column_List"/>
-        from t_house_apartment where deleted = 0 and user_id = #{userId}
+        from t_house_apartment where deleted = 0 and house_id = #{houseId}
     </select>
 </mapper>

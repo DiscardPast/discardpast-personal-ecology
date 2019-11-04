@@ -1,6 +1,6 @@
 $(".form-control-chosen").chosen();
 
-function addProject(){
+function addProject() {
 
     var url = base + "project";
     var projectDeveloper = $("#projectDeveloper").val();

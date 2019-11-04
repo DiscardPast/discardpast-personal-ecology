@@ -54,6 +54,11 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
+        <!--druid-->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid-spring-boot-starter</artifactId>
+        </dependency>
     </dependencies>
 
     <build>
@@ -135,6 +140,7 @@
                                     <!-- 打包指定文件文件 -->
                                     <includes>
                                         <include>application.yml</include>
+                                        <include>application-common.yml</include>
                                         <include>application-${profileActive}.yml</include>
                                     </includes>
                                 </resource>
