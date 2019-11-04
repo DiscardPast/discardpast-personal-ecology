@@ -2,7 +2,7 @@ var houseId = getQueryVariable("houseId");
 
 function addHouseApartment() {
 
-    var url = "http://localhost:8080/houseApartment";
+    var url = base + "houseApartment";
 
     var houseApartmentTitle = $("#houseApartmentTitle").val();
     var houseApartmentContent = $("#houseApartmentContent").val();
@@ -22,7 +22,7 @@ function addHouseApartment() {
         async: false,
         data: JSON.stringify(data),
         success: function () {
-            window.location.href = "http://localhost:8080/house.html"
+            window.location.href = base + "index.html"
         },
         error: function () {
 

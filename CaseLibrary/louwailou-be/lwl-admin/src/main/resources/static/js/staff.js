@@ -1,4 +1,4 @@
-var url = base + "user/all";
+var url = base + "staff/all";
 $.ajax({
     url: url,
     type: "get",
@@ -13,10 +13,12 @@ $.ajax({
             $("#userList").append(
                 "<tr>\n" +
                 "        <th scope=\"row\">" + data[i].id + "</th>\n" +
-                "        <td>" + data[i].nickname + "</td>\n" +
-                "        <td><img style='height: 30px;width: 60px;' src=" + data[i].idCardFront + "/></td>\n" +
-                "        <td><img style='height: 30px;width: 60px;' src=" + data[i].visitingCard + "/></td>\n" +
+                "        <td>" + data[i].name + "</td>\n" +
+                "        <td>" + data[i].gender + "</td>\n" +
+                "        <td>" + data[i].code + "</td>\n" +
                 "        <td>" + data[i].phone + "</td>\n" +
+                "        <td>" + data[i].username + "</td>\n" +
+                "        <td>" + data[i].password + "</td>\n" +
                 "        <td>" +
                 "<button type=\"button\" class=\"btn btn-success\">查看</button>" +
                 "<button type=\"button\" class=\"btn btn-danger\" onclick=\"deleteUser(" + data[i].id + ")\">删除</button>" +
@@ -31,7 +33,7 @@ $.ajax({
 });
 
 function deleteUser(currentUserId) {
-    var deleteUrl = "http://localhost:8080/user?userId=" + currentUserId;
+    var deleteUrl = base + "user?userId=" + currentUserId;
     $.ajax({
         url: deleteUrl,
         type: "delete",

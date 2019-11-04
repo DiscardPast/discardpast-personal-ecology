@@ -2,7 +2,7 @@ $(".form-control-chosen").chosen();
 
 function addHouse(){
 
-    var url = "http://localhost:8080/house";
+    var url = base + "house";
     var houseTitle = $("#houseTitle").val();
     var houseConsultantTitle = $("#houseConsultantTitle").val();
     var houseArea = $("#houseArea").val();
@@ -12,6 +12,16 @@ function addHouse(){
     var houseContent = $("#houseContent").val();
     var houseBonus = $("#houseBonus").val();
     var houseOpenTime = $("#houseOpenTime").val();
+    var houseType = $("#houseType").val();
+    var houseTips = $("#houseTips").val();
+    var houseStructure = $("#houseStructure").val();
+    var houseProject = $("#houseProject").val();
+
+    var tips = "";
+    for (var i = 0;i < houseTips.length;i++)
+    {
+        tips += houseTips[i] + ",";
+    }
 
     var data = {
         "title": houseTitle,
@@ -22,6 +32,10 @@ function addHouse(){
         "beat": houseBeat,
         "content": houseContent,
         "bonus": houseBonus,
+        "types": houseType,
+        "tips": tips,
+        "structure": houseStructure,
+        "projectId": houseProject,
         "openTime": houseOpenTime
     };
 
@@ -34,7 +48,7 @@ function addHouse(){
         async: false,
         data: JSON.stringify(data),
         success: function () {
-            window.location.href = "http://localhost:8080/index.html?fromPage=addHouse"
+            window.location.href = base + "index.html?fromPage=addHouse"
         },
         error: function () {
 

@@ -1,6 +1,6 @@
 $(".form-control-chosen").chosen();
 var houseId = getQueryVariable("houseId");
-var url = "http://localhost:8080/house?houseId=" + houseId;
+var url = base + "house?houseId=" + houseId;
 
 $.ajax({
     url: url,

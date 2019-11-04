@@ -1,6 +1,6 @@
 $(".form-control-chosen").chosen();
-var houseId = getQueryVariable("houseId");
-var url = base + "house?houseId=" + houseId;
+var projectId = getQueryVariable("projectId");
+var url = base + "project?projectId=" + projectId;
 
 $.ajax({
     url: url,

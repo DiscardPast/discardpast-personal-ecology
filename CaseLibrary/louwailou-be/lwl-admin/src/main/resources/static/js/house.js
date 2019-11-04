@@ -1,4 +1,4 @@
-var url = "http://localhost:8080/house/all";
+var url = base + "house/all";
 var houseId;
 
 $.ajax({
@@ -51,15 +51,15 @@ $.ajax({
 });
 
 function toAddHouseApartment(currentHouseId) {
-    window.location.href = "http://localhost:8080/addHouseApartment.html?houseId=" + currentHouseId;
+    window.location.href = base + "addHouseApartment.html?houseId=" + currentHouseId;
 }
 
 function toHouseDetail(currentHouseId) {
-    window.location.href = "http://localhost:8080/houseDetail.html?houseId=" + currentHouseId;
+    window.location.href = base + "houseDetail.html?houseId=" + currentHouseId;
 }
 
 function deleteHouse(currentHouseId) {
-    var deleteUrl = "http://localhost:8080/house?houseId=" + currentHouseId;
+    var deleteUrl = base + "house?houseId=" + currentHouseId;
     $.ajax({
         url: deleteUrl,
         type: "delete",
@@ -68,7 +68,7 @@ function deleteHouse(currentHouseId) {
         timeout: 10000,
         async: false,
         success: function () {
-            window.location.href = "http://localhost:8080/house.html"
+            window.location.href = base + "house.html"
         },
         error: function () {
             alert("删除房屋信息失败！")

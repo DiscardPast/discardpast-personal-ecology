@@ -1,4 +1,4 @@
-var url = "http://localhost:8080/project/all";
+var url = base + "project/all";
 $.ajax({
     url: url,
     type: "get",

@@ -1,5 +1,5 @@
 function login() {
-    var url = "http://localhost:8080/staff/login";
+    var url = base + "staff/login";
 
     var username = $("#UserName").val();
     var password = $("#Password").val();
@@ -21,7 +21,7 @@ function login() {
             var data = response.data;
             if(data)
             {
-                window.location.href = "http://localhost:8080/index.html"
+                window.location.href = base + "index.html"
             }
             else
             {

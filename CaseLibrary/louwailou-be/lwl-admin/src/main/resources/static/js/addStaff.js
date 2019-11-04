@@ -1,6 +1,6 @@
 function addStaff() {
 
-    var url = "http://localhost:8080/staff";
+    var url = base + "staff";
 
     var staffName = $("#staffName").val();
     var staffGender = $("#staffGender").val();
@@ -25,7 +25,7 @@ function addStaff() {
         async: false,
         data: JSON.stringify(data),
         success: function () {
-            window.location.href = "http://localhost:8080/index.html?fromPage=addStaff"
+            window.location.href = base + "index.html?fromPage=addStaff"
         },
         error: function () {
 
