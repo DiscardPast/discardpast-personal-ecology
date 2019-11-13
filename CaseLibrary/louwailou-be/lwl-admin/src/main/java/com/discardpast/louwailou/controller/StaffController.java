@@ -1,5 +1,6 @@
 package com.discardpast.louwailou.controller;
 
+import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.discardpast.louwailou.action.StaffAction;
 import com.discardpast.louwailou.base.domain.Result;
 import com.discardpast.louwailou.domain.Staff;
@@ -40,6 +41,20 @@ public class StaffController{
             @ApiParam(name = "staffId", value = "主键", required = true, example = "1")
             @RequestParam Long staffId) {
         return Result.success(this.staffService.queryById(staffId));
+    }
+
+    /**
+     * 分页查询员工表数据
+     *
+     * @param staffPage
+     * @return Result 返回统一结果model
+     */
+    @ApiOperation(value = "查询员工表", notes = "查询员工表", response = Result.class)
+    @GetMapping("/byPage")
+    public Result selectPage(
+            @ApiParam(name = "staffId", value = "主键", required = true, example = "1")
+            @RequestBody IPage<Staff> staffPage) {
+        return Result.success(this.staffService.queryByPage(staffPage));
     }
 
     /**

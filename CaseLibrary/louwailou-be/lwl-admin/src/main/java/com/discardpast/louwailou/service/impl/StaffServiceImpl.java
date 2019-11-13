@@ -1,6 +1,7 @@
 package com.discardpast.louwailou.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.core.metadata.IPage;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.discardpast.louwailou.service.StaffService;
@@ -24,6 +25,11 @@ public class StaffServiceImpl implements StaffService {
     @Override
     public Staff queryById(Long id) {
         return this.staffMapper.selectById(id);
+    }
+
+    @Override
+    public IPage<Staff> queryByPage(IPage<Staff> staffPage) {
+        return this.staffMapper.selectPage(staffPage,null);
     }
 
     @Override

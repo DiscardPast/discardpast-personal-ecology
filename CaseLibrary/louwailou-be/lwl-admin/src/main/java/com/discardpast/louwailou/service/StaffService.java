@@ -1,5 +1,6 @@
 package com.discardpast.louwailou.service;
 
+import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.discardpast.louwailou.domain.Staff;
 import org.springframework.stereotype.Service;
 
@@ -20,6 +21,13 @@ public interface StaffService {
      * @return
      */
      Staff queryById(Long id);
+
+    /**
+     * 通过id查询一条员工表数据
+     * @param staffPage
+     * @return
+     */
+     IPage<Staff> queryByPage(IPage<Staff> staffPage);
 
     /**
      * 通过UserId查询一条员工表数据

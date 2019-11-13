@@ -1,8 +1,0 @@
-spring:
-  profiles:
-    active: common
-  datasource:
-    # 填写本地数据库的url、登录名、密码和数据库名
-    url: jdbc:mysql://127.0.0.1:3306/new_louwailou?useUnicode=true&characterEncoding=utf8
-    username: root
-    password: qpy1995

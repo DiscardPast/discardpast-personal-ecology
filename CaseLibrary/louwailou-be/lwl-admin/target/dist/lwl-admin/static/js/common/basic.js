@@ -1,5 +1,5 @@
-var base = "http://localhost:8080/";
-//var base = "https://www.cslouwailou.com/"
+//var base = "http://localhost:8080/";
+var base = "http://www.cslouwailou.com/";
 
 function getQueryVariable(variable) {
     var query = window.location.search.substring(1);
