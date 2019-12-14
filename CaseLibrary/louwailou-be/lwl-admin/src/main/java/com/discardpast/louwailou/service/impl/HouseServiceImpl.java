@@ -1,6 +1,9 @@
 package com.discardpast.louwailou.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.discardpast.louwailou.domain.Staff;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.discardpast.louwailou.service.HouseService;
@@ -27,8 +30,9 @@ public class HouseServiceImpl implements HouseService {
     }
 
     @Override
-    public List<House> queryHouseList() {
-        return this.houseMapper.selectList(new QueryWrapper<House>().eq("deleted",0));
+    public IPage<House> queryByPage(int pageNo, int pageSize) {
+        Page<House> housePage = new Page<>(pageNo,pageSize);
+        return this.houseMapper.selectPage(housePage,null);
     }
 
     @Override

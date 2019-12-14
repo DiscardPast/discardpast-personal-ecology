@@ -54,7 +54,6 @@ public class HouseAction{
         houseVo.setOpenTime(house.getOpenTime());
         houseVo.setBeat(house.getBeat());
         houseVo.setTitle(house.getTitle());
-        houseVo.setConsultantTitle(house.getConsultantTitle());
         houseVo.setContent(house.getContent());
         houseVo.setBouns(house.getBouns());
         houseVo.setTips(house.getTips());

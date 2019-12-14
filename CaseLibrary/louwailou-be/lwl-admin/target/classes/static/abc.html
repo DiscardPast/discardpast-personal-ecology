@@ -1,0 +1,1474 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>PMT 支付系统接口自动化测试报告</title>
+    <meta name="generator" content="HTMLTestRunner 0.8.2"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    
+<style type="text/css" media="screen">
+body        { font-family: verdana, arial, helvetica, sans-serif; font-size: 80%; }
+table       { font-size: 100%; }
+pre         { }
+
+/* -- heading ---------------------------------------------------------------------- */
+h1 {
+	font-size: 16pt;
+	color: gray;
+}
+.heading {
+    margin-top: 0ex;
+    margin-bottom: 1ex;
+}
+
+.heading .attribute {
+    margin-top: 1ex;
+    margin-bottom: 0;
+}
+
+.heading .description {
+    margin-top: 4ex;
+    margin-bottom: 6ex;
+}
+
+/* -- css div popup ------------------------------------------------------------------------ */
+a.popup_link {
+}
+
+a.popup_link:hover {
+    color: red;
+}
+
+.popup_window {
+    display: none;
+    position: relative;
+    left: 0px;
+    top: 0px;
+    /*border: solid #627173 1px; */
+    padding: 10px;
+    background-color: #E6E6D6;
+    font-family: "Lucida Console", "Courier New", Courier, monospace;
+    text-align: left;
+    font-size: 8pt;
+    width: 500px;
+}
+
+}
+/* -- report ------------------------------------------------------------------------ */
+#show_detail_line {
+    margin-top: 3ex;
+    margin-bottom: 1ex;
+}
+#result_table {
+    width: 80%;
+    border-collapse: collapse;
+    border: 1px solid #777;
+}
+#header_row {
+    font-weight: bold;
+    color: white;
+    background-color: #777;
+}
+#result_table td {
+    border: 1px solid #777;
+    padding: 2px;
+}
+#total_row  { font-weight: bold; }
+.passClass  { background-color: #6c6; }
+.failClass  { background-color: #c60; }
+.errorClass { background-color: #c00; }
+.passCase   { color: #6c6; }
+.failCase   { color: #c60; font-weight: bold; }
+.errorCase  { color: #c00; font-weight: bold; }
+.hiddenRow  { display: none; }
+.testcase   { margin-left: 2em; }
+
+
+/* -- ending ---------------------------------------------------------------------- */
+#ending {
+}
+
+</style>
+
+</head>
+<body>
+<script language="javascript" type="text/javascript"><!--
+output_list = Array();
+
+/* level - 0:Summary; 1:Failed; 2:All */
+function showCase(level) {
+    trs = document.getElementsByTagName("tr");
+    for (var i = 0; i < trs.length; i++) {
+        tr = trs[i];
+        id = tr.id;
+        if (id.substr(0,2) == 'ft') {
+            if (level < 1) {
+                tr.className = 'hiddenRow';
+            }
+            else {
+                tr.className = '';
+            }
+        }
+        if (id.substr(0,2) == 'pt') {
+            if (level > 1) {
+                tr.className = '';
+            }
+            else {
+                tr.className = 'hiddenRow';
+            }
+        }
+    }
+}
+
+
+function showClassDetail(cid, count) {
+    var id_list = Array(count);
+    var toHide = 1;
+    for (var i = 0; i < count; i++) {
+        tid0 = 't' + cid.substr(1) + '.' + (i+1);
+        tid = 'f' + tid0;
+        tr = document.getElementById(tid);
+        if (!tr) {
+            tid = 'p' + tid0;
+            tr = document.getElementById(tid);
+        }
+        id_list[i] = tid;
+        if (tr.className) {
+            toHide = 0;
+        }
+    }
+    for (var i = 0; i < count; i++) {
+        tid = id_list[i];
+        if (toHide) {
+            document.getElementById('div_'+tid).style.display = 'none'
+            document.getElementById(tid).className = 'hiddenRow';
+        }
+        else {
+            document.getElementById(tid).className = '';
+        }
+    }
+}
+
+
+function showTestDetail(div_id){
+    var details_div = document.getElementById(div_id)
+    var displayState = details_div.style.display
+    // alert(displayState)
+    if (displayState != 'block' ) {
+        displayState = 'block'
+        details_div.style.display = 'block'
+    }
+    else {
+        details_div.style.display = 'none'
+    }
+}
+
+
+function html_escape(s) {
+    s = s.replace(/&/g,'&amp;');
+    s = s.replace(/</g,'&lt;');
+    s = s.replace(/>/g,'&gt;');
+    return s;
+}
+
+/* obsoleted by detail in <div>
+function showOutput(id, name) {
+    var w = window.open("", //url
+                    name,
+                    "resizable,scrollbars,status,width=800,height=450");
+    d = w.document;
+    d.write("<pre>");
+    d.write(html_escape(output_list[id]));
+    d.write("\n");
+    d.write("<a href='javascript:window.close()'>close</a>\n");
+    d.write("</pre>\n");
+    d.close();
+}
+*/
+--></script>
+
+<div class='heading'>
+<h1>PMT 支付系统接口自动化测试报告</h1>
+<p class='attribute'><strong>Start Time:</strong> 2019-11-15 18:34:55</p>
+<p class='attribute'><strong>Duration:</strong> 0:00:48.855695</p>
+<p class='attribute'><strong>Pass Rate:</strong> 100.0 %</p>
+<p class='attribute'><strong>Statistics:</strong> Total - 2 ;  Pass - 2 ; </p>
+
+<p class='description'></p>
+</div>
+
+
+
+<p id='show_detail_line'>Show
+<a href='javascript:showCase(0)'>Summary</a>
+<a href='javascript:showCase(1)'>Failed</a>
+<a href='javascript:showCase(2)'>All</a>
+</p>
+<table id='result_table'>
+<colgroup>
+<col align='left' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+</colgroup>
+<tr id='header_row'>
+    <td>Test Group/Test case</td>
+    <td>Count</td>
+    <td>Pass</td>
+    <td>Fail</td>
+    <td>Error</td>
+    <td>View</td>
+</tr>
+
+<tr class='passClass'>
+    <td>projects.pmt.test.payment.rebate.rebate_payment_submit.RebatePaymentCreateCheck</td>
+    <td>2</td>
+    <td>2</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c1',2)">Detail</a></td>
+</tr>
+
+<tr id='pt1.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_create_pay_order: 返点体现支付申请单的创建，未提交        <br> 校验        <br> 1. 申请单状态为 未提交审批        <br> 2. 申请单的支付状态为 未支付        <br> 3. 通用信息校验，申请金额</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.1')" >
+        pass</a>
+
+    <div id='div_pt1.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.1:  准备一个 审批通过的  返点开票。。。。
+
+  @@   切换登录人    @@   
++++[INFO]+++  当前登录人 label: 'business_A' 信息如下 -----------------
+ID: 100339; Name: 商务A; Boss_ID: 100338; Boss_name: 商务leader; Area: [u'渠道一部', u'渠道三部', u'网服三部', u'网服一部', u'品牌二部', u'本地直营中心-LA']
+  @@@@@@@@@@@@@@@@@@@@@@   
+ 
+增加一笔返点在当前返点开票上。。。。
+
+
+--------------------------------------------------------------------------
+-----准备造数据 ：盖章，回收当前 的返点 -------
+------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------
+-----准备造数据 ：消管生成一个  已结算的返点 -------
+------------------------------------------------------------------------------
+
+  @@   切换登录人    @@   
++++[INFO]+++  当前登录人 label: 'channelsalesmanage_B' 信息如下 -----------------
+ID: 100336; Name: 渠道销管B; Boss_ID: 100334; Boss_name: 渠道销管leader; Area: u'渠道一部'
+  @@@@@@@@@@@@@@@@@@@@@@   
+ 
+【MOCK-UP】生成返点新建所需要的 payload 信息。。。
+              [INFO]没有提供具体的代理商/客户ID， 那么接下来随机db里面找一个可用代理商
+      【INFO】随机找到一个审批通过的客户，ID为
+              [INFO]agent_id ： 44973794
+              [INFO]使用传入的返点金额 ： 6.55
+              [INFO]随机生成的返点类型是types：三返
+              [INFO]使用传入的返点使用类型
+              [INFO]有3种返点使用方式，分别为：1,2,3 - 现金,返点抵扣,充值到AD
+              [INFO]返点结算年为：2022
+              [INFO]返点结算月份/季度为：7月
+    [INFO]DB里面，用sales id = '100322', 随机找到一个审批通过之后状态的 合同 。。。
+    [INFO]DB 拿到的contract_serial ： BJKJ2019013004524
+    [INFO]随机生成的 日期： 2019-11-15
+[INFO] 随机增加返点部分的 金额相关词case
+ ----------------------------------
+ ------打印 返点新建详情----------
+----------------------------------------------------
+【Print】printing dict detailed data in lines。。。
+    no_special_industry_bid_income  :  66 
+                        reset_cost  :  81.66 
+                     mission_ratio  :  0.1 
+             cur_net_no_bid_income  :  54.0 
+                              year  :  2022 
+          timely_paid_reward_ratio  :  0.02 
+    quarter_assessment_rebate_amount  :  57.4 
+            cur_no_join_bid_income  :  17 
+        quarter_year_reward_income  :  37 
+                    bidding_income  :  92.3 
+             supplement_con_serial  :  CON10000000 
+             cur_no_join_bid_ratio  :  0.31 
+                         area_type  :  10 
+    video_material_no_bid_reward_ratio  :  0.54 
+                non_bidding_income  :  70 
+                      leading_area  :  2 
+             cur_no_net_bid_income  :  39 
+                              type  :  3 
+               channel_salesman_id  :  100322 
+           cur_no_net_no_bid_ratio  :  0.03 
+                      luban_income  :  18.44 
+                         sales_ids  :  100322 
+    video_material_no_bid_reward_income  :  84.37 
+                     month_quarter  :  7 
+                          standard  :  1 
+                          agent_id  :  44973794 
+                    cur_join_ratio  :  0.7 
+               luban_reward_income  :  69 
+               submit_approve_date  :  2019-11-15 
+                         use_types  :  1,2,3 
+                video_reward_ratio  :  0.29 
+                cur_net_bid_income  :  82.86 
+                            amount  :  6.55 
+                   contract_serial  :  BJKJ2019013004524 
+                   current_mission  :  12.46 
+----------------------------------------------------
+
+
+ ---------保存审批-------------------------
+ 【INFo】如果不需要 代理商审批，直接提交！
+
+【@KEY STEP@】--- 通过API 保存/新建,提交审批一条返点结算
+              [INFO]提交审批
+-----[REQUEST] details below : ----------------------------
+  Request : http://10.10.57.228:58313/back_end/rebate/save
+  Headers : {'content_type': 'application/json'}
+  Cookies : {'fake_employee_id': '100336', 'login_employee_id': '100336'}
+  Method : POST
+  Payload : '{"no_special_industry_bid_income": 66, "reset_cost": 81.66, "mission_ratio": 0.1, "cur_net_no_bid_income": 54.0, "year": 2022, "timely_paid_reward_ratio": 0.02, "quarter_assessment_rebate_amount": 57.4, "cur_no_join_bid_income": 17, "quarter_year_reward_income": 37, "bidding_income": 92.3, "supplement_con_serial": "CON10000000", "cur_no_join_bid_ratio": 0.31, "area_type": 10, "video_material_no_bid_reward_ratio": 0.54, "non_bidding_income": 70, "leading_area": 2, "cur_no_net_bid_income": 39, "type": 3, "submit_approval": true, "channel_salesman_id": "100322", "cur_no_net_no_bid_ratio": 0.03, "luban_income": 18.44, "sales_ids": "100322", "video_material_no_bid_reward_income": 84.37, "month_quarter": 7, "standard": 1, "agent_id": 44973794, "cur_join_ratio": 0.7, "luban_reward_income": 69, "submit_approve_date": "2019-11-15", "use_types": "1,2,3", "video_reward_ratio": 0.29, "cur_net_bid_income": 82.86, "amount": 6.55, "contract_serial": "BJKJ2019013004524", "current_mission": 12.46}'
+-----------------------------------------------
+【性能】请求花费时间 1.928441 s 
+-----------------------------------------------
+ -----[RESPONSE] details below : ----------------------------
+  Returned code: 200
+  Response: 
+{'msg': '保存成功', 'code': 1, 'data': {'rebate_balance_id': 133128721, 'rebate_balance_serial': 'FD133128721'}}
+------------------------------------------------------------------------
+[INFO]DB里面，通过serial -BJKJ2019013004524，获取id 。。。
+[INFO]DB 拿到的 contract id ： 6652249536410419975
+-------------已提交审批，rebate_balance_id 为 133128721
+
+[DATA PREPARATION] 最后打印当前的返点信息。。。。。
+100336-渠道销管B-channelsalesmanage_B
+ 
+---------打印当前返点基本信息：---------------------------------------
+----------------------------------------------------
+【Print】printing dict detailed data in lines。。。
+                            Status  :  2 - 审批中待结算  
+                       StampStatus  :  1 - 未盖章  
+                           Creator  :  100336-渠道销管B-channelsalesmanage_B 
+                    ContractSerial  :  BJKJ2019013004524 
+                          UseTypes  :  7 - 现金,返点抵扣,充值到AD 
+                    ArchieveStatus  :  1 - 未回收  
+                            Amount  :  0.0 
+                            Serial  :  FD133128721 
+                           AgentID  :  44973794 
+                                ID  :  133128721 
+                             Types  :  3 - 三返  
+----------------------------------------------------
+
+ ------------------------------------------------------------
+
+----------审批中，走审批流---------------------------
+
+
+-------------------------------
+【INFO】返点审批流 财务核算
+-------------------------------
+approval_list审批流为['finance_account_A']
+审批人：finance_account_A
+[INFO] 当前用户没有boss 属性
+[INFO] 当前用户没有boss 属性
+
+  @@   切换登录人    @@   
++++[INFO]+++  当前登录人 label: 'finance_account_A' 信息如下 -----------------
+ID: 100364; Name: finance-A; Boss_ID: None; Boss_name: None; Area: u'核算组'
+  @@@@@@@@@@@@@@@@@@@@@@   
+ 
+
+【@KEY STEP@】--- 通过API 获取下一个 待审批人列表
+
+【@KEY STEP@】--- 通过API 审批通过 结算单/或返点， entity_id=133128721， entity_type : 8 - rebate
+-----[REQUEST] details below : ----------------------------
+  Request : http://10.10.57.228:58313/back_end/approval/log_list
+  Cookies : {'fake_employee_id': '100364', 'login_employee_id': '100364'}
+  Parameters : {'entity_id': 133128721, 'entity_type': 8}
+  Method : GET
+-----------------------------------------------
+【性能】请求花费时间 0.076298 s 
+-----------------------------------------------
+ -----[RESPONSE] details below : ----------------------------
+  Returned code: 200
+  Response: 
+{'code': 1, 'data': {'total': 1, 'list': [{'comment': '', 'entity_id': None, 'result': 5, 'approver_id': '1806,100356,100363,100364,100365,100366,1102771,1128722,1168921,1271797,1285632,1393610,1553567,1602508,2057512,2369107,2720176,2923026,3289606,3299115,3703672,3725361,3815870,3902625,5060758,5081990,5153893,5207100,5616263,5817132,6003520,6357583,7103308,7199767,7206065,7535702,7780057,7883021,7922808,7995555,8002517,8793781,8976986,9055612,9878229,9903339', 'approver_name': '杨丹,财务BP-B,财务核算leader,finance-A,财务核算-B,财务核算-C,仇衍铭,黄玲,张文博,廖亮,李明华,张一凡,李硕德,顾见颀,章利,田金杰,兰雁,李瑶,郑小冰,刘玉娟,王安龙,李雪,陈智,刘雷,马晓策,陈子健,安慧芳,张剑,李晶晶,周黎,杜现芳,夏春阳,吴得瑀,吴昊,于宾,孙娇娇,贾珊,石红霞,孙伟,周立文,郭继春,董学军,郑珊,王德宸,高玉婷,李静静', 'informed_names': None, 'create_time': '', 'approval_department': '财务', 'result_name': '待审批', 'file_names': None, 'approval_record_id': 1}]}}
+------------------------------------------------------------------------
+
+【@KEY STEP@】--- 通过API 审批通过 返点， rebate_balance_id=133128721
+
+【@KEY STEP@】--- 通过API 获取一个返点， id=133128721
+-----[REQUEST] details below : ----------------------------
+  Request : http://10.10.57.228:58313/back_end/rebate/detail
+  Cookies : {'fake_employee_id': '100364', 'login_employee_id': '100364'}
+  Parameters : {'rebate_balance_id': 133128721}
+  Method : GET
+-----------------------------------------------
+【性能】请求花费时间 0.113237 s 
+-----------------------------------------------
+ -----[RESPONSE] details below : ----------------------------
+  Returned code: 200
+  Response: 
+{'msg': '获取详情成功', 'code': 1, 'data': {'display_template_area': 1, 'agent_name': '今日头条-品牌广告PM-测试账号-2', 'area_type_name': '分公司-江苏', 'use_amount': '0.00', 'use_status_name': '未使用', 'archive_locker_no': '', 'rebate_balance_id': 133128721, 'agent_type_name': 'KA直客', 'archive_status_name': '未回收', 'leading_area_name': '华东', 'rebate_balance_serial': 'FD133128721', 'use_status': 1, 'stamp_status': 1, 'create_time': '2019-11-15 18:34:55', 'year': 2022, 'remain_amount': '0.00', 'archive_box_no': '', 'archive_num': 0, 'archive_time': '', 'channel_salesman_name': 'channel client sales_A', 'contract_subject_name': '北京字节跳动科技有限公司', 'type_name': '三返', 'sales_names': 'channel client sales_A', 'area_type': 10, 'month_quarter_name': '7月', 'contract_subject_id': 1, 'agent_type': 11, 'stamp_status_name': '未盖章', 'approval_time': '2019-11-15', 'agent_category_name': '独代', 'type': 3, 'agent_approval_name': None, 'category': 1, 'agent_approval_time': None, 'channel_salesman_id': 100322, 'operate_time': None, 'stamp_type_name': '线下盖章', 'supplement_con_serial': 'CON10000000', 'stamp_stap_id': None, 'archive_status': 1, 'sales_ids': [100322], 'submit_approve_date': '2019-11-15', 'remark': '', 'month_quarter': 7, 'standard': '1', 'process_id': 47860252, 'agent_id': 44973794, 'step_id': None, 'leading_area': 2, 'category_name': '直客', 'status': 2, 'rebate_id': 0, 'use_types': [1, 2, 3], 'task_id': 47860820, 'status_name': '审批中', 'agent_category': 1, 'standard_name': '标准', 'amount': '6.55', 'frozen_amount': '0.00', 'contract_serial': 'BJKJ2019013004524', 'standard_serial': '', 'stamp_type': 2, 'use_type_names': ['现金', '返点抵扣', '充值到AD']}}
+------------------------------------------------------------------------
+-----[REQUEST] details below : ----------------------------
+  Request : http://10.10.57.228:58313/back_end/approval/pass
+  Headers : {'content_type': 'application/json'}
+  Cookies : {'fake_employee_id': '100364', 'login_employee_id': '100364'}
+  Method : POST
+  Payload : '{"entity_id": "133128721", "process_id": 47860252, "task_id": 47860820}'
+-----------------------------------------------
+【性能】请求花费时间 0.723229 s 
+-----------------------------------------------
+ -----[RESPONSE] details below : ----------------------------
+  Returned code: 200
+  Response: 
+{'msg': '操作成功', 'code': 1}
+------------------------------------------------------------------------
+
+[DATA PREPARATION] 最后打印当前的返点信息。。。。。
+100336-渠道销管B-channelsalesmanage_B
+ 
+---------打印当前返点基本信息：---------------------------------------
+----------------------------------------------------
+【Print】printing dict detailed data in lines。。。
+                            Status  :  3 - 已结算  
+                       StampStatus  :  1 - 未盖章  
+                           Creator  :  100336-渠道销管B-channelsalesmanage_B 
+                    ContractSerial  :  BJKJ2019013004524 
+                          UseTypes  :  7 - 现金,返点抵扣,充值到AD 
+                    ArchieveStatus  :  1 - 未回收  
+                            Amount  :  0.0 
+                            Serial  :  FD133128721 
+                           AgentID  :  44973794 
+                                ID  :  133128721 
+                             Types  :  3 - 三返  
+----------------------------------------------------
+
+ ------------------------------------------------------------
+-----数据准备完毕------------------------------------------------
+
+
+
+
+  @@   切换登录人    @@   
++++[INFO]+++  当前登录人 label: 'business_A' 信息如下 -----------------
+ID: 100339; Name: 商务A; Boss_ID: 100338; Boss_name: 商务leader; Area: [u'渠道一部', u'渠道三部', u'网服三部', u'网服一部', u'品牌二部', u'本地直营中心-LA']
+  @@@@@@@@@@@@@@@@@@@@@@   
+ 
+
+【@KEY STEP@】--- 通过API 盖章申请 一条返点, id ： 133128721
+-----[REQUEST] details below : ----------------------------
+  Request : http://10.10.57.228:58313/back_end/rebate/stamp_request
+  Headers : {'content_type': 'application/json'}
+  Cookies : {'fake_employee_id': '100339', 'login_employee_id': '100339'}
+  Method : POST
+  Payload : '{"rebate_balance_id": 133128721, "party_a_num": 3, "stamp_order": 2, "party_b_num": 1}'
+-----------------------------------------------
+【性能】请求花费时间 2.303668 s 
+-----------------------------------------------
+ -----[RESPONSE] details below : ----------------------------
+  Returned code: 200
+  Response: 
+{'msg': '申请成功', 'code': 1}
+------------------------------------------------------------------------
+[审批流]获取 结算单盖章审批流...
+[INFO]当前期望审批人列表为... 
+      --&gt;  100357-合同专员-contractops
+[INFO] 当前用户没有boss 属性
+[INFO] 当前用户没有boss 属性
+
+  @@   切换登录人    @@   
++++[INFO]+++  当前登录人 label: 'contractops' 信息如下 -----------------
+ID: 100357; Name: 合同专员; Boss_ID: None; Boss_name: None; Area: u'财务合同组'
+  @@@@@@@@@@@@@@@@@@@@@@   
+ 
+
+【@KEY STEP@】--- 通过API 盖章通过 返点， rebate_balance_id=133128721
+
+【@KEY STEP@】--- 通过API 获取一个返点， id=133128721
+-----[REQUEST] details below : ----------------------------
+  Request : http://10.10.57.228:58313/back_end/rebate/detail
+  Cookies : {'fake_employee_id': '100357', 'login_employee_id': '100357'}
+  Parameters : {'rebate_balance_id': 133128721}
+  Method : GET
+-----------------------------------------------
+【性能】请求花费时间 0.075346 s 
+-----------------------------------------------
+ -----[RESPONSE] details below : ----------------------------
+  Returned code: 200
+  Response: 
+{'msg': '获取详情成功', 'code': 1, 'data': {'display_template_area': 1, 'agent_name': '今日头条-品牌广告PM-测试账号-2', 'area_type_name': '分公司-江苏', 'use_amount': '0.00', 'use_status_name': '未使用', 'archive_locker_no': '', 'rebate_balance_id': 133128721, 'agent_type_name': 'KA直客', 'archive_status_name': '未回收', 'leading_area_name': '华东', 'rebate_balance_serial': 'FD133128721', 'use_status': 1, 'stamp_status': 2, 'create_time': '2019-11-15 18:34:55', 'year': 2022, 'remain_amount': '0.00', 'archive_box_no': '', 'archive_num': 0, 'archive_time': '', 'channel_salesman_name': 'channel client sales_A', 'contract_subject_name': '北京字节跳动科技有限公司', 'type_name': '三返', 'sales_names': 'channel client sales_A', 'area_type': 10, 'month_quarter_name': '7月', 'contract_subject_id': 1, 'agent_type': 11, 'stamp_status_name': '审批中', 'approval_time': '2019-11-15', 'agent_category_name': '独代', 'type': 3, 'agent_approval_name': None, 'category': 1, 'agent_approval_time': None, 'channel_salesman_id': 100322, 'operate_time': None, 'stamp_type_name': '线下盖章', 'supplement_con_serial': 'CON10000000', 'stamp_stap_id': None, 'archive_status': 1, 'sales_ids': [100322], 'submit_approve_date': '2019-11-15', 'remark': '', 'month_quarter': 7, 'standard': '1', 'process_id': 47865160, 'agent_id': 44973794, 'step_id': None, 'leading_area': 2, 'category_name': '直客', 'status': 3, 'rebate_id': 0, 'use_types': [1, 2, 3], 'task_id': 47866066, 'status_name': '审批通过', 'agent_category': 1, 'standard_name': '标准', 'amount': '6.55', 'frozen_amount': '0.00', 'contract_serial': 'BJKJ2019013004524', 'standard_serial': '', 'stamp_type': 2, 'use_type_names': ['现金', '返点抵扣', '充值到AD']}}
+------------------------------------------------------------------------
+-----[REQUEST] details below : ----------------------------
+  Request : http://10.10.57.228:58313/back_end/approval/pass
+  Headers : {'content_type': 'application/json'}
+  Cookies : {'fake_employee_id': '100357', 'login_employee_id': '100357'}
+  Method : POST
+  Payload : '{"entity_id": "133128721", "process_id": 47865160, "task_id": 47866066}'
+-----------------------------------------------
+【性能】请求花费时间 0.58363 s 
+-----------------------------------------------
+ -----[RESPONSE] details below : ----------------------------
+  Returned code: 200
+  Response: 
+{'msg': '操作成功', 'code': 1}
+------------------------------------------------------------------------
+
+  @@   切换登录人    @@   
++++[INFO]+++  当前登录人 label: 'business_A' 信息如下 -----------------
+ID: 100339; Name: 商务A; Boss_ID: 100338; Boss_name: 商务leader; Area: [u'渠道一部', u'渠道三部', u'网服三部', u'网服一部', u'品牌二部', u'本地直营中心-LA']
+  @@@@@@@@@@@@@@@@@@@@@@   
+ 
+
+【@KEY STEP@】--- 通过API 回收 一条返点结算，id：133128721
+-----[REQUEST] details below : ----------------------------
+  Request : http://10.10.57.228:58313/back_end/rebate/retrieve
+  Headers : {'content_type': 'application/json'}
+  Cookies : {'fake_employee_id': '100339', 'login_employee_id': '100339'}
+  Method : POST
+  Payload : '{"rebate_balance_id": 133128721}'
+-----------------------------------------------
+【性能】请求花费时间 0.052225 s 
+-----------------------------------------------
+ -----[RESPONSE] details below : ----------------------------
+  Returned code: 200
+  Response: 
+{'msg': '回收成功', 'code': 1}
+------------------------------------------------------------------------
+
+[DATA PREPARATION] 最后打印当前的返点信息。。。。。
+100336-渠道销管B-channelsalesmanage_B
+ 
+---------打印当前返点基本信息：---------------------------------------
+----------------------------------------------------
+【Print】printing dict detailed data in lines。。。
+                            Status  :  3 - 已结算  
+                       StampStatus  :  3 - 已盖章  
+                           Creator  :  100336-渠道销管B-channelsalesmanage_B 
+                    ContractSerial  :  BJKJ2019013004524 
+                          UseTypes  :  7 - 现金,返点抵扣,充值到AD 
+                    ArchieveStatus  :  2 - 已回收  
+                            Amount  :  0.0 
+                            Serial  :  FD133128721 
+                           AgentID  :  44973794 
+                                ID  :  133128721 
+                             Types  :  3 - 三返  
+----------------------------------------------------
+
+ ------------------------------------------------------------
+-----数据准备完毕------------------------------------------------
+
+
+
+
+  @@   切换登录人    @@   
++++[INFO]+++  当前登录人 label: 'business_A' 信息如下 -----------------
+ID: 100339; Name: 商务A; Boss_ID: 100338; Boss_name: 商务leader; Area: [u'渠道一部', u'渠道三部', u'网服三部', u'网服一部', u'品牌二部', u'本地直营中心-LA']
+  @@@@@@@@@@@@@@@@@@@@@@   
+ 
+
+【@KEY STEP@】---- 创建一个 返点 开票 对象，contract_id :'6652249536410419975'  。。。
+当前开票platform  3-返点开票
+
+【@KEY STEP@】---- 创建一个 开票 对象''  。。。
+  用当前传入的contract_id 覆盖 6652249536410419975
+---打印当前 创建payload ----
+----------------------------------------------------
+【Print】printing dict detailed data in lines。。。
+                          platform  :  0 
+                       contract_id  :  6652249536410419975 
+                    invoice_object  :  3 
+----------------------------------------------------
+
+None
+-----[REQUEST] details below : ----------------------------
+  Request : http://10.10.57.228:38312/back_end/invoice/create
+  Headers : {'content_type': 'application/json'}
+  Cookies : {'fake_employee_id': '100339', 'login_employee_id': '100339'}
+  Method : POST
+  Payload : '{"platform": 0, "contract_id": 6652249536410419975, "invoice_object": 3}'
+-----------------------------------------------
+【性能】请求花费时间 0.168427 s 
+-----------------------------------------------
+ -----[RESPONSE] details below : ----------------------------
+  Returned code: 200
+  Response: 
+{'code': 1, 'data': 133128107}
+------------------------------------------------------------------------
+
+【@KEY STEP@】---- 给当前发票id = '133128107' 增加返点 rebate_id=133128721  。。。
+
+【@KEY STEP@】---- 给当前发票id = '133128107' 绑定实体  。。。
+-----[REQUEST] details below : ----------------------------
+  Request : http://10.10.57.228:38312/back_end/invoice/bind
+  Headers : {'content_type': 'application/json'}
+  Cookies : {'fake_employee_id': '100339', 'login_employee_id': '100339'}
+  Method : POST
+  Payload : '{"invoice_id": 133128107, "bind_records": "[{\"amount\": 6.55, \"id\": 133128721}]"}'
+-----------------------------------------------
+【性能】请求花费时间 0.101394 s 
+-----------------------------------------------
+ -----[RESPONSE] details below : ----------------------------
+  Returned code: 200
+  Response: 
+{'code': 1, 'data': 133128107}
+------------------------------------------------------------------------
+【MOCK-UP】生成 更新 通用 - 开票 所需要的 payload 信息。。。
+              [INFO]随机生成的名称： Auto-名字1573814106
+              [INFO]随机生成的名称： Auto-名字1573814106
+              [INFO]随机生成的名称： Auto-名字1573814106
+              [INFO]随机生成的名称： Auto-名字1573814106
+              [INFO]使用随机生成的email ：  auto.mail.4572218@bytedance.com
+    [INFO]DB 随机找到的签约主体是  ： 50 - 深圳市脸萌互娱有限公司 
+----------------------------------------------------
+【Print】printing mocked data in lines。。。
+                          tax_no  :  13407494957 
+             contract_subject_id  :  50 
+                  customer_email  :  auto.mail.4572218@bytedance.com 
+           customer_subject_name  :  开票公司名-Auto-名字15738141066六要素 
+              unprintable_remark  :  auto_非打印备注-59692157938779 
+                    invoice_type  :  3 
+                          remark  :  auto_remark-80561280242410 
+                  customer_phone  :  13407324153 
+             customer_sms_phones  :  ['13407333313'] 
+                  region_last_id  :  3 
+                customer_address  :  Auto-名字1573814106地址-6六要素 
+                 contact_address  :  Auto-名字1573814106地址-接收信息 
+                         contact  :  渠道销售A 
+                            bank  :  Auto-名字1573814106银行-6六要素 
+                   contact_phone  :  13405627611 
+                      region_ids  :  [1, 2, 3] 
+                    bank_account  :  66304411236359 
+----------------------------------------------------
+
+
+【@KEY STEP@】---- 保存 更新六要素 实体 id：133128107 。。。
+-----[REQUEST] details below : ----------------------------
+  Request : http://10.10.57.228:38312/back_end/invoice/save
+  Headers : {'content_type': 'application/json'}
+  Cookies : {'fake_employee_id': '100339', 'login_employee_id': '100339'}
+  Method : POST
+  Payload : '{"tax_no": "13407494957", "contract_subject_id": 50, "customer_email": "auto.mail.4572218@bytedance.com", "customer_subject_name": "\u5f00\u7968\u516c\u53f8\u540d-Auto-\u540d\u5b5715738141066\u516d\u8981\u7d20", "unprintable_remark": "auto_\u975e\u6253\u5370\u5907\u6ce8-59692157938779", "invoice_type": 3, "remark": "auto_remark-80561280242410", "customer_phone": "13407324153", "customer_sms_phones": ["13407333313"], "region_last_id": 3, "customer_address": "Auto-\u540d\u5b571573814106\u5730\u5740-6\u516d\u8981\u7d20", "contact_address": "Auto-\u540d\u5b571573814106\u5730\u5740-\u63a5\u6536\u4fe1\u606f", "contact": "\u6e20\u9053\u9500\u552eA", "bank": "Auto-\u540d\u5b571573814106\u94f6\u884c-6\u516d\u8981\u7d20", "invoice_id": 133128107, "contact_phone": "13405627611", "region_ids": [1, 2, 3], "bank_account": 66304411236359}'
+-----------------------------------------------
+【性能】请求花费时间 0.083215 s 
+-----------------------------------------------
+ -----[RESPONSE] details below : ----------------------------
+  Returned code: 200
+  Response: 
+{'code': 1, 'data': 133128107}
+------------------------------------------------------------------------
+[KEY info] 当前为返点开票，必须是 负数，差额！！！！
+[KEY info] 当前开票项目金额为： -6.55
+增加一个开票项目，在当前返点开票上。。。
+【MOCK-UP】生成 开票 所需要的 项目的信息。。。
+ [KEY]生成 所有项目数量为： 4
+[INFO]如果当前是差额开票，amount，应该为负数， 需要反转生成
+【KEY】当前是差额开票，需要反转project amount 为负数！
+[INFO]打印当前项目生成list
+[{'invoice_project_amount': -6.21, 'invoice_project_id': '7'}, {'invoice_project_amount': -0.22, 'invoice_project_id': '8'}, {'invoice_project_amount': -0.1, 'invoice_project_id': '5'}, {'invoice_project_amount': -0.02, 'invoice_project_id': '2'}]
+
+【@KEY STEP@】---- 对开票 id ： '133128107'，增加开票项目信息【通用】  。。。
+ 增加开票字段。。。
+-----[REQUEST] details below : ----------------------------
+  Request : http://10.10.57.228:38312/back_end/invoice/invoice_detail/save
+  Headers : {'content_type': 'application/json'}
+  Cookies : {'fake_employee_id': '100339', 'login_employee_id': '100339'}
+  Method : POST
+  Payload : '{"invoice_id": 133128107, "invoice_details": "[{\"invoice_project_amount\": -6.21, \"invoice_project_id\": \"7\"}, {\"invoice_project_amount\": -0.22, \"invoice_project_id\": \"8\"}, {\"invoice_project_amount\": -0.1, \"invoice_project_id\": \"5\"}, {\"invoice_project_amount\": -0.02, \"invoice_project_id\": \"2\"}]"}'
+-----------------------------------------------
+【性能】请求花费时间 0.079725 s 
+-----------------------------------------------
+ -----[RESPONSE] details below : ----------------------------
+  Returned code: 200
+  Response: 
+{'msg': '新增成功', 'code': 1, 'data': 26635}
+------------------------------------------------------------------------
+
+  @@   切换登录人    @@   
++++[INFO]+++  当前登录人 label: 'business_A' 信息如下 -----------------
+ID: 100339; Name: 商务A; Boss_ID: 100338; Boss_name: 商务leader; Area: [u'渠道一部', u'渠道三部', u'网服三部', u'网服一部', u'品牌二部', u'本地直营中心-LA']
+  @@@@@@@@@@@@@@@@@@@@@@   
+ 
+
+【@KEY STEP@】---- 提交返点实体 id： 。。。
+-----[REQUEST] details below : ----------------------------
+  Request : http://10.10.57.228:38312/back_end/invoice/submit
+  Headers : {'content_type': 'application/json'}
+  Cookies : {'fake_employee_id': '100339', 'login_employee_id': '100339'}
+  Method : POST
+  Payload : '{"invoice_id": 133128107}'
+-----------------------------------------------
+【性能】请求花费时间 1.73454 s 
+-----------------------------------------------
+ -----[RESPONSE] details below : ----------------------------
+  Returned code: 200
+  Response: 
+{'msg': '操作成功', 'code': 1}
+------------------------------------------------------------------------
+
+
+【审批流】AD账号的票，开票审批 - 审批流： 
+[INFO]当前审批流 的期望审批人列表为 
+      --&gt;  100316-财务开票专员-finance_invoice_BP
+[INFO] 当前用户没有boss 属性
+[INFO] 当前用户没有boss 属性
+
+  @@   切换登录人    @@   
++++[INFO]+++  当前登录人 label: 'finance_invoice_BP' 信息如下 -----------------
+ID: 100316; Name: 财务开票专员; Boss_ID: None; Boss_name: None; Area: u'财务BP组'
+  @@@@@@@@@@@@@@@@@@@@@@   
+ 
+
+【@KEY STEP@】---- 对开票 ：id - '133128107'审批通过  。。。
+ [KEY STEP] 先detail 获取process and task id
+
+【@KEY STEP@】---- get 开票 detail ：id '133128107'，  。。。
+-----[REQUEST] details below : ----------------------------
+  Request : http://10.10.57.228:38312/back_end/invoice/detail
+  Cookies : {'fake_employee_id': '100316', 'login_employee_id': '100316'}
+  Parameters : {'invoice_id': 133128107}
+  Method : GET
+-----------------------------------------------
+【性能】请求花费时间 0.126339 s 
+-----------------------------------------------
+ -----[RESPONSE] details below : ----------------------------
+  Returned code: 200
+  Response: 
+{'code': 1, 'data': {'invoice_detail_status_name': '未开票', 'revert_amount': '0.000000', 'actual_invoice_amount': '0.000000', 'statement_id': 0, 'diff_amount': '-6.55', 'org_revert_status': None, 'submit_time': '2019-11-15 18:35:08', 'unprintable_remark': 'auto_非打印备注-59692157938779', 'qualification_changed_name': None, 'invoice_object': 3, 'send_status_name': None, 'org_invoice_id': None, 'contact_address': None, 'create_time': '2019-11-15 18:35:06', 'source_name': 'STA', 'customer_subject_name': '开票公司名-Auto-名字15738141066六要素', 'is_revert_name': '否', 'customer_name': '今日头条-品牌广告PM-测试账号-2', 'relate_status_name': None, 'submitter_name': '商务A', 'tax_no': '13407494957', 'contract_id': '6652249536410419975', 'invoice_status_name': None, 'source': 2, 'revert_amount_remain': '0.000000', 'relate_amount': None, 'contract_subject_name': '深圳市脸萌互娱有限公司', 'status_name': '审批中', 'revert_frozen_amount': '0.000000', 'invoice_amount': '-6.55', 'platform': 0, 'contract_subject_id': 50, 'bank_account': '66304411236359', 'difference_invoice_name': '全额开票', 'send_status': None, 'customer_id': 44971474, 'contact_phone': None, 'invoiced_time': None, 'process_id': 47866910, 'customer_email': 'auto.mail.4572218@bytedance.com', 'assign_type_name': None, 'assign_type': None, 'task_id': 47867261, 'relate_amount_remain': None, 'invoice_type': 3, 'customer_phone': '13407324153', 'customer_address': 'Auto-名字1573814106地址-6六要素', 'change_status_name': None, 'org_revert_status_name': None, 'qualification_status_name': None, 'change_status': None, 'invoice_object_name': '返点结算开票', 'revert_status_name': '未红冲', 'bank': 'Auto-名字1573814106银行-6六要素', 'invoice_detail_status': 1, 'invoice_serial': 'INV133128107', 'remark': 'auto_remark-80561280242410', 'org_invoice_serial': None, 'invoice_status': None, 'default_invoice_project_name': None, 'creator_name': '商务A', 'difference_invoice': 0, 'submitter_id': 100339, 'invoice_id': 133128107, 'express_number': None, 'express_company': None, 'customer_sms_phones': None, 'abandoned_amount': '0.00', 'platform_name': '广告平台', 'creator_id': 100339, 'contact': '', 'status': 2, 'relate_status': None, 'contract_serial': 'BJKJ2019013004524', 'invoice_type_name': '增值税电子普通发票', 'qualification_status': None, 'revert_status': 1, 'default_invoice_project_id': None, 'invoice_nos': None, 'qualification_changed': None}}
+------------------------------------------------------------------------
+-----[REQUEST] details below : ----------------------------
+  Request : http://10.10.57.228:38312/back_end/approval/pass
+  Headers : {'content_type': 'application/json'}
+  Cookies : {'fake_employee_id': '100316', 'login_employee_id': '100316'}
+  Method : POST
+  Payload : '{"comment": null, "process_id": 47866910, "task_id": 47867261}'
+-----------------------------------------------
+【性能】请求花费时间 1.383857 s 
+-----------------------------------------------
+ -----[RESPONSE] details below : ----------------------------
+  Returned code: 200
+  Response: 
+{'msg': '操作成功', 'code': 1}
+------------------------------------------------------------------------
+
+  @@   切换登录人    @@   
++++[INFO]+++  当前登录人 label: 'business_A' 信息如下 -----------------
+ID: 100339; Name: 商务A; Boss_ID: 100338; Boss_name: 商务leader; Area: [u'渠道一部', u'渠道三部', u'网服三部', u'网服一部', u'品牌二部', u'本地直营中心-LA']
+  @@@@@@@@@@@@@@@@@@@@@@   
+ 
+----------------------------------------------------
+    ---- 打印当前开票信息： 类型 ：返点
+----------------------------------------------------
+    ---- 开票ID ：133128107
+    ---- 开票Serial ：INV133128107
+----------------------------------------------------
+【Print】printing dict detailed data in lines。。。
+                        rebate_obj  :  {'contract_id': '6652249536410419975', 'rebate_balance_id': 133128721, 'rebate_amount': 6.55, 'rebate_balance_serial': 'FD133128721', 'agent_id': 44973794, 'approval_list': ['finance_account_A'], 'payload': {'no_special_industry_bid_income': 66, 'reset_cost': 81.66, 'mission_ratio': 0.1, 'cur_net_no_bid_income': 54.0, 'year': 2022, 'timely_paid_reward_ratio': 0.02, 'quarter_assessment_rebate_amount': 57.4, 'cur_no_join_bid_income': 17, 'quarter_year_reward_income': 37, 'bidding_income': 92.3, 'supplement_con_serial': 'CON10000000', 'cur_no_join_bid_ratio': 0.31, 'area_type': 10, 'video_material_no_bid_reward_ratio': 0.54, 'non_bidding_income': 70, 'leading_area': 2, 'cur_no_net_bid_income': 39, 'type': 3, 'submit_approval': True, 'channel_salesman_id': '100322', 'cur_no_net_no_bid_ratio': 0.03, 'luban_income': 18.44, 'sales_ids': '100322', 'video_material_no_bid_reward_income': 84.37, 'month_quarter': 7, 'standard': 1, 'agent_id': 44973794, 'cur_join_ratio': 0.7, 'luban_reward_income': 69, 'submit_approve_date': '2019-11-15', 'use_types': '1,2,3', 'video_reward_ratio': 0.29, 'cur_net_bid_income': 82.86, 'amount': 6.55, 'contract_serial': u'BJKJ2019013004524', 'current_mission': 12.46}} 
+                      project_list  :  [{'invoice_project_amount': -6.21, 'invoice_project_id': '7'}, {'invoice_project_amount': -0.22, 'invoice_project_id': '8'}, {'invoice_project_amount': -0.1, 'invoice_project_id': '5'}, {'invoice_project_amount': -0.02, 'invoice_project_id': '2'}] 
+                       contract_id  :  6652249536410419975 
+                    common_payload  :  {'tax_no': '13407494957', 'contract_subject_id': 50, 'customer_email': 'auto.mail.4572218@bytedance.com', 'customer_subject_name': u'\u5f00\u7968\u516c\u53f8\u540d-Auto-\u540d\u5b5715738141066\u516d\u8981\u7d20', 'unprintable_remark': u'auto_\u975e\u6253\u5370\u5907\u6ce8-59692157938779', 'invoice_type': 3, 'remark': 'auto_remark-80561280242410', 'customer_phone': '13407324153', 'customer_sms_phones': ['13407333313'], 'region_last_id': 3, 'customer_address': u'Auto-\u540d\u5b571573814106\u5730\u5740-6\u516d\u8981\u7d20', 'contact_address': u'Auto-\u540d\u5b571573814106\u5730\u5740-\u63a5\u6536\u4fe1\u606f', 'contact': u'\u6e20\u9053\u9500\u552eA', 'bank': u'Auto-\u540d\u5b571573814106\u94f6\u884c-6\u516d\u8981\u7d20', 'invoice_id': 133128107, 'contact_phone': '13405627611', 'region_ids': [1, 2, 3], 'bank_account': 66304411236359} 
+                        invoice_id  :  133128107 
+                         rebate_id  :  133128721 
+                    invoice_serial  :  INV133128107 
+                     rebate_serial  :  FD133128721 
+----------------------------------------------------
+
+----------------------------------------------------
+
+
+[PAYLOAD-Prepare]准备返点支付单创建所需要的数据！！
+
+打印当前的 返点信息list :
+[{'amount': 4.11, 'id': 133128721}]
+
+  @@   切换登录人    @@   
++++[INFO]+++  当前登录人 label: 'business_A' 信息如下 -----------------
+ID: 100339; Name: 商务A; Boss_ID: 100338; Boss_name: 商务leader; Area: [u'渠道一部', u'渠道三部', u'网服三部', u'网服一部', u'品牌二部', u'本地直营中心-LA']
+  @@@@@@@@@@@@@@@@@@@@@@   
+ 
+
+【@KEY STEP@】API 创建返点 支付申请单！
+-----[REQUEST] details below : ----------------------------
+  Request : http://10.6.26.234:18371/back_end/pay_order/add_rebate
+  Headers : {'content_type': 'application/json'}
+  Cookies : {'fake_employee_id': '100339', 'login_employee_id': '100339'}
+  Method : POST
+  Payload : '{"pay_category": 1, "biz_type": 0, "biz_line": 0, "rebates": "[{\"amount\": 4.11, \"id\": 133128721}]"}'
+-----------------------------------------------
+【性能】请求花费时间 2.392509 s 
+-----------------------------------------------
+ -----[RESPONSE] details below : ----------------------------
+  Returned code: 200
+  Response: 
+{'msg': 'success', 'code': 1, 'data': {'pay_order_id': 7516}}
+------------------------------------------------------------------------
+[Verify - Begin] 【支付申请单】整单状态校验开始
+[Verify - Done] 【支付申请单】整单状态校验结束
+[Verify - Begin] 【支付申请单】支付状态校验开始
+[Verify - Done] 【支付申请单】支付状态校验结束
+[Verify - Begin] 支付申请单金额 1.金额
+[Verify - Done] 支付申请单金额 Done
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.2' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_submit_pay_order: 返点体现支付申请单的创建，提交申请        <br> 校验        <br> 1. 申请单状态为 审批中        <br> 2. 申请单的支付状态为 未支付        <br> 3. 通用信息校验，申请金额</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.2')" >
+        pass</a>
+
+    <div id='div_pt1.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.2: 
+  @@   切换登录人    @@   
++++[INFO]+++  当前登录人 label: 'business_A' 信息如下 -----------------
+ID: 100339; Name: 商务A; Boss_ID: 100338; Boss_name: 商务leader; Area: [u'渠道一部', u'渠道三部', u'网服三部', u'网服一部', u'品牌二部', u'本地直营中心-LA']
+  @@@@@@@@@@@@@@@@@@@@@@   
+ 
+ 准备一个 审批通过的  返点开票。。。。
+
+  @@   切换登录人    @@   
++++[INFO]+++  当前登录人 label: 'business_A' 信息如下 -----------------
+ID: 100339; Name: 商务A; Boss_ID: 100338; Boss_name: 商务leader; Area: [u'渠道一部', u'渠道三部', u'网服三部', u'网服一部', u'品牌二部', u'本地直营中心-LA']
+  @@@@@@@@@@@@@@@@@@@@@@   
+ 
+增加一笔返点在当前返点开票上。。。。
+
+
+--------------------------------------------------------------------------
+-----准备造数据 ：盖章，回收当前 的返点 -------
+------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------
+-----准备造数据 ：消管生成一个  已结算的返点 -------
+------------------------------------------------------------------------------
+
+  @@   切换登录人    @@   
++++[INFO]+++  当前登录人 label: 'channelsalesmanage_B' 信息如下 -----------------
+ID: 100336; Name: 渠道销管B; Boss_ID: 100334; Boss_name: 渠道销管leader; Area: u'渠道一部'
+  @@@@@@@@@@@@@@@@@@@@@@   
+ 
+【MOCK-UP】生成返点新建所需要的 payload 信息。。。
+              [INFO]没有提供具体的代理商/客户ID， 那么接下来随机db里面找一个可用代理商
+      【INFO】随机找到一个审批通过的客户，ID为
+              [INFO]agent_id ： 44971491
+              [INFO]使用传入的返点金额 ： 6.4
+              [INFO]随机生成的返点类型是types：一返
+              [INFO]使用传入的返点使用类型
+              [INFO]有3种返点使用方式，分别为：1,2,3 - 现金,返点抵扣,充值到AD
+              [INFO]返点结算年为：2021
+              [INFO]返点结算月份/季度为：8月
+    [INFO]DB里面，用sales id = '100322', 随机找到一个审批通过之后状态的 合同 。。。
+    [INFO]DB 拿到的contract_serial ： JLYQ2019082100484
+    [INFO]随机生成的 日期： 2019-11-15
+[INFO] 随机增加返点部分的 金额相关词case
+ ----------------------------------
+ ------打印 返点新建详情----------
+----------------------------------------------------
+【Print】printing dict detailed data in lines。。。
+          cur_no_net_no_bid_income  :  20.76 
+         cur_no_join_no_bid_income  :  23 
+                       luban_ratio  :  0.59 
+                     mission_ratio  :  0.51 
+             cur_net_no_bid_income  :  33.65 
+                              year  :  2021 
+          timely_paid_reward_ratio  :  0.11 
+    quarter_assessment_rebate_amount  :  59 
+            cur_no_join_bid_income  :  12.79 
+       special_industry_bid_income  :  98 
+             cur_no_join_bid_ratio  :  0.57 
+                         area_type  :  7 
+                non_bidding_income  :  57.56 
+    video_material_bid_reward_income  :  92 
+                      leading_area  :  2 
+             cur_no_net_bid_income  :  56 
+                              type  :  1 
+               channel_salesman_id  :  100322 
+                 overdue_deduction  :  78 
+             supplement_con_serial  :  CON10000000 
+         quarter_year_reward_ratio  :  0.19 
+                         sales_ids  :  100322 
+                     month_quarter  :  8 
+                          standard  :  1 
+                          agent_id  :  44971491 
+                    cur_join_ratio  :  0.72 
+               submit_approve_date  :  2019-11-15 
+                         use_types  :  1,2,3 
+                     illegal_money  :  27 
+                            amount  :  6.4 
+                   contract_serial  :  JLYQ2019082100484 
+                       reset_ratio  :  0.5 
+       video_platform_reward_ratio  :  0.14 
+----------------------------------------------------
+
+
+ ---------保存审批-------------------------
+ 【INFo】如果不需要 代理商审批，直接提交！
+
+【@KEY STEP@】--- 通过API 保存/新建,提交审批一条返点结算
+              [INFO]提交审批
+-----[REQUEST] details below : ----------------------------
+  Request : http://10.10.57.228:58313/back_end/rebate/save
+  Headers : {'content_type': 'application/json'}
+  Cookies : {'fake_employee_id': '100336', 'login_employee_id': '100336'}
+  Method : POST
+  Payload : '{"cur_no_net_no_bid_income": 20.76, "cur_no_join_no_bid_income": 23, "luban_ratio": 0.59, "mission_ratio": 0.51, "cur_net_no_bid_income": 33.65, "year": 2021, "timely_paid_reward_ratio": 0.11, "quarter_assessment_rebate_amount": 59, "cur_no_join_bid_income": 12.79, "special_industry_bid_income": 98, "cur_no_join_bid_ratio": 0.57, "area_type": 7, "non_bidding_income": 57.56, "video_material_bid_reward_income": 92, "leading_area": 2, "cur_no_net_bid_income": 56, "type": 1, "submit_approval": true, "channel_salesman_id": "100322", "overdue_deduction": 78, "supplement_con_serial": "CON10000000", "quarter_year_reward_ratio": 0.19, "sales_ids": "100322", "month_quarter": 8, "standard": 1, "agent_id": 44971491, "cur_join_ratio": 0.72, "submit_approve_date": "2019-11-15", "use_types": "1,2,3", "illegal_money": 27, "amount": 6.4, "contract_serial": "JLYQ2019082100484", "reset_ratio": 0.5, "video_platform_reward_ratio": 0.14}'
+-----------------------------------------------
+【性能】请求花费时间 3.179339 s 
+-----------------------------------------------
+ -----[RESPONSE] details below : ----------------------------
+  Returned code: 200
+  Response: 
+{'msg': '保存成功', 'code': 1, 'data': {'rebate_balance_id': 133128722, 'rebate_balance_serial': 'FD133128722'}}
+------------------------------------------------------------------------
+[INFO]DB里面，通过serial -JLYQ2019082100484，获取id 。。。
+[INFO]DB 拿到的 contract id ： 6727589894966739716
+-------------已提交审批，rebate_balance_id 为 133128722
+
+[DATA PREPARATION] 最后打印当前的返点信息。。。。。
+100336-渠道销管B-channelsalesmanage_B
+ 
+---------打印当前返点基本信息：---------------------------------------
+----------------------------------------------------
+【Print】printing dict detailed data in lines。。。
+                            Status  :  2 - 审批中待结算  
+                       StampStatus  :  1 - 未盖章  
+                           Creator  :  100336-渠道销管B-channelsalesmanage_B 
+                    ContractSerial  :  JLYQ2019082100484 
+                          UseTypes  :  7 - 现金,返点抵扣,充值到AD 
+                    ArchieveStatus  :  1 - 未回收  
+                            Amount  :  0.0 
+                            Serial  :  FD133128722 
+                           AgentID  :  44971491 
+                                ID  :  133128722 
+                             Types  :  1 - 一返  
+----------------------------------------------------
+
+ ------------------------------------------------------------
+
+----------审批中，走审批流---------------------------
+
+
+-------------------------------
+【INFO】返点审批流 财务核算
+-------------------------------
+approval_list审批流为['finance_account_A']
+审批人：finance_account_A
+[INFO] 当前用户没有boss 属性
+[INFO] 当前用户没有boss 属性
+
+  @@   切换登录人    @@   
++++[INFO]+++  当前登录人 label: 'finance_account_A' 信息如下 -----------------
+ID: 100364; Name: finance-A; Boss_ID: None; Boss_name: None; Area: u'核算组'
+  @@@@@@@@@@@@@@@@@@@@@@   
+ 
+
+【@KEY STEP@】--- 通过API 获取下一个 待审批人列表
+
+【@KEY STEP@】--- 通过API 审批通过 结算单/或返点， entity_id=133128722， entity_type : 8 - rebate
+-----[REQUEST] details below : ----------------------------
+  Request : http://10.10.57.228:58313/back_end/approval/log_list
+  Cookies : {'fake_employee_id': '100364', 'login_employee_id': '100364'}
+  Parameters : {'entity_id': 133128722, 'entity_type': 8}
+  Method : GET
+-----------------------------------------------
+【性能】请求花费时间 0.18324 s 
+-----------------------------------------------
+ -----[RESPONSE] details below : ----------------------------
+  Returned code: 200
+  Response: 
+{'code': 1, 'data': {'total': 1, 'list': [{'comment': '', 'entity_id': None, 'result': 5, 'approver_id': '1806,100356,100363,100364,100365,100366,1102771,1128722,1168921,1271797,1285632,1393610,1553567,1602508,2057512,2369107,2720176,2923026,3289606,3299115,3703672,3725361,3815870,3902625,5060758,5081990,5153893,5207100,5616263,5817132,6003520,6357583,7103308,7199767,7206065,7535702,7780057,7883021,7922808,7995555,8002517,8793781,8976986,9055612,9878229,9903339', 'approver_name': '杨丹,财务BP-B,财务核算leader,finance-A,财务核算-B,财务核算-C,仇衍铭,黄玲,张文博,廖亮,李明华,张一凡,李硕德,顾见颀,章利,田金杰,兰雁,李瑶,郑小冰,刘玉娟,王安龙,李雪,陈智,刘雷,马晓策,陈子健,安慧芳,张剑,李晶晶,周黎,杜现芳,夏春阳,吴得瑀,吴昊,于宾,孙娇娇,贾珊,石红霞,孙伟,周立文,郭继春,董学军,郑珊,王德宸,高玉婷,李静静', 'informed_names': None, 'create_time': '', 'approval_department': '财务', 'result_name': '待审批', 'file_names': None, 'approval_record_id': 1}]}}
+------------------------------------------------------------------------
+
+【@KEY STEP@】--- 通过API 审批通过 返点， rebate_balance_id=133128722
+
+【@KEY STEP@】--- 通过API 获取一个返点， id=133128722
+-----[REQUEST] details below : ----------------------------
+  Request : http://10.10.57.228:58313/back_end/rebate/detail
+  Cookies : {'fake_employee_id': '100364', 'login_employee_id': '100364'}
+  Parameters : {'rebate_balance_id': 133128722}
+  Method : GET
+-----------------------------------------------
+【性能】请求花费时间 0.054061 s 
+-----------------------------------------------
+ -----[RESPONSE] details below : ----------------------------
+  Returned code: 200
+  Response: 
+{'msg': '获取详情成功', 'code': 1, 'data': {'display_template_area': 1, 'agent_name': '今日头条-品牌广告PM-测试账号-2', 'area_type_name': '分公司-湖北', 'use_amount': '0.00', 'use_status_name': '未使用', 'archive_locker_no': '', 'rebate_balance_id': 133128722, 'agent_type_name': '', 'archive_status_name': '未回收', 'leading_area_name': '华东', 'rebate_balance_serial': 'FD133128722', 'use_status': 1, 'stamp_status': 1, 'create_time': '2019-11-15 18:35:12', 'year': 2021, 'remain_amount': '0.00', 'archive_box_no': '', 'archive_num': 0, 'archive_time': '', 'channel_salesman_name': 'channel client sales_A', 'contract_subject_name': '巨量引擎（上海）计算机科技有限公司', 'type_name': '一返', 'sales_names': 'channel client sales_A', 'area_type': 7, 'month_quarter_name': '8月', 'contract_subject_id': 59, 'agent_type': 21, 'stamp_status_name': '未盖章', 'approval_time': '2019-11-15', 'agent_category_name': '独代', 'type': 1, 'agent_approval_name': None, 'category': 2, 'agent_approval_time': None, 'channel_salesman_id': 100322, 'operate_time': None, 'stamp_type_name': '线下盖章', 'supplement_con_serial': 'CON10000000', 'stamp_stap_id': None, 'archive_status': 1, 'sales_ids': [100322], 'submit_approve_date': '2019-11-15', 'remark': '', 'month_quarter': 8, 'standard': '1', 'process_id': 47870391, 'agent_id': 44971491, 'step_id': None, 'leading_area': 2, 'category_name': '代理商', 'status': 2, 'rebate_id': 0, 'use_types': [1, 2, 3], 'task_id': 47871583, 'status_name': '审批中', 'agent_category': 1, 'standard_name': '标准', 'amount': '6.40', 'frozen_amount': '0.00', 'contract_serial': 'JLYQ2019082100484', 'standard_serial': '', 'stamp_type': 2, 'use_type_names': ['现金', '返点抵扣', '充值到AD']}}
+------------------------------------------------------------------------
+-----[REQUEST] details below : ----------------------------
+  Request : http://10.10.57.228:58313/back_end/approval/pass
+  Headers : {'content_type': 'application/json'}
+  Cookies : {'fake_employee_id': '100364', 'login_employee_id': '100364'}
+  Method : POST
+  Payload : '{"entity_id": "133128722", "process_id": 47870391, "task_id": 47871583}'
+-----------------------------------------------
+【性能】请求花费时间 0.786324 s 
+-----------------------------------------------
+ -----[RESPONSE] details below : ----------------------------
+  Returned code: 200
+  Response: 
+{'msg': '操作成功', 'code': 1}
+------------------------------------------------------------------------
+
+[DATA PREPARATION] 最后打印当前的返点信息。。。。。
+100336-渠道销管B-channelsalesmanage_B
+ 
+---------打印当前返点基本信息：---------------------------------------
+----------------------------------------------------
+【Print】printing dict detailed data in lines。。。
+                            Status  :  3 - 已结算  
+                       StampStatus  :  1 - 未盖章  
+                           Creator  :  100336-渠道销管B-channelsalesmanage_B 
+                    ContractSerial  :  JLYQ2019082100484 
+                          UseTypes  :  7 - 现金,返点抵扣,充值到AD 
+                    ArchieveStatus  :  1 - 未回收  
+                            Amount  :  0.0 
+                            Serial  :  FD133128722 
+                           AgentID  :  44971491 
+                                ID  :  133128722 
+                             Types  :  1 - 一返  
+----------------------------------------------------
+
+ ------------------------------------------------------------
+-----数据准备完毕------------------------------------------------
+
+
+
+
+  @@   切换登录人    @@   
++++[INFO]+++  当前登录人 label: 'business_A' 信息如下 -----------------
+ID: 100339; Name: 商务A; Boss_ID: 100338; Boss_name: 商务leader; Area: [u'渠道一部', u'渠道三部', u'网服三部', u'网服一部', u'品牌二部', u'本地直营中心-LA']
+  @@@@@@@@@@@@@@@@@@@@@@   
+ 
+
+【@KEY STEP@】--- 通过API 盖章申请 一条返点, id ： 133128722
+-----[REQUEST] details below : ----------------------------
+  Request : http://10.10.57.228:58313/back_end/rebate/stamp_request
+  Headers : {'content_type': 'application/json'}
+  Cookies : {'fake_employee_id': '100339', 'login_employee_id': '100339'}
+  Method : POST
+  Payload : '{"rebate_balance_id": 133128722, "party_a_num": 2, "stamp_order": 2, "party_b_num": 1}'
+-----------------------------------------------
+【性能】请求花费时间 1.503956 s 
+-----------------------------------------------
+ -----[RESPONSE] details below : ----------------------------
+  Returned code: 200
+  Response: 
+{'msg': '申请成功', 'code': 1}
+------------------------------------------------------------------------
+[审批流]获取 结算单盖章审批流...
+[INFO]当前期望审批人列表为... 
+      --&gt;  100357-合同专员-contractops
+[INFO] 当前用户没有boss 属性
+[INFO] 当前用户没有boss 属性
+
+  @@   切换登录人    @@   
++++[INFO]+++  当前登录人 label: 'contractops' 信息如下 -----------------
+ID: 100357; Name: 合同专员; Boss_ID: None; Boss_name: None; Area: u'财务合同组'
+  @@@@@@@@@@@@@@@@@@@@@@   
+ 
+
+【@KEY STEP@】--- 通过API 盖章通过 返点， rebate_balance_id=133128722
+
+【@KEY STEP@】--- 通过API 获取一个返点， id=133128722
+-----[REQUEST] details below : ----------------------------
+  Request : http://10.10.57.228:58313/back_end/rebate/detail
+  Cookies : {'fake_employee_id': '100357', 'login_employee_id': '100357'}
+  Parameters : {'rebate_balance_id': 133128722}
+  Method : GET
+-----------------------------------------------
+【性能】请求花费时间 0.049953 s 
+-----------------------------------------------
+ -----[RESPONSE] details below : ----------------------------
+  Returned code: 200
+  Response: 
+{'msg': '获取详情成功', 'code': 1, 'data': {'display_template_area': 1, 'agent_name': '今日头条-品牌广告PM-测试账号-2', 'area_type_name': '分公司-湖北', 'use_amount': '0.00', 'use_status_name': '未使用', 'archive_locker_no': '', 'rebate_balance_id': 133128722, 'agent_type_name': '', 'archive_status_name': '未回收', 'leading_area_name': '华东', 'rebate_balance_serial': 'FD133128722', 'use_status': 1, 'stamp_status': 2, 'create_time': '2019-11-15 18:35:12', 'year': 2021, 'remain_amount': '0.00', 'archive_box_no': '', 'archive_num': 0, 'archive_time': '', 'channel_salesman_name': 'channel client sales_A', 'contract_subject_name': '巨量引擎（上海）计算机科技有限公司', 'type_name': '一返', 'sales_names': 'channel client sales_A', 'area_type': 7, 'month_quarter_name': '8月', 'contract_subject_id': 59, 'agent_type': 21, 'stamp_status_name': '审批中', 'approval_time': '2019-11-15', 'agent_category_name': '独代', 'type': 1, 'agent_approval_name': None, 'category': 2, 'agent_approval_time': None, 'channel_salesman_id': 100322, 'operate_time': None, 'stamp_type_name': '线下盖章', 'supplement_con_serial': 'CON10000000', 'stamp_stap_id': None, 'archive_status': 1, 'sales_ids': [100322], 'submit_approve_date': '2019-11-15', 'remark': '', 'month_quarter': 8, 'standard': '1', 'process_id': 47874956, 'agent_id': 44971491, 'step_id': None, 'leading_area': 2, 'category_name': '代理商', 'status': 3, 'rebate_id': 0, 'use_types': [1, 2, 3], 'task_id': 47875304, 'status_name': '审批通过', 'agent_category': 1, 'standard_name': '标准', 'amount': '6.40', 'frozen_amount': '0.00', 'contract_serial': 'JLYQ2019082100484', 'standard_serial': '', 'stamp_type': 2, 'use_type_names': ['现金', '返点抵扣', '充值到AD']}}
+------------------------------------------------------------------------
+-----[REQUEST] details below : ----------------------------
+  Request : http://10.10.57.228:58313/back_end/approval/pass
+  Headers : {'content_type': 'application/json'}
+  Cookies : {'fake_employee_id': '100357', 'login_employee_id': '100357'}
+  Method : POST
+  Payload : '{"entity_id": "133128722", "process_id": 47874956, "task_id": 47875304}'
+-----------------------------------------------
+【性能】请求花费时间 0.924035 s 
+-----------------------------------------------
+ -----[RESPONSE] details below : ----------------------------
+  Returned code: 200
+  Response: 
+{'msg': '操作成功', 'code': 1}
+------------------------------------------------------------------------
+
+  @@   切换登录人    @@   
++++[INFO]+++  当前登录人 label: 'business_A' 信息如下 -----------------
+ID: 100339; Name: 商务A; Boss_ID: 100338; Boss_name: 商务leader; Area: [u'渠道一部', u'渠道三部', u'网服三部', u'网服一部', u'品牌二部', u'本地直营中心-LA']
+  @@@@@@@@@@@@@@@@@@@@@@   
+ 
+
+【@KEY STEP@】--- 通过API 回收 一条返点结算，id：133128722
+-----[REQUEST] details below : ----------------------------
+  Request : http://10.10.57.228:58313/back_end/rebate/retrieve
+  Headers : {'content_type': 'application/json'}
+  Cookies : {'fake_employee_id': '100339', 'login_employee_id': '100339'}
+  Method : POST
+  Payload : '{"rebate_balance_id": 133128722}'
+-----------------------------------------------
+【性能】请求花费时间 0.051934 s 
+-----------------------------------------------
+ -----[RESPONSE] details below : ----------------------------
+  Returned code: 200
+  Response: 
+{'msg': '回收成功', 'code': 1}
+------------------------------------------------------------------------
+
+[DATA PREPARATION] 最后打印当前的返点信息。。。。。
+100336-渠道销管B-channelsalesmanage_B
+ 
+---------打印当前返点基本信息：---------------------------------------
+----------------------------------------------------
+【Print】printing dict detailed data in lines。。。
+                            Status  :  3 - 已结算  
+                       StampStatus  :  3 - 已盖章  
+                           Creator  :  100336-渠道销管B-channelsalesmanage_B 
+                    ContractSerial  :  JLYQ2019082100484 
+                          UseTypes  :  7 - 现金,返点抵扣,充值到AD 
+                    ArchieveStatus  :  2 - 已回收  
+                            Amount  :  0.0 
+                            Serial  :  FD133128722 
+                           AgentID  :  44971491 
+                                ID  :  133128722 
+                             Types  :  1 - 一返  
+----------------------------------------------------
+
+ ------------------------------------------------------------
+-----数据准备完毕------------------------------------------------
+
+
+
+
+  @@   切换登录人    @@   
++++[INFO]+++  当前登录人 label: 'business_A' 信息如下 -----------------
+ID: 100339; Name: 商务A; Boss_ID: 100338; Boss_name: 商务leader; Area: [u'渠道一部', u'渠道三部', u'网服三部', u'网服一部', u'品牌二部', u'本地直营中心-LA']
+  @@@@@@@@@@@@@@@@@@@@@@   
+ 
+
+【@KEY STEP@】---- 创建一个 返点 开票 对象，contract_id :'6727589894966739716'  。。。
+当前开票platform  3-返点开票
+
+【@KEY STEP@】---- 创建一个 开票 对象''  。。。
+  用当前传入的contract_id 覆盖 6727589894966739716
+---打印当前 创建payload ----
+----------------------------------------------------
+【Print】printing dict detailed data in lines。。。
+                          platform  :  0 
+                       contract_id  :  6727589894966739716 
+                    invoice_object  :  3 
+----------------------------------------------------
+
+None
+-----[REQUEST] details below : ----------------------------
+  Request : http://10.10.57.228:38312/back_end/invoice/create
+  Headers : {'content_type': 'application/json'}
+  Cookies : {'fake_employee_id': '100339', 'login_employee_id': '100339'}
+  Method : POST
+  Payload : '{"platform": 0, "contract_id": 6727589894966739716, "invoice_object": 3}'
+-----------------------------------------------
+【性能】请求花费时间 0.128687 s 
+-----------------------------------------------
+ -----[RESPONSE] details below : ----------------------------
+  Returned code: 200
+  Response: 
+{'code': 1, 'data': 133128109}
+------------------------------------------------------------------------
+
+【@KEY STEP@】---- 给当前发票id = '133128109' 增加返点 rebate_id=133128722  。。。
+
+【@KEY STEP@】---- 给当前发票id = '133128109' 绑定实体  。。。
+-----[REQUEST] details below : ----------------------------
+  Request : http://10.10.57.228:38312/back_end/invoice/bind
+  Headers : {'content_type': 'application/json'}
+  Cookies : {'fake_employee_id': '100339', 'login_employee_id': '100339'}
+  Method : POST
+  Payload : '{"invoice_id": 133128109, "bind_records": "[{\"amount\": 6.4, \"id\": 133128722}]"}'
+-----------------------------------------------
+【性能】请求花费时间 0.07465 s 
+-----------------------------------------------
+ -----[RESPONSE] details below : ----------------------------
+  Returned code: 200
+  Response: 
+{'code': 1, 'data': 133128109}
+------------------------------------------------------------------------
+【MOCK-UP】生成 更新 通用 - 开票 所需要的 payload 信息。。。
+              [INFO]随机生成的名称： Auto-名字1573814123
+              [INFO]随机生成的名称： Auto-名字1573814123
+              [INFO]随机生成的名称： Auto-名字1573814123
+              [INFO]随机生成的名称： Auto-名字1573814123
+              [INFO]使用随机生成的email ：  auto.mail.7952920@bytedance.com
+    [INFO]DB 随机找到的签约主体是  ： 20 - 深圳今日头条科技有限公司 
+----------------------------------------------------
+【Print】printing mocked data in lines。。。
+                          tax_no  :  13401256504 
+             contract_subject_id  :  20 
+                  customer_email  :  auto.mail.7952920@bytedance.com 
+           customer_subject_name  :  开票公司名-Auto-名字15738141236六要素 
+              unprintable_remark  :  auto_非打印备注-66073591702152 
+                    invoice_type  :  3 
+                          remark  :  auto_remark-55662485772192 
+                  customer_phone  :  13407623750 
+             customer_sms_phones  :  ['13404389886'] 
+                  region_last_id  :  3 
+                customer_address  :  Auto-名字1573814123地址-6六要素 
+                 contact_address  :  Auto-名字1573814123地址-接收信息 
+                         contact  :  渠道销售A 
+                            bank  :  Auto-名字1573814123银行-6六要素 
+                   contact_phone  :  13405390370 
+                      region_ids  :  [1, 2, 3] 
+                    bank_account  :  59850953018279 
+----------------------------------------------------
+
+
+【@KEY STEP@】---- 保存 更新六要素 实体 id：133128109 。。。
+-----[REQUEST] details below : ----------------------------
+  Request : http://10.10.57.228:38312/back_end/invoice/save
+  Headers : {'content_type': 'application/json'}
+  Cookies : {'fake_employee_id': '100339', 'login_employee_id': '100339'}
+  Method : POST
+  Payload : '{"tax_no": "13401256504", "contract_subject_id": 20, "customer_email": "auto.mail.7952920@bytedance.com", "customer_subject_name": "\u5f00\u7968\u516c\u53f8\u540d-Auto-\u540d\u5b5715738141236\u516d\u8981\u7d20", "unprintable_remark": "auto_\u975e\u6253\u5370\u5907\u6ce8-66073591702152", "invoice_type": 3, "remark": "auto_remark-55662485772192", "customer_phone": "13407623750", "customer_sms_phones": ["13404389886"], "region_last_id": 3, "customer_address": "Auto-\u540d\u5b571573814123\u5730\u5740-6\u516d\u8981\u7d20", "contact_address": "Auto-\u540d\u5b571573814123\u5730\u5740-\u63a5\u6536\u4fe1\u606f", "contact": "\u6e20\u9053\u9500\u552eA", "bank": "Auto-\u540d\u5b571573814123\u94f6\u884c-6\u516d\u8981\u7d20", "invoice_id": 133128109, "contact_phone": "13405390370", "region_ids": [1, 2, 3], "bank_account": 59850953018279}'
+-----------------------------------------------
+【性能】请求花费时间 0.063503 s 
+-----------------------------------------------
+ -----[RESPONSE] details below : ----------------------------
+  Returned code: 200
+  Response: 
+{'code': 1, 'data': 133128109}
+------------------------------------------------------------------------
+[KEY info] 当前为返点开票，必须是 负数，差额！！！！
+[KEY info] 当前开票项目金额为： -6.4
+增加一个开票项目，在当前返点开票上。。。
+【MOCK-UP】生成 开票 所需要的 项目的信息。。。
+ [KEY]生成 所有项目数量为： 1
+[INFO]如果当前是差额开票，amount，应该为负数， 需要反转生成
+【KEY】当前是差额开票，需要反转project amount 为负数！
+[INFO]打印当前项目生成list
+[{'invoice_project_amount': -6.4, 'invoice_project_id': '6'}]
+
+【@KEY STEP@】---- 对开票 id ： '133128109'，增加开票项目信息【通用】  。。。
+ 增加开票字段。。。
+-----[REQUEST] details below : ----------------------------
+  Request : http://10.10.57.228:38312/back_end/invoice/invoice_detail/save
+  Headers : {'content_type': 'application/json'}
+  Cookies : {'fake_employee_id': '100339', 'login_employee_id': '100339'}
+  Method : POST
+  Payload : '{"invoice_id": 133128109, "invoice_details": "[{\"invoice_project_amount\": -6.4, \"invoice_project_id\": \"6\"}]"}'
+-----------------------------------------------
+【性能】请求花费时间 0.062539 s 
+-----------------------------------------------
+ -----[RESPONSE] details below : ----------------------------
+  Returned code: 200
+  Response: 
+{'msg': '新增成功', 'code': 1, 'data': 26637}
+------------------------------------------------------------------------
+
+  @@   切换登录人    @@   
++++[INFO]+++  当前登录人 label: 'business_A' 信息如下 -----------------
+ID: 100339; Name: 商务A; Boss_ID: 100338; Boss_name: 商务leader; Area: [u'渠道一部', u'渠道三部', u'网服三部', u'网服一部', u'品牌二部', u'本地直营中心-LA']
+  @@@@@@@@@@@@@@@@@@@@@@   
+ 
+
+【@KEY STEP@】---- 提交返点实体 id： 。。。
+-----[REQUEST] details below : ----------------------------
+  Request : http://10.10.57.228:38312/back_end/invoice/submit
+  Headers : {'content_type': 'application/json'}
+  Cookies : {'fake_employee_id': '100339', 'login_employee_id': '100339'}
+  Method : POST
+  Payload : '{"invoice_id": 133128109}'
+-----------------------------------------------
+【性能】请求花费时间 2.805782 s 
+-----------------------------------------------
+ -----[RESPONSE] details below : ----------------------------
+  Returned code: 200
+  Response: 
+{'msg': '操作成功', 'code': 1}
+------------------------------------------------------------------------
+
+
+【审批流】AD账号的票，开票审批 - 审批流： 
+[INFO]当前审批流 的期望审批人列表为 
+      --&gt;  100316-财务开票专员-finance_invoice_BP
+[INFO] 当前用户没有boss 属性
+[INFO] 当前用户没有boss 属性
+
+  @@   切换登录人    @@   
++++[INFO]+++  当前登录人 label: 'finance_invoice_BP' 信息如下 -----------------
+ID: 100316; Name: 财务开票专员; Boss_ID: None; Boss_name: None; Area: u'财务BP组'
+  @@@@@@@@@@@@@@@@@@@@@@   
+ 
+
+【@KEY STEP@】---- 对开票 ：id - '133128109'审批通过  。。。
+ [KEY STEP] 先detail 获取process and task id
+
+【@KEY STEP@】---- get 开票 detail ：id '133128109'，  。。。
+-----[REQUEST] details below : ----------------------------
+  Request : http://10.10.57.228:38312/back_end/invoice/detail
+  Cookies : {'fake_employee_id': '100316', 'login_employee_id': '100316'}
+  Parameters : {'invoice_id': 133128109}
+  Method : GET
+-----------------------------------------------
+【性能】请求花费时间 0.121883 s 
+-----------------------------------------------
+ -----[RESPONSE] details below : ----------------------------
+  Returned code: 200
+  Response: 
+{'code': 1, 'data': {'invoice_detail_status_name': '未开票', 'revert_amount': '0.000000', 'actual_invoice_amount': '0.000000', 'statement_id': 0, 'diff_amount': '-6.40', 'org_revert_status': None, 'submit_time': '2019-11-15 18:35:27', 'unprintable_remark': 'auto_非打印备注-66073591702152', 'qualification_changed_name': None, 'invoice_object': 3, 'send_status_name': None, 'org_invoice_id': None, 'contact_address': None, 'create_time': '2019-11-15 18:35:23', 'source_name': 'STA', 'customer_subject_name': '开票公司名-Auto-名字15738141236六要素', 'is_revert_name': '否', 'customer_name': '今日头条-品牌广告PM-测试账号-2', 'relate_status_name': None, 'submitter_name': '商务A', 'tax_no': '13401256504', 'contract_id': '6727589894966739716', 'invoice_status_name': None, 'source': 2, 'revert_amount_remain': '0.000000', 'relate_amount': None, 'contract_subject_name': '深圳今日头条科技有限公司', 'status_name': '审批中', 'revert_frozen_amount': '0.000000', 'invoice_amount': '-6.40', 'platform': 0, 'contract_subject_id': 20, 'bank_account': '59850953018279', 'difference_invoice_name': '全额开票', 'send_status': None, 'customer_id': 44971509, 'contact_phone': None, 'invoiced_time': None, 'process_id': 47876365, 'customer_email': 'auto.mail.7952920@bytedance.com', 'assign_type_name': None, 'assign_type': None, 'task_id': 47877418, 'relate_amount_remain': None, 'invoice_type': 3, 'customer_phone': '13407623750', 'customer_address': 'Auto-名字1573814123地址-6六要素', 'change_status_name': None, 'org_revert_status_name': None, 'qualification_status_name': None, 'change_status': None, 'invoice_object_name': '返点结算开票', 'revert_status_name': '未红冲', 'bank': 'Auto-名字1573814123银行-6六要素', 'invoice_detail_status': 1, 'invoice_serial': 'INV133128109', 'remark': 'auto_remark-55662485772192', 'org_invoice_serial': None, 'invoice_status': None, 'default_invoice_project_name': None, 'creator_name': '商务A', 'difference_invoice': 0, 'submitter_id': 100339, 'invoice_id': 133128109, 'express_number': None, 'express_company': None, 'customer_sms_phones': None, 'abandoned_amount': '0.00', 'platform_name': '广告平台', 'creator_id': 100339, 'contact': '', 'status': 2, 'relate_status': None, 'contract_serial': 'JLYQ2019082100484', 'invoice_type_name': '增值税电子普通发票', 'qualification_status': None, 'revert_status': 1, 'default_invoice_project_id': None, 'invoice_nos': None, 'qualification_changed': None}}
+------------------------------------------------------------------------
+-----[REQUEST] details below : ----------------------------
+  Request : http://10.10.57.228:38312/back_end/approval/pass
+  Headers : {'content_type': 'application/json'}
+  Cookies : {'fake_employee_id': '100316', 'login_employee_id': '100316'}
+  Method : POST
+  Payload : '{"comment": " \u968f\u4fbf \u901a\u8fc7\uff0c\u4e0d\u4e3b\u52a8\u4e0d\u62d2\u7edd\u4e0d\u8d1f\u8d23", "process_id": 47876365, "task_id": 47877418}'
+-----------------------------------------------
+【性能】请求花费时间 1.153164 s 
+-----------------------------------------------
+ -----[RESPONSE] details below : ----------------------------
+  Returned code: 200
+  Response: 
+{'msg': '操作成功', 'code': 1}
+------------------------------------------------------------------------
+
+  @@   切换登录人    @@   
++++[INFO]+++  当前登录人 label: 'business_A' 信息如下 -----------------
+ID: 100339; Name: 商务A; Boss_ID: 100338; Boss_name: 商务leader; Area: [u'渠道一部', u'渠道三部', u'网服三部', u'网服一部', u'品牌二部', u'本地直营中心-LA']
+  @@@@@@@@@@@@@@@@@@@@@@   
+ 
+----------------------------------------------------
+    ---- 打印当前开票信息： 类型 ：返点
+----------------------------------------------------
+    ---- 开票ID ：133128109
+    ---- 开票Serial ：INV133128109
+----------------------------------------------------
+【Print】printing dict detailed data in lines。。。
+                        rebate_obj  :  {'contract_id': '6727589894966739716', 'rebate_balance_id': 133128722, 'rebate_amount': 6.4, 'rebate_balance_serial': 'FD133128722', 'agent_id': 44971491, 'approval_list': ['finance_account_A'], 'payload': {'cur_no_net_no_bid_income': 20.76, 'cur_no_join_no_bid_income': 23, 'luban_ratio': 0.59, 'mission_ratio': 0.51, 'cur_net_no_bid_income': 33.65, 'year': 2021, 'timely_paid_reward_ratio': 0.11, 'quarter_assessment_rebate_amount': 59, 'cur_no_join_bid_income': 12.79, 'special_industry_bid_income': 98, 'cur_no_join_bid_ratio': 0.57, 'area_type': 7, 'non_bidding_income': 57.56, 'video_material_bid_reward_income': 92, 'leading_area': 2, 'cur_no_net_bid_income': 56, 'type': 1, 'submit_approval': True, 'channel_salesman_id': '100322', 'overdue_deduction': 78, 'supplement_con_serial': 'CON10000000', 'quarter_year_reward_ratio': 0.19, 'sales_ids': '100322', 'month_quarter': 8, 'standard': 1, 'agent_id': 44971491, 'cur_join_ratio': 0.72, 'submit_approve_date': '2019-11-15', 'use_types': '1,2,3', 'illegal_money': 27, 'amount': 6.4, 'contract_serial': u'JLYQ2019082100484', 'reset_ratio': 0.5, 'video_platform_reward_ratio': 0.14}} 
+                      project_list  :  [{'invoice_project_amount': -6.4, 'invoice_project_id': '6'}] 
+                       contract_id  :  6727589894966739716 
+                    common_payload  :  {'tax_no': '13401256504', 'contract_subject_id': 20, 'customer_email': 'auto.mail.7952920@bytedance.com', 'customer_subject_name': u'\u5f00\u7968\u516c\u53f8\u540d-Auto-\u540d\u5b5715738141236\u516d\u8981\u7d20', 'unprintable_remark': u'auto_\u975e\u6253\u5370\u5907\u6ce8-66073591702152', 'invoice_type': 3, 'remark': 'auto_remark-55662485772192', 'customer_phone': '13407623750', 'customer_sms_phones': ['13404389886'], 'region_last_id': 3, 'customer_address': u'Auto-\u540d\u5b571573814123\u5730\u5740-6\u516d\u8981\u7d20', 'contact_address': u'Auto-\u540d\u5b571573814123\u5730\u5740-\u63a5\u6536\u4fe1\u606f', 'contact': u'\u6e20\u9053\u9500\u552eA', 'bank': u'Auto-\u540d\u5b571573814123\u94f6\u884c-6\u516d\u8981\u7d20', 'invoice_id': 133128109, 'contact_phone': '13405390370', 'region_ids': [1, 2, 3], 'bank_account': 59850953018279} 
+                        invoice_id  :  133128109 
+                         rebate_id  :  133128722 
+                    invoice_serial  :  INV133128109 
+                     rebate_serial  :  FD133128722 
+----------------------------------------------------
+
+----------------------------------------------------
+
+
+[PAYLOAD-Prepare]准备返点支付单创建所需要的数据！！
+
+打印当前的 返点信息list :
+[{'amount': 3.47, 'id': 133128722}]
+
+  @@   切换登录人    @@   
++++[INFO]+++  当前登录人 label: 'business_A' 信息如下 -----------------
+ID: 100339; Name: 商务A; Boss_ID: 100338; Boss_name: 商务leader; Area: [u'渠道一部', u'渠道三部', u'网服三部', u'网服一部', u'品牌二部', u'本地直营中心-LA']
+  @@@@@@@@@@@@@@@@@@@@@@   
+ 
+
+【@KEY STEP@】API 创建返点 支付申请单！
+-----[REQUEST] details below : ----------------------------
+  Request : http://10.6.26.234:18371/back_end/pay_order/add_rebate
+  Headers : {'content_type': 'application/json'}
+  Cookies : {'fake_employee_id': '100339', 'login_employee_id': '100339'}
+  Method : POST
+  Payload : '{"pay_category": 1, "biz_type": 0, "biz_line": 0, "rebates": "[{\"amount\": 3.47, \"id\": 133128722}]"}'
+-----------------------------------------------
+【性能】请求花费时间 0.678996 s 
+-----------------------------------------------
+ -----[RESPONSE] details below : ----------------------------
+  Returned code: 200
+  Response: 
+{'msg': 'success', 'code': 1, 'data': {'pay_order_id': 7518}}
+------------------------------------------------------------------------
+[INFO] 为支付申请单添加附件！支付单ID： None
+-----[REQUEST] details below : ----------------------------
+  Request : http://10.6.26.234:18371/back_end/attachment/upload
+  Headers : {'content_type': 'application/json'}
+  Cookies : {'fake_employee_id': '100339', 'login_employee_id': '100339'}
+  Method : POST
+  Payload : '{"file_list": [{"file_name": "761f12b79a5fac36422f9f45510b601b.docx", "origin_file_name": "3M\u7ed3\u7b97\u5355-\u5b57\u8282\u5c0f\u7a0b\u5e8f\u5e7f\u544a_V2.0-\u5355\u7ae0 (1) (1) (1) (1).docx"}], "entity_id": 7518, "entity_type": 1}'
+-----------------------------------------------
+【性能】请求花费时间 1.060474 s 
+-----------------------------------------------
+ -----[RESPONSE] details below : ----------------------------
+  Returned code: 200
+  Response: 
+{'msg': 'success', 'code': 1, 'data': {'ids': [1062]}}
+------------------------------------------------------------------------
+
+【@KEY STEP@】API 提交审批当前 支付申请单！！支付单ID： 7518
+-----[REQUEST] details below : ----------------------------
+  Request : http://10.6.26.234:18371/back_end/work_flow/submit
+  Headers : {'content_type': 'application/json'}
+  Cookies : {'fake_employee_id': '100339', 'login_employee_id': '100339'}
+  Method : POST
+  Payload : '{"entity_id": "7518", "pay_order_id": "7518", "entity_type": 1}'
+-----------------------------------------------
+【性能】请求花费时间 13.763604 s 
+-----------------------------------------------
+ -----[RESPONSE] details below : ----------------------------
+  Returned code: 200
+  Response: 
+{'msg': '提交成功', 'code': 1, 'data': None}
+------------------------------------------------------------------------
+[Verify - Begin] 【支付申请单】整单状态校验开始
+[Verify - Done] 【支付申请单】整单状态校验结束
+[Verify - Begin] 【支付申请单】支付状态校验开始
+[Verify - Done] 【支付申请单】支付状态校验结束
+[Verify - Begin] 支付申请单金额 1.金额
+[Verify - Done] 支付申请单金额 Done
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='total_row'>
+    <td>Total</td>
+    <td>2</td>
+    <td>2</td>
+    <td>0</td>
+    <td>0</td>
+    <td>&nbsp;</td>
+</tr>
+</table>
+
+<div id='ending'>&nbsp;</div>
+
+</body>
+</html>

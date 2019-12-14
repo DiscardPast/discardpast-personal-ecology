@@ -29,14 +29,18 @@ public class HouseController{
     private HouseAction houseAction;
 
     /**
-     * 分页查询所有用户表数据
+     * 分页查询员工表数据
      *
-     * @return Result 返回统一结果model
+     * @param pageNo
+     * @param pageSize
+     * @return
      */
-    @ApiOperation(value = "查询用户表", notes = "查询用户表", response = Result.class)
-    @GetMapping("/all")
-    public Result selectAllUser() {
-        return Result.success(this.houseService.queryHouseList());
+    @ApiOperation(value = "查询员工表", notes = "查询员工表", response = Result.class)
+    @GetMapping("/byPage")
+    public Result selectPage(
+            @ApiParam(name = "pageNo", value = "页码", required = true, example = "1")
+            @RequestParam int pageNo , @RequestParam int pageSize) {
+        return Result.success(this.houseService.queryByPage(pageNo,pageSize));
     }
 
 

@@ -2,13 +2,12 @@ package com.discardpast.louwailou.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.discardpast.louwailou.service.StaffService;
 import com.discardpast.louwailou.mapper.StaffMapper;
 import com.discardpast.louwailou.domain.Staff;
-
-import java.util.List;
 
 
 /**
@@ -28,7 +27,8 @@ public class StaffServiceImpl implements StaffService {
     }
 
     @Override
-    public IPage<Staff> queryByPage(IPage<Staff> staffPage) {
+    public IPage<Staff> queryByPage(int pageNo , int pageSize) {
+        Page<Staff> staffPage = new Page<>(pageNo,pageSize);
         return this.staffMapper.selectPage(staffPage,null);
     }
 

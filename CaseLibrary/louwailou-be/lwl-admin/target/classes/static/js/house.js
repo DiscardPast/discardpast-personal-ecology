@@ -1,4 +1,4 @@
-var url = base + "house/all";
+var url = base + "house/byPage?pageNo=1&pageSize=10";
 var houseId;
 
 $.ajax({
@@ -9,7 +9,7 @@ $.ajax({
     timeout: 10000,
     async: false,
     success: function (response) {
-        var data = response.data;
+        var data = response.data.records;
         for (var i = 0; i < data.length; i++) {
             var houseType = "";
             if (data[i].types == 0) {
@@ -28,13 +28,10 @@ $.ajax({
                 "<tr>\n" +
                 "        <th scope=\"row\">" + data[i].id + "</th>\n" +
                 "        <td>" + data[i].title + "</td>\n" +
-                "        <td>" + data[i].consultantTitle + "</td>\n" +
                 "        <td>" + houseType + "</td>\n" +
-                "        <td>" + data[i].content + "</td>\n" +
-                "        <td>" + data[i].apartment + "</td>\n" +
-                "        <td>" + data[i].bouns + "</td>\n" +
-                "        <td>" + data[i].beat + "</td>\n" +
                 "        <td>" + data[i].address + "</td>\n" +
+                "        <td>" + data[i].beat + "</td>\n" +
+                "        <td>" + data[i].bouns + "</td>\n" +
                 "        <td>" +
                 "<button type=\"button\" class=\"btn btn-success\" onclick=\"toHouseDetail(" + data[i].id + ")\">查看</button>" +
                 "<button type=\"button\" onclick=\"toAddHouseApartment(" + data[i].id + ")\" class=\"btn btn-primary\">添加房屋户型</button>" +
@@ -43,7 +40,26 @@ $.ajax({
                 "    </tr>"
             )
         }
-
+        var total = response.data.total;
+        var html = "\"<iframe id=\\\"contentIframe\\\" class=\\\"contentView\\\" style=\\\"overflow: hidden; border:none;\\\"></iframe>\\n\" +\n" +
+            "            \"        <nav id=\\\"paginationView\\\" class=\\\"paginationView\\\" aria-label=\\\"Page navigation example\\\">\\n\" +\n" +
+            "            \"            <ul class=\\\"pagination\\\">\\n\" +\n" +
+            "            \"                <li class=\\\"page-item\\\"><a class=\\\"page-link\\\" href=\\\"#\\\">Previous</a></li>\\n\" +";
+        var page = 1;
+        while(total > 10)
+        {
+            html += "\"                <li class=\\\"page-item\\\"><a class=\\\"page-link\\\" href=\\\"#\\\">" +  page + "</a></li>\\n\" +"
+            page++;
+            total = total - 10;
+        }
+        while(total <= 10)
+        {
+            html += "\"                <li class=\\\"page-item\\\"><a class=\\\"page-link\\\" href=\\\"#\\\">1</a></li>\\n\" +"
+        }
+        html +="            \"                <li class=\\\"page-item\\\"><a class=\\\"page-link\\\" href=\\\"#\\\">Next</a></li>\\n\" +\n" +
+            "            \"            </ul>\\n\" +\n" +
+            "            \"        </nav>\"";
+        $("#content").append(html);
     },
     error: function () {
         console.log("error")

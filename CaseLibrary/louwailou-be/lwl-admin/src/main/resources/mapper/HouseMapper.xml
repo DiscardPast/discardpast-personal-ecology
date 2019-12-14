@@ -15,7 +15,6 @@
         <result property="openTime" column="open_time" jdbcType="TIMESTAMP" />
         <result property="beat" column="beat" jdbcType="VARCHAR" />
         <result property="title" column="title" jdbcType="VARCHAR" />
-        <result property="consultantTitle" column="consultant_title" jdbcType="VARCHAR" />
         <result property="content" column="content" jdbcType="VARCHAR" />
         <result property="bouns" column="bouns" jdbcType="BIGINT" />
         <result property="createTime" column="create_time" jdbcType="TIMESTAMP" />
@@ -25,7 +24,7 @@
             </resultMap>
 
     <sql id="Base_Column_List">
-      id,project_id,area,price,types,structure,address,open_time,beat,title,consultant_title,content,bouns,create_time,update_time,deleted,tips
+      id,project_id,area,price,types,structure,address,open_time,beat,title,content,bouns,create_time,update_time,deleted,tips
     </sql>
 
     <!--通过用户Id查询房屋信息表-->

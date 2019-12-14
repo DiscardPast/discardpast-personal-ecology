@@ -1,4 +1,4 @@
-var url = base + "staff/all";
+var url = base + "staff/byPage";
 $.ajax({
     url: url,
     type: "get",

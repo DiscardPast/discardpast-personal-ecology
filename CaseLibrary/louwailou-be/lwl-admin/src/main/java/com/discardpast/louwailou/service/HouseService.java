@@ -1,5 +1,6 @@
 package com.discardpast.louwailou.service;
 
+import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.discardpast.louwailou.domain.House;
 import org.springframework.stereotype.Service;
 
@@ -21,12 +22,15 @@ public interface HouseService {
      */
      House queryById(Long id);
 
+
     /**
-     * 查询所有用户数据
+     * 分页查询房屋信息
      *
+     * @param pageNo
+     * @param pageSize
      * @return
      */
-    List<House> queryHouseList();
+     IPage<House> queryByPage(int pageNo, int pageSize);
 
     /**
      * 通过UserId查询一条房屋信息表数据

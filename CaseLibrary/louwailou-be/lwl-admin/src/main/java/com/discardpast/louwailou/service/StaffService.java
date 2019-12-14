@@ -22,12 +22,15 @@ public interface StaffService {
      */
      Staff queryById(Long id);
 
+
     /**
-     * 通过id查询一条员工表数据
-     * @param staffPage
+     * 分页查询所有员工信息
+     *
+     * @param pageNo
+     * @param pageSize
      * @return
      */
-     IPage<Staff> queryByPage(IPage<Staff> staffPage);
+     IPage<Staff> queryByPage(int pageNo , int pageSize);
 
     /**
      * 通过UserId查询一条员工表数据

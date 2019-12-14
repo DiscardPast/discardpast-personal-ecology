@@ -66,11 +66,6 @@ public class House extends DataEntity {
     @ApiModelProperty(name="title",value = "房屋标题")
     private String title;
 
-    /** 房屋置业顾问所见标题 */
-    @TableField(value="consultant_title")
-    @ApiModelProperty(name="consultantTitle",value = "房屋置业顾问所见标题")
-    private String consultantTitle;
-
     /** 房屋信息 */
     @TableField(value="content")
     @ApiModelProperty(name="content",value = "房屋信息")
